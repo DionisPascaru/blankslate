@@ -52,19 +52,17 @@ $font-secondary: "Oswald", sans-serif;
 
 /** ----- font sizes ----- **/
 :root {
-  --heading-font-size: 28px;
+  --heading-font-size: 44px;
   --normal-font-size: 16px;
   --small-font-size: 14px;
   --title-font-size: 20px;
+  --modal-title-font-size: 28px;
 
   @include for-md {
-    --heading-font-size: 44px;
+    --heading-font-size: 70px;
     --normal-font-size: 18px;
     --small-font-size: 16px;
     --title-font-size: 22px;
-  }
-
-  @include for-lg {
-    --heading-font-size: 70px;
+    --modal-title-font-size: 50px;
   }
 }

@@ -6,22 +6,19 @@
 /** ------ 2x large screen ------ **/
 /** ----- font sizes ----- **/
 :root {
-  --heading-font-size: 28px;
+  --heading-font-size: 44px;
   --normal-font-size: 16px;
   --small-font-size: 14px;
   --title-font-size: 20px;
+  --modal-title-font-size: 28px;
 }
 @media screen and (min-width: 768px) {
   :root {
-    --heading-font-size: 44px;
+    --heading-font-size: 70px;
     --normal-font-size: 18px;
     --small-font-size: 16px;
     --title-font-size: 22px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  :root {
-    --heading-font-size: 70px;
+    --modal-title-font-size: 50px;
   }
 }
 
@@ -601,7 +598,7 @@ body {
 }
 .rm-modal .rm-modal-header .rm-modal-title {
   font-family: "Montserrat", sans-serif;
-  font-size: var(--heading-font-size);
+  font-size: var(--modal-title-font-size);
   font-weight: 500;
   color: #fff;
   line-height: 1;
@@ -804,6 +801,44 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
+}
+
+.rm-career .rm-career-content {
+  padding: 50px 0;
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+}
+.rm-career .rm-career-content-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--title-font-size);
+  font-weight: 500;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 40px;
+}
+.rm-career .rm-career-content-text {
+  margin-bottom: 40px;
+}
+.rm-career .rm-career-content-text p {
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  color: #fff;
+}
+.rm-career .rm-career-content-positions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+.rm-career .rm-career-content-positions .rm-career-content-position {
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--title-font-size);
+  font-weight: 500;
+  color: #fff;
+  line-height: 1;
 }
 
 /*# sourceMappingURL=main.css.map */
