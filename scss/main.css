@@ -841,4 +841,76 @@ body {
   line-height: 1;
 }
 
+.rm-contacts .rm-contacts-items {
+  padding-top: 50px;
+}
+.rm-contacts .rm-contact-item {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.rm-contacts .rm-contact-item .rm-contact-item-hash {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1;
+}
+.rm-contacts .rm-contact-item .rm-contact-item-text {
+  text-align: center;
+}
+.rm-contacts .rm-contact-item .rm-contact-item-text .rm-contact-item-text-phone a {
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+}
+.rm-contacts .rm-contact-item .rm-contact-item-text .rm-contact-item-text-address {
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  color: #fff;
+}
+.rm-contacts .rm-contact-item .rm-contact-item-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.rm-contacts .rm-contact-item .rm-contact-item-icons a {
+  transition: opacity 0.5s;
+}
+.rm-contacts .rm-contact-item .rm-contact-item-icons a:hover {
+  opacity: 0.5;
+}
+.rm-contacts .rm-contact-item .rm-contact-item-icons i {
+  font-size: 50px;
+}
+.rm-contacts .rm-contact-item-one .rm-contact-item-hash {
+  color: #00FF00;
+}
+.rm-contacts .rm-contact-item-one .rm-contact-item-icons i {
+  color: #00FF00;
+}
+.rm-contacts .rm-contact-item-two .rm-contact-item-hash {
+  color: #A200FF;
+}
+.rm-contacts .rm-contact-item-two .rm-contact-item-icons i {
+  color: #A200FF;
+}
+.rm-contacts .rm-contact-item-three .rm-contact-item-hash {
+  color: #FF0000;
+}
+.rm-contacts .rm-contact-item-three .rm-contact-item-icons i {
+  color: #FF0000;
+}
+.rm-contacts .rm-contact-item-four .rm-contact-item-hash {
+  color: #F7FF00;
+}
+.rm-contacts .rm-contact-item-four .rm-contact-item-icons i {
+  color: #F7FF00;
+}
+
 /*# sourceMappingURL=main.css.map */
