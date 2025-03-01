@@ -1,0 +1,227 @@
+/** ----- subsidiary block ----- **/
+.rm-subsidiary-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+
+  .rm-subsidiary-block-address {
+    font-family: $font-primary;
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    color: $white-rm-color;
+    text-align: center;
+  }
+
+  .rm-subsidiary-block-logo-text {
+    font-family: $font-secondary;
+    font-size: 32px;
+    font-weight: 600;
+    color: $green-rm-color;
+    margin-top: -17px;
+  }
+
+  .rm-subsidiary-block-button {
+    button {
+      border: 1px solid $white-rm-color;
+      text-transform: uppercase;
+      font-family: $font-primary;
+      font-size: var(--small-font-size);
+      font-weight: 500;
+      padding: 6px 15px;
+      color: $white-rm-color;
+      line-height: 1;
+      border-radius: 8px;
+    }
+  }
+}
+
+.rm-subsidiary-block-one {
+  .rm-subsidiary-block-logo-text {
+    color: $green-rm-color;
+  }
+}
+
+.rm-subsidiary-block-two {
+  .rm-subsidiary-block-logo-text {
+    color: $purple-rm-color;
+  }
+}
+
+.rm-subsidiary-block-three {
+  .rm-subsidiary-block-logo-text {
+    color: $red-two-rm-color;
+  }
+}
+
+.rm-subsidiary-block-four {
+  .rm-subsidiary-block-logo-text {
+    color: $yellow-rm-color;
+  }
+}
+
+/** ----- subsidiary modal ----- **/
+.rm-subsidiary-modal {
+  .rm-modal-header {
+    display: flex;
+    justify-content: center;
+    border-bottom: none;
+    padding-top: 50px;
+
+    .rm-btn-close {
+      color: $white-rm-color;
+      padding: 0;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+
+      i {
+        font-size: 24px;
+      }
+    }
+  }
+
+  .rm-subsidiary-modal-logo {
+    .rm-subsidiary-modal-logo-text {
+      text-align: center;
+      font-family: $font-secondary;
+      font-size: 36px;
+      font-weight: 500;
+      margin-top: -17px;
+
+      @include for-md {
+        font-size: 50px;
+      }
+    }
+
+    .rm-subsidiary-modal-logo-img {
+      rotate: 4deg;
+
+      img {
+        width: 255px;
+      }
+    }
+  }
+}
+
+.rm-subsidiary-modal-one {
+  .rm-subsidiary-modal-logo-text {
+    color: $green-rm-color;
+  }
+
+  .rm-subsidiary-tab-button {
+    &.active {
+      color: $green-rm-color;
+    }
+  }
+}
+
+.rm-subsidiary-modal-two {
+  .rm-subsidiary-modal-logo-text {
+    color: $purple-rm-color;
+  }
+
+  .rm-subsidiary-tab-button {
+    &.active {
+      color: $purple-rm-color;
+    }
+  }
+}
+
+.rm-subsidiary-modal-three {
+  .rm-subsidiary-modal-logo-text {
+    color: $red-two-rm-color;
+  }
+
+  .rm-subsidiary-tab-button {
+    &.active {
+      color: $red-two-rm-color;
+    }
+  }
+}
+
+.rm-subsidiary-modal-four {
+  .rm-subsidiary-modal-logo-text {
+    color: $yellow-rm-color;
+  }
+
+  .rm-subsidiary-tab-button {
+    &.active {
+      color: $yellow-rm-color;
+    }
+  }
+}
+
+.rm-subsidiary-tabs {
+  padding-bottom: 40px;
+  justify-content: center;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+
+  &.nav-tabs {
+    border: none;
+    flex-wrap: nowrap;
+  }
+
+  .rm-subsidiary-tab {
+    border-right: 1px solid $grey-one-rm-color;
+    flex: 0 0 auto;
+
+    &:last-of-type {
+      border: none;
+    }
+
+    &:has(.rm-subsidiary-tab-button.active) {
+      border-color: $green-rm-color;
+    }
+  }
+
+  .rm-subsidiary-tab-button {
+    color: $grey-one-rm-color;
+    font-size: var(--title-font-size);
+    padding: 10px 20px;
+    font-weight: 500;
+
+    &.active {
+      background-color: transparent;
+    }
+
+    &:hover {
+      border: none;
+    }
+  }
+}
+
+.rm-subsidiary-modal-contacts {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  .rm-subsidiary-modal-contacts-address,
+  .rm-subsidiary-modal-contacts-phone {
+    color: $white-rm-color;
+    font-family: $font-primary;
+    font-size: var(--small-font-size);
+    font-weight: 500;
+  }
+
+  .rm-rm-subsidiary-modal-contacts-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    i {
+      font-size: 54px;
+      color: $grey-one-rm-color;
+
+      &:hover {
+        color: $white-rm-color
+      }
+    }
+  }
+}

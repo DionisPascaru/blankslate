@@ -1,0 +1,20 @@
+.modal-backdrop {
+  background-color: transparent !important;
+}
+
+.rm-modal {
+  backdrop-filter: $modal-bg;
+
+  .rm-modal-dialog {
+    //width: 100%;
+    min-height: calc(100vh - 102px);
+    border: 1px solid $grey-one-rm-color;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .rm-modal-content {
+    background-color: unset;
+  }
+}

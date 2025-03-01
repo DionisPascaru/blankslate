@@ -1,0 +1,149 @@
+.rm-services {
+  max-width: 800px;
+  margin: auto;
+
+  .rm-services-tabs {
+    padding-top: 30px;
+    padding-bottom: 40px;
+    border: none;
+    justify-content: center;
+
+    .rm-services-tab-basic {
+      .active {
+        color: $white-rm-color;
+      }
+    }
+
+    .rm-services-tab-pro {
+      .active {
+        color: $blue-rm-color;
+      }
+    }
+
+    .rm-services-tab-top {
+      .active {
+        color: $red-two-rm-color;
+      }
+    }
+
+    .rm-services-tab-grand {
+      .active {
+        color: $green-rm-color;
+      }
+    }
+
+    .rm-services-tab {
+      color: $grey-one-rm-color;
+      border: none;
+      font-size: var(--title-font-size);
+      padding: 10px 20px;
+      font-weight: 500;
+
+      &.active {
+        background-color: transparent;
+      }
+
+      &:hover {
+        border: none;
+      }
+    }
+  }
+
+  .rm-services-tab-content-basic {
+    .accordion-item {
+      border-color: $white-rm-color;
+
+      &:not(:first-of-type) {
+        border-top: 1px solid $white-rm-color;
+      }
+    }
+  }
+
+  .rm-services-tab-content-pro {
+    .accordion-item {
+      border-color: $blue-rm-color;
+
+      &:not(:first-of-type) {
+        border-top: 1px solid $blue-rm-color;
+      }
+
+      .rm-accordion-heading-price {
+        color: $blue-rm-color;
+      }
+    }
+  }
+
+  .rm-services-tab-content-top {
+    .accordion-item {
+      border-color: $red-two-rm-color;
+
+      &:not(:first-of-type) {
+        border-top: 1px solid $red-two-rm-color;
+      }
+
+      .rm-accordion-heading-price {
+        color: $red-two-rm-color;
+      }
+    }
+  }
+
+  .rm-services-tab-content-grand {
+    .accordion-item {
+      border-color: $green-rm-color;
+
+      &:not(:first-of-type) {
+        border-top: 1px solid $green-rm-color;
+      }
+
+      .rm-accordion-heading-price {
+        color: $green-rm-color;
+      }
+    }
+  }
+
+  .accordion-item {
+    background-color: $black-rm-color;
+    color: $white-rm-color;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+
+    &:has(.rm-accordion-heading.collapsed) {
+      border-color: $grey-one-rm-color;
+    }
+
+    &:not(:first-of-type) {
+      &:has(.rm-accordion-heading.collapsed) {
+        border-top: 1px solid $grey-one-rm-color;
+      }
+    }
+
+    .rm-accordion-heading {
+      font-family: $font-primary;
+      font-size: var(--normal-font-size);
+      background-color: $black-rm-color;
+      color: $white-rm-color;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 16px 20px;
+      font-weight: 700;
+
+      .rm-accordion-heading-price {
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .accordion-body {
+      font-family: $font-primary;
+      font-size: var(--normal-font-size);
+      color: $white-rm-color;
+      text-align: center;
+    }
+  }
+}

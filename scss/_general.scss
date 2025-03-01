@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  padding: 50px 0;
+}
+
+.rm-section-head {
+  text-align: center;
+}
+
+.rm-section-head-text {
+  font-size: var(--small-font-size);
+  color: $grey-one-rm-color;
+  font-weight: 500;
+}
+
+.rm-heading {
+  font-family: $font-primary;
+  font-weight: 500;
+  font-size: var(--heading-font-size);
+  color: $white-rm-color;
+}
+
+.rm-list-group {
+  list-style-type: none;
+  padding: 0;
+
+  .rm-list-group-item {
+    text-align: center;
+    margin-bottom: 5px;
+    font-family: $font-primary;
+    font-size: var(--normal-font-size);
+    font-weight: 500;
+  }
+
+  .rm-list-group-item-day {
+    color: $white-rm-color;
+  }
+
+  .rm-list-group-item-time {
+    color: $grey-one-rm-color;
+  }
+}

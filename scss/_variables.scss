@@ -1,0 +1,67 @@
+/** ----- Colors ----- **/
+$black-rm-color: #000;
+$red-one-rm-color: #C80000;
+$red-two-rm-color: #FF0000;
+$grey-one-rm-color: #54595F;
+$grey-two-rm-color: #B3B3B3;
+$white-rm-color: #fff;
+$blue-rm-color: #004DFF;
+$green-rm-color: #00FF00;
+$purple-rm-color: #A200FF;
+$yellow-rm-color: #F7FF00;
+$modal-bg: blur(37px) brightness(50%);
+
+// Font Families
+$font-primary: "Montserrat", sans-serif;
+$font-secondary: "Oswald", sans-serif;
+
+/** ------ Small screen ------ **/
+@mixin for-sm {
+  @media screen and (min-width: 576px) {
+    @content;
+  }
+}
+
+/** ------ Medium screen ------ **/
+@mixin for-md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+/** ------ Large screen ------ **/
+@mixin for-lg {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+/** ------ Extra large screen ------ **/
+@mixin for-xl {
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
+}
+
+/** ------ 2x large screen ------ **/
+@mixin for-xxl {
+  @media screen and (min-width: 1536px) {
+    @content;
+  }
+}
+
+/** ----- font sizes ----- **/
+:root {
+  --heading-font-size: 28px;
+  --normal-font-size: 18px;
+  --small-font-size: 16px;
+  --title-font-size: 22px;
+
+  @include for-md {
+    --heading-font-size: 44px;
+  }
+
+  @include for-lg {
+    --heading-font-size: 70px;
+  }
+}
