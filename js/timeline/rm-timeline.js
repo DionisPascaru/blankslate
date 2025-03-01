@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesToShow: 1,
         slidesToScroll: 1,
         asNavFor: '.rm-timeline-nav',
-        arrows: true,
+        arrows: false,
         fade: true,
         infinite: false,
         draggable: false
@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         focusOnSelect: true,
         centerMode: true,
         centerPadding: '0',
+        arrows: true,
         infinite: false,
         draggable: false,
         responsive: [
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     slidesToShow: 3,
                     centerMode: true,
                     centerPadding: '0',
+                    arrows: true,
                 }
             },
             {
@@ -31,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 settings: {
                     infinite: false,
                     draggable: false,
-                    arrows: false,
+                    arrows: true,
                     centerMode: true,
                     centerPadding: '0',
                     slidesToShow: 1

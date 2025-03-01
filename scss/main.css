@@ -588,6 +588,14 @@ body {
   background-color: unset;
 }
 
+.rm-timeline-animation {
+  max-width: 900px;
+  margin: auto;
+}
+
+.rm-timeline {
+  margin-top: 30px;
+}
 .rm-timeline .rm-timeline-shadow {
   position: relative;
 }

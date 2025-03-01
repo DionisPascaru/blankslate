@@ -2,6 +2,12 @@
 
 <section>
     <div class="container">
+        <div class="rm-section-head">
+            <div>
+                <h2 class="rm-heading">DESPRE</h2>
+            </div>
+        </div>
+        <div id="lottieRealmen" class="rm-timeline-animation"></div>
         <div class="rm-timeline">
             <div class="rm-timeline-shadow">
                 <div class="rm-timeline-nav">
@@ -133,4 +139,16 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            lottie.loadAnimation({
+                container: document.getElementById('lottieRealmen'),
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: '<?php echo get_template_directory_uri(); ?>/assets/lottie/realmen.json'
+            });
+        })
+    </script>
 </section>
