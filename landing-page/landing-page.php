@@ -10,6 +10,7 @@
 <?php get_template_part('landing-page/section/timeline'); ?>
 <?php get_template_part('landing-page/section/franchise'); ?>
 <?php get_template_part('landing-page/section/career'); ?>
+<?php get_template_part('landing-page/section/contacts'); ?>
 
 <!--libraries scripts-->
 <script src="<?php echo get_template_directory_uri(); ?>/node_modules/bootstrap/dist/js/bootstrap.min.js'"></script>

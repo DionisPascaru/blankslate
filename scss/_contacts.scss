@@ -1,0 +1,110 @@
+.rm-contacts {
+  .rm-contacts-items {
+    padding-top: 50px;
+  }
+
+  .rm-contact-item {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    .rm-contact-item-hash {
+      text-align: center;
+      font-family: $font-primary;
+      font-size: 50px;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    .rm-contact-item-text {
+      text-align: center;
+
+      .rm-contact-item-text-phone {
+        a {
+          font-family: $font-primary;
+          font-size: var(--small-font-size);
+          font-weight: 500;
+          color: $white-rm-color;
+          text-decoration: none;
+        }
+      }
+
+      .rm-contact-item-text-address {
+        font-family: $font-primary;
+        font-size: var(--small-font-size);
+        font-weight: 500;
+        color: $white-rm-color;
+      }
+    }
+
+    .rm-contact-item-icons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+
+      a {
+        transition: opacity 0.5s;
+
+        &:hover {
+          opacity: .5;
+        }
+      }
+
+      i {
+        font-size: 50px;
+
+
+      }
+    }
+  }
+
+  .rm-contact-item-one {
+    .rm-contact-item-hash {
+      color: $green-rm-color;
+    }
+
+    .rm-contact-item-icons {
+      i {
+        color: $green-rm-color;
+      }
+    }
+  }
+
+  .rm-contact-item-two {
+    .rm-contact-item-hash {
+      color: $purple-rm-color;
+    }
+
+    .rm-contact-item-icons {
+      i {
+        color: $purple-rm-color;
+      }
+    }
+  }
+
+  .rm-contact-item-three {
+    .rm-contact-item-hash {
+      color: $red-two-rm-color;
+    }
+
+    .rm-contact-item-icons {
+      i {
+        color: $red-two-rm-color;
+      }
+    }
+  }
+
+  .rm-contact-item-four {
+    .rm-contact-item-hash {
+      color: $yellow-rm-color;
+    }
+
+    .rm-contact-item-icons {
+      i {
+        color: $yellow-rm-color;
+      }
+    }
+  }
+}
