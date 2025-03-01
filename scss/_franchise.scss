@@ -1,0 +1,32 @@
+.rm-franchise {
+  padding: 50px 0;
+  background-color: $blue-rm-color;
+
+  .rm-franchise-heading {
+    text-align: center;
+    margin-bottom: 40px;
+
+    h2 {
+      font-family: $font-primary;
+      font-size: 40px;
+      font-weight: 500;
+      color: $white-rm-color;
+      line-height: 1;
+
+      @include for-md {
+        font-size: 74px;
+      }
+
+      @include for-lg {
+        font-size: 96px;
+      }
+    }
+  }
+
+  .rm-franchise-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}

@@ -63,25 +63,6 @@
 
 /** ----- subsidiary modal ----- **/
 .rm-subsidiary-modal {
-  .rm-modal-header {
-    display: flex;
-    justify-content: center;
-    border-bottom: none;
-    padding-top: 50px;
-
-    .rm-btn-close {
-      color: $white-rm-color;
-      padding: 0;
-      position: absolute;
-      top: 20px;
-      right: 20px;
-
-      i {
-        font-size: 24px;
-      }
-    }
-  }
-
   .rm-subsidiary-modal-logo {
     .rm-subsidiary-modal-logo-text {
       text-align: center;

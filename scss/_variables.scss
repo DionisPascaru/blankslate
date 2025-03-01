@@ -53,12 +53,15 @@ $font-secondary: "Oswald", sans-serif;
 /** ----- font sizes ----- **/
 :root {
   --heading-font-size: 28px;
-  --normal-font-size: 18px;
-  --small-font-size: 16px;
-  --title-font-size: 22px;
+  --normal-font-size: 16px;
+  --small-font-size: 14px;
+  --title-font-size: 20px;
 
   @include for-md {
     --heading-font-size: 44px;
+    --normal-font-size: 18px;
+    --small-font-size: 16px;
+    --title-font-size: 22px;
   }
 
   @include for-lg {

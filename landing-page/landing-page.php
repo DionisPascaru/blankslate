@@ -8,6 +8,7 @@
 <?php get_template_part('landing-page/section/services'); ?>
 <?php get_template_part('landing-page/section/subsidiaries'); ?>
 <?php get_template_part('landing-page/section/timeline'); ?>
+<?php get_template_part('landing-page/section/franchise'); ?>
 
 <!--libraries scripts-->
 <script src="<?php echo get_template_directory_uri(); ?>/node_modules/bootstrap/dist/js/bootstrap.min.js'"></script>
