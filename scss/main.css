@@ -7,13 +7,16 @@
 /** ----- font sizes ----- **/
 :root {
   --heading-font-size: 28px;
-  --normal-font-size: 18px;
-  --small-font-size: 16px;
-  --title-font-size: 22px;
+  --normal-font-size: 16px;
+  --small-font-size: 14px;
+  --title-font-size: 20px;
 }
 @media screen and (min-width: 768px) {
   :root {
     --heading-font-size: 44px;
+    --normal-font-size: 18px;
+    --small-font-size: 16px;
+    --title-font-size: 22px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -67,6 +70,23 @@ section {
 }
 .rm-list-group .rm-list-group-item-time {
   color: #54595F;
+}
+
+.rm-btn {
+  background-color: #fff;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+  padding: 13px 35px;
+  border-radius: 8px;
+  line-height: 1;
+  border: none;
+}
+@media screen and (min-width: 768px) {
+  .rm-btn {
+    padding: 15px 40px;
+  }
 }
 
 body {
@@ -445,22 +465,6 @@ body {
 }
 
 /** ----- subsidiary modal ----- **/
-.rm-subsidiary-modal .rm-modal-header {
-  display: flex;
-  justify-content: center;
-  border-bottom: none;
-  padding-top: 50px;
-}
-.rm-subsidiary-modal .rm-modal-header .rm-btn-close {
-  color: #fff;
-  padding: 0;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-.rm-subsidiary-modal .rm-modal-header .rm-btn-close i {
-  font-size: 24px;
-}
 .rm-subsidiary-modal .rm-subsidiary-modal-logo .rm-subsidiary-modal-logo-text {
   text-align: center;
   font-family: "Oswald", sans-serif;
@@ -578,14 +582,66 @@ body {
   backdrop-filter: blur(37px) brightness(50%);
 }
 .rm-modal .rm-modal-dialog {
-  min-height: calc(100vh - 102px);
+  height: calc(100vh - 102px);
   border: 1px solid #54595F;
   border-radius: 10px;
   margin-top: 50px;
   margin-bottom: 50px;
 }
 .rm-modal .rm-modal-content {
+  height: 100%;
+  overflow-y: auto;
   background-color: unset;
+}
+.rm-modal .rm-modal-header {
+  display: flex;
+  justify-content: center;
+  border-bottom: none;
+  padding-top: 50px;
+}
+.rm-modal .rm-modal-header .rm-modal-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--heading-font-size);
+  font-weight: 500;
+  color: #fff;
+  line-height: 1;
+}
+.rm-modal .rm-modal-header .rm-btn-close {
+  color: #fff;
+  padding: 0;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  line-height: 1;
+}
+@media screen and (min-width: 768px) {
+  .rm-modal .rm-modal-header .rm-btn-close {
+    top: 20px;
+    right: 20px;
+  }
+}
+.rm-modal .rm-modal-header .rm-btn-close i {
+  font-size: 24px;
+}
+.rm-modal .rm-modal-body {
+  text-align: center;
+}
+.rm-modal .rm-modal-body .rm-modal-body-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--title-font-size);
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 15px;
+}
+.rm-modal .rm-modal-body .rm-modal-body-content {
+  margin-bottom: 15px;
+}
+.rm-modal .rm-modal-body .rm-modal-body-content p {
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  color: #fff;
+  margin: 0;
 }
 
 .rm-timeline-animation {
@@ -716,6 +772,38 @@ body {
   font-size: var(--small-font-size);
   font-weight: 500;
   color: #fff;
+}
+
+.rm-franchise {
+  padding: 50px 0;
+  background-color: #004DFF;
+}
+.rm-franchise .rm-franchise-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.rm-franchise .rm-franchise-heading h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1;
+}
+@media screen and (min-width: 768px) {
+  .rm-franchise .rm-franchise-heading h2 {
+    font-size: 74px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .rm-franchise .rm-franchise-heading h2 {
+    font-size: 96px;
+  }
+}
+.rm-franchise .rm-franchise-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */

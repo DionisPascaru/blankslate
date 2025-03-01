@@ -6,8 +6,7 @@
   backdrop-filter: $modal-bg;
 
   .rm-modal-dialog {
-    //width: 100%;
-    min-height: calc(100vh - 102px);
+    height: calc(100vh - 102px);
     border: 1px solid $grey-one-rm-color;
     border-radius: 10px;
     margin-top: 50px;
@@ -15,6 +14,65 @@
   }
 
   .rm-modal-content {
+    height: 100%;
+    overflow-y: auto;
     background-color: unset;
+  }
+
+  .rm-modal-header {
+    display: flex;
+    justify-content: center;
+    border-bottom: none;
+    padding-top: 50px;
+
+    .rm-modal-title {
+      font-family: $font-primary;
+      font-size: var(--heading-font-size);
+      font-weight: 500;
+      color: $white-rm-color;
+      line-height: 1;
+    }
+
+    .rm-btn-close {
+      color: $white-rm-color;
+      padding: 0;
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      line-height: 1;
+
+      @include for-md {
+        top: 20px;
+        right: 20px;
+      }
+
+      i {
+        font-size: 24px;
+      }
+    }
+  }
+
+  .rm-modal-body {
+    text-align: center;
+
+    .rm-modal-body-title {
+      font-family: $font-primary;
+      font-size: var(--title-font-size);
+      font-weight: 500;
+      color: $white-rm-color;
+      margin-bottom: 15px;
+    }
+
+    .rm-modal-body-content {
+      margin-bottom: 15px;
+
+      p {
+        font-family: $font-primary;
+        font-size: var(--small-font-size);
+        font-weight: 500;
+        color: $white-rm-color;
+        margin: 0;
+      }
+    }
   }
 }
