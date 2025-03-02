@@ -1,6 +1,8 @@
 <?php ?>
 <section>
     <div class="container">
-        <?php echo do_shortcode('[fluentform id="3"]'); ?>
+        <div class="rm-review-form">
+            <?php echo do_shortcode('[fluentform id="3"]'); ?>
+        </div>
     </div>
 </section>
