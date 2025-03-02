@@ -1,0 +1,51 @@
+.rm-fixed-buttons {
+  position: fixed;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  .rm-fixed-buttons-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+
+    .rm-fixed-button {
+      .rm-fixed-btn {
+        height: 52px;
+        border-radius: 8px;
+        border: none;
+        background-color: $red-two-rm-color;
+        padding: 15px;
+        line-height: 1;
+        text-decoration: none;
+        transition: 0.5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+          background-color: $red-one-rm-color;
+        }
+
+        span {
+          color: $white-rm-color;
+          line-height: 1;
+          font-family: $font-primary;
+          font-weight: 500;
+          font-size: var(--normal-font-size);
+        }
+
+        i {
+          color: $white-rm-color;
+          font-size: 22px;
+
+        }
+      }
+    }
+  }
+
+
+}

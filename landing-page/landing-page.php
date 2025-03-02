@@ -13,6 +13,7 @@
 <?php get_template_part('landing-page/section/contacts'); ?>
 <?php get_template_part('landing-page/section/reviews'); ?>
 <?php get_template_part('landing-page/section/review-form'); ?>
+<?php get_template_part('landing-page/section/fixed-buttons'); ?>
 
 <!--libraries scripts-->
 <script src="<?php echo get_template_directory_uri(); ?>/node_modules/bootstrap/dist/js/bootstrap.min.js'"></script>

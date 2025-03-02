@@ -70,10 +70,10 @@
                     <div class="rm-nav-mobile-row">
                         <div class="rm-social-media">
                             <div class="rm-social-media-item">
-                                <i class="bi bi-facebook"></i>
+                                <i class="icon-facebook"></i>
                             </div>
                             <div class="rm-social-media-item">
-                                <i class="bi bi-instagram"></i>
+                                <i class="icon-instagram"></i>
                             </div>
                         </div>
                     </div>
