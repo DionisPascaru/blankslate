@@ -639,6 +639,7 @@ body {
 .rm-subsidiary-modal-contacts .rm-rm-subsidiary-modal-contacts-links i {
   font-size: 54px;
   color: #54595F;
+  transition: 0.5s;
 }
 .rm-subsidiary-modal-contacts .rm-rm-subsidiary-modal-contacts-links i:hover {
   color: #fff;
@@ -1072,6 +1073,47 @@ body {
   margin: auto;
 }
 
+.rm-fixed-buttons {
+  position: fixed;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.rm-fixed-buttons .rm-fixed-buttons-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+.rm-fixed-buttons .rm-fixed-buttons-items .rm-fixed-button .rm-fixed-btn {
+  height: 52px;
+  border-radius: 8px;
+  border: none;
+  background-color: #FF0000;
+  padding: 15px;
+  line-height: 1;
+  text-decoration: none;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rm-fixed-buttons .rm-fixed-buttons-items .rm-fixed-button .rm-fixed-btn:hover {
+  background-color: #C80000;
+}
+.rm-fixed-buttons .rm-fixed-buttons-items .rm-fixed-button .rm-fixed-btn span {
+  color: #fff;
+  line-height: 1;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: var(--normal-font-size);
+}
+.rm-fixed-buttons .rm-fixed-buttons-items .rm-fixed-button .rm-fixed-btn i {
+  color: #fff;
+  font-size: 22px;
+}
+
 .rm-footer {
   padding: 50px 0;
   display: flex;
@@ -1095,6 +1137,7 @@ body {
 .rm-footer .rm-footer-media i {
   font-size: 54px;
   color: #54595F;
+  transition: 0.5s;
 }
 .rm-footer .rm-footer-media i:hover {
   color: #fff;
