@@ -11,6 +11,8 @@
 <?php get_template_part('landing-page/section/franchise'); ?>
 <?php get_template_part('landing-page/section/career'); ?>
 <?php get_template_part('landing-page/section/contacts'); ?>
+<?php get_template_part('landing-page/section/reviews'); ?>
+<?php get_template_part('landing-page/section/review-form'); ?>
 
 <!--libraries scripts-->
 <script src="<?php echo get_template_directory_uri(); ?>/node_modules/bootstrap/dist/js/bootstrap.min.js'"></script>
@@ -20,4 +22,5 @@
 
 <!--custom scripts-->
 <script src="<?php echo get_template_directory_uri(); ?>/js/timeline/rm-timeline.js'"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/reviews/rm-reviews.js'"></script>
 <?php get_footer(); ?>

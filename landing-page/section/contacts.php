@@ -22,12 +22,12 @@
                         <div class="rm-contact-item-icons">
                             <div class="rm-contact-item-icon-phone">
                                 <a href="tel:+373 60 972 777">
-                                    <i class="bi bi-telephone-fill"></i>
+                                    <i class="icon-phone-square"></i>
                                 </a>
                             </div>
                             <div class="rm-contact-item-icon-location">
                                 <a href="https://maps.app.goo.gl/fZiP366kCNRjJYjN9" target="_blank">
-                                    <i class="bi bi-geo-alt-fill"></i>
+                                    <i class="icon-location-square"></i>
                                 </a>
                             </div>
                         </div>
@@ -45,12 +45,12 @@
                         <div class="rm-contact-item-icons">
                             <div class="rm-contact-item-icon-phone">
                                 <a href="tel:+373 60 971 777">
-                                    <i class="bi bi-telephone-fill"></i>
+                                    <i class="icon-phone-square"></i>
                                 </a>
                             </div>
                             <div class="rm-contact-item-icon-location">
                                 <a href="https://maps.app.goo.gl/hP5WPKqYG9xHGnUNA" target="_blank">
-                                    <i class="bi bi-geo-alt-fill"></i>
+                                    <i class="icon-location-square"></i>
                                 </a>
                             </div>
                         </div>
@@ -68,12 +68,12 @@
                         <div class="rm-contact-item-icons">
                             <div class="rm-contact-item-icon-phone">
                                 <a href="tel:+373 68 727 772">
-                                    <i class="bi bi-telephone-fill"></i>
+                                    <i class="icon-phone-square"></i>
                                 </a>
                             </div>
                             <div class="rm-contact-item-icon-location">
                                 <a href="https://maps.app.goo.gl/zXxUh1qH4YhFLhed6" target="_blank">
-                                    <i class="bi bi-geo-alt-fill"></i>
+                                    <i class="icon-location-square"></i>
                                 </a>
                             </div>
                         </div>
@@ -91,12 +91,12 @@
                         <div class="rm-contact-item-icons">
                             <div class="rm-contact-item-icon-phone">
                                 <a href="tel:+373 68 433 444">
-                                    <i class="bi bi-telephone-fill"></i>
+                                    <i class="icon-phone-square"></i>
                                 </a>
                             </div>
                             <div class="rm-contact-item-icon-location">
                                 <a href="https://maps.app.goo.gl/31dmvuqRjk1WMQmP9" target="_blank">
-                                    <i class="bi bi-geo-alt-fill"></i>
+                                    <i class="icon-location-square"></i>
                                 </a>
                             </div>
                         </div>

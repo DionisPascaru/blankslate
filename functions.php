@@ -204,27 +204,6 @@ function blankslate_comment_count($count)
     }
 }
 
-//function enqueue_bootstrap()
-//{
-//    $theme_version = wp_get_theme()->get('Version');
-//
-//    // Enqueue Bootstrap CSS
-//    wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/node_modules/bootstrap/css/bootstrap.min.css', array(), $theme_version);
-//    wp_enqueue_style('bootstrap-icons', get_template_directory_uri() . '/node_modules/bootstrap/icons/font/bootstrap-icons.min.css', array(), $theme_version);
-//    wp_enqueue_style('slick-css', get_template_directory_uri() . '/node_modules/slick/slick/slick.css', array(), $theme_version);
-//    wp_enqueue_style('slick-theme-css', get_template_directory_uri() . '/node_modules/slick/slick/slick-theme.css', array(), $theme_version);
-//
-//
-//    // Enqueue Bootstrap JS
-////    wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/bootstrap/js/bootstrap.bundle.min.js', array('jquery'), $theme_version, true);
-////    wp_enqueue_script('lottie-web-master', get_template_directory_uri() . '/lottie-web-master/build/player/lottie.min.js', array('jquery'), $theme_version, true);
-////    wp_enqueue_script('slick-js', get_template_directory_uri() . '/slick/slick/slick.js', array('jquery'), $theme_version, true);
-////    wp_enqueue_script('rm-timeline', get_template_directory_uri() . '/timeline/rm-timeline.js', array('jquery'), $theme_version, true);
-//
-//}
-//
-//add_action('wp_enqueue_scripts', 'enqueue_bootstrap');
-
 function theme_custom_logo_setup() {
     add_theme_support('custom-logo', array(
         'height'      => 200,

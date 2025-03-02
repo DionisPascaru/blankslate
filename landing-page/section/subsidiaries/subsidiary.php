@@ -72,8 +72,9 @@
                             <div class="rm-subsidiary-modal-contacts-address">+373 60 972 777</div>
                             <div class="rm-subsidiary-modal-contacts-phone">Chisinau, bd. Grigore Vieru, 20</div>
                             <div class="rm-rm-subsidiary-modal-contacts-links">
-                                <div><i class="bi bi-facebook"></i></div>
-                                <div><i class="bi bi-instagram"></i></div>
+                                <div><i class="icon-facebook"></i></div>
+                                <div><i class="icon-instagram"></i></div>
+                                <div><i class="icon-tick-tock"></i></div>
                             </div>
                         </div>
                     </div>

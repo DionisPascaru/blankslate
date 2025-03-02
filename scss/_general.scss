@@ -63,3 +63,20 @@ section {
     padding: 15px 40px;
   }
 }
+
+
+.rm-rating-stars {
+  display: flex;
+  gap: 5px;
+
+  .rm-rating-star {
+    i {
+      color: $grey-one-rm-color;
+      font-size: 20px;
+
+      &.fill {
+        color: $white-rm-color;
+      }
+    }
+  }
+}
