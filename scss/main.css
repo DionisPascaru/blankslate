@@ -997,7 +997,7 @@ body {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: -12px;
+  left: 0;
   z-index: 9;
   width: 100px;
   height: 100%;
@@ -1014,7 +1014,7 @@ body {
   position: absolute;
   top: 0;
   bottom: 0;
-  right: -12px;
+  right: 0;
   z-index: 9;
   width: 100px;
   height: 100%;
@@ -1070,6 +1070,44 @@ body {
 .rm-review-form {
   max-width: 700px;
   margin: auto;
+}
+
+.rm-footer {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.rm-footer .rm-footer-logo {
+  max-width: 400px;
+  margin: auto;
+}
+.rm-footer .rm-footer-media {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.rm-footer .rm-footer-media a {
+  text-decoration: none;
+}
+.rm-footer .rm-footer-media i {
+  font-size: 54px;
+  color: #54595F;
+}
+.rm-footer .rm-footer-media i:hover {
+  color: #fff;
+}
+
+.rm-copyright {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+  color: #fff;
+  padding: 50px;
+  margin-bottom: 50px;
 }
 
 /*# sourceMappingURL=main.css.map */
