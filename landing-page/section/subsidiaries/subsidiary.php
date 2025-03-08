@@ -27,13 +27,14 @@
                         <div class="rm-subsidiary-tab-button" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-selected="false">Contacte</div>
                     </li>
                 </ul>
-                <div class="tab-content" id="myTabContent">
+                <div class="tab-content rm-subsidiary-modal-tabs-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
                         <?php echo do_shortcode('[simple-staff-list group="str-iuri-gagarin-3"]'); ?>
                     </div>
                     <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-
-                        <?php echo do_shortcode("[FinalTilesGallery id='1']"); ?>
+                        <div class="rm-subsidiary-tab-content-gallery">
+                            <?php echo do_shortcode('[rl_gallery id="2585"]'); ?>
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
                         <ul class="rm-list-group">

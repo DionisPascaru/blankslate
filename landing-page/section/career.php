@@ -1,5 +1,5 @@
 <?php ?>
-<section>
+<section id="career">
     <div class="container">
         <div class="rm-section-head">
             <div>
@@ -32,7 +32,7 @@
         </div>
         <!-- Career complete request modal -->
         <div class="rm-modal modal fade" id="careerCompleteRequestModal" tabindex="-1" aria-hidden="true">
-            <div class="rm-modal-dialog modal-dialog modal-xl">
+            <div class="rm-modal-dialog modal-dialog modal-lg">
                 <div class="rm-modal-content modal-content">
                     <div class="rm-modal-header modal-header">
                         <div class="rm-modal-title modal-title">Completează cererea</div>

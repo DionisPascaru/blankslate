@@ -36,5 +36,9 @@
     </script>
 </footer>
 </div>
+
+<!--libraries scripts-->
+<script src="<?php echo get_template_directory_uri(); ?>/node_modules//lottie-web/build/player/lottie.min.js'"></script>
+
 </body>
 </html>

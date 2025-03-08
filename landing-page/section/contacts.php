@@ -1,5 +1,5 @@
 <?php ?>
-<section>
+<section id="contacts">
     <div class="container">
         <div class="rm-contacts">
             <div class="rm-section-head">

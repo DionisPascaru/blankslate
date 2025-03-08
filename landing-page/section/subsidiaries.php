@@ -1,5 +1,5 @@
 <?php ?>
-<section>
+<section id="branches">
     <div class="container">
         <div class="rm-subsidiaries">
             <div class="rm-section-head">
