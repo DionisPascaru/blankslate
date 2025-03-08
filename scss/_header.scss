@@ -1,6 +1,3 @@
-body {
-  background-color: yellow;
-}
 .rm-navbar {
   background-color: $black-rm-color;
 
@@ -8,13 +5,30 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &.rm-nav-column-left {
+      justify-content: right;
+    }
+
+    &.rm-nav-column-right {
+      justify-content: left;
+    }
+
+    img {
+      width: 100%;
+    }
   }
 
   .menu {
     display: flex;
+    gap: 10px;
     list-style-type: none;
     margin: 0;
     padding: 0;
+
+    @include for-xl {
+      gap: 20px;
+    }
   }
 
   .menu-item {
@@ -25,7 +39,7 @@ body {
       font-family: $font-primary;
       font-size: var(--small-font-size);
       text-decoration: none;
-      padding: 10px;
+      padding: 10px 0;
 
       &:hover {
         color: $white-rm-color;
@@ -48,7 +62,7 @@ body {
   right: 0;
   z-index: 1054;
 
-  @include for-md {
+  @include for-lg {
     display: block;
   }
 
@@ -72,7 +86,7 @@ body {
   right: 0;
   z-index: 1054;
 
-  @include for-md {
+  @include for-lg {
     display: none;
   }
 

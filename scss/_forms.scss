@@ -1,0 +1,56 @@
+.fluentform {
+  .frm-fluent-form {
+    .ff-el-ratings {
+      display: flex;
+      justify-content: center;
+
+      label {
+        svg {
+          fill: $grey-one-rm-color;
+        }
+
+        &.active {
+          svg {
+            fill: $white-rm-color;
+          }
+        }
+      }
+    }
+
+    .ff-el-input--label {
+      display: flex;
+      justify-content: left;
+
+      label {
+        font-family: $font-primary;
+        color: $white-rm-color;
+        font-weight: 600;
+        font-size: var(--small-font-size);
+      }
+    }
+
+    .ff-el-group {
+      &:has(.ff-btn) {
+        display: flex;
+        justify-content: center;
+      }
+
+      button.ff-btn {
+        background-color: $white-rm-color;
+        color: $black-rm-color;
+        font-family: $font-primary;
+        font-size: var(--normal-font-size);
+        font-weight: 500;
+        padding: 13px 35px;
+        border-radius: 8px;
+        line-height: 1;
+        border: none;
+        margin: auto;
+
+        @include for-md {
+          padding: 15px 40px;
+        }
+      }
+    }
+  }
+}

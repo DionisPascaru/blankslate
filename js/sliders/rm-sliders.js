@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+    /**
+     * Timeline slider.
+     */
     $('.rm-timeline-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -40,5 +43,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         ]
+    });
+
+    /**
+     * Reviews slider.
+     */
+    $('.rm-reviews-items').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        infinite: true,
+        draggable: false,
+        dots: true,
     });
 })

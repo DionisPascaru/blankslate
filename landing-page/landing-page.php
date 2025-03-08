@@ -22,6 +22,5 @@
 <script src="<?php echo get_template_directory_uri(); ?>/node_modules/slick-carousel/slick/slick.min.js'"></script>
 
 <!--custom scripts-->
-<script src="<?php echo get_template_directory_uri(); ?>/js/timeline/rm-timeline.js'"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/reviews/rm-reviews.js'"></script>
-<?php get_footer(); ?>
+<script src="<?php echo get_template_directory_uri(); ?>/js/sliders/rm-sliders.js'"></script>
+<?php wp_footer(); ?>

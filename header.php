@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width">
     <?php wp_head(); ?>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/node_modules/bootstrap/dist/css/bootstrap.min.css'" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/node_modules/bootstrap-icons/font/bootstrap-icons.min.css'" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/node_modules/slick-carousel/slick/slick.css'" />
@@ -22,13 +25,13 @@
                         <div class="col-1 rm-nav-column">
                             <?php wp_nav_menu(array('theme_location' => 'languages-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>')); ?>
                         </div>
-                        <div class="col-3 rm-nav-column">
+                        <div class="col-4 rm-nav-column rm-nav-column-left">
                             <?php wp_nav_menu(array('theme_location' => 'left-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>')); ?>
                         </div>
-                        <div class="col-4 rm-nav-column">
+                        <div class="col-2 rm-nav-column">
                             <?php the_custom_logo(); ?>
                         </div>
-                        <div class="col-3 rm-nav-column">
+                        <div class="col-4 rm-nav-column rm-nav-column-right">
                             <?php wp_nav_menu(array('theme_location' => 'right-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>')); ?>
                         </div>
                         <!-- social media-->
@@ -48,7 +51,7 @@
         </nav>
 
         <!-- mobile menu -->
-        <nav class="rm-navbar rm-mobile-menu rm-menu-gradient">
+        <nav id="rmMobileMenu" class="rm-navbar rm-mobile-menu rm-menu-gradient">
             <div class="rm-mobile-menu-bar">
                 <div>
                     <?php the_custom_logo(); ?>
@@ -81,5 +84,20 @@
             </div>
         </nav>
     </header>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let navbarItems = document.querySelectorAll(".menu-mobilemenu-container .menu .menu-item");
+            let bsCollapse = document.querySelector(".rm-mobile-menu .collapse");
+
+            navbarItems.forEach(function (item) {
+                item.addEventListener("click", function () {
+                    if (bsCollapse.classList.contains("show")) {
+                        let bsCollapseInstance = new bootstrap.Collapse(bsCollapse, { toggle: true });
+                        bsCollapseInstance.hide();
+                    }
+                });
+            });
+        });
+    </script>
     <div id="container">
         <main id="content" role="main">

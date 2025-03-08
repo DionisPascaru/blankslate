@@ -1,6 +1,6 @@
 <?php ?>
 
-<section>
+<section id="about">
     <div class="container">
         <div class="rm-section-head">
             <div>

@@ -92,6 +92,33 @@
   }
 }
 
+.rm-review-form-content {
+  max-width: 700px;
+  margin: auto;
+
+  .rm-review-form-title {
+    font-family: $font-primary;
+    font-size: var(--title-font-size);
+    font-weight: 500;
+    color: $white-rm-color;
+    line-height: 1;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .rm-review-form-text {
+    margin-bottom: 40px;
+
+    p {
+      font-family: $font-primary;
+      font-size: var(--small-font-size);
+      font-weight: 500;
+      color: $white-rm-color;
+      text-align: center;
+    }
+  }
+}
+
 .rm-review-form {
   max-width: 700px;
   margin: auto;

@@ -1,5 +1,5 @@
 <?php ?>
-<section>
+<section id="franchise">
     <div class="rm-franchise">
         <div class="container">
             <div class="rm-franchise-heading">
@@ -75,7 +75,7 @@
 
             <!-- Franchise receive offer modal -->
             <div class="rm-modal modal fade" id="receiveOfferModal" tabindex="-1" aria-hidden="true">
-                <div class="rm-modal-dialog modal-dialog modal-xl">
+                <div class="rm-modal-dialog modal-dialog modal-lg">
                     <div class="rm-modal-content modal-content">
                         <div class="rm-modal-header modal-header">
                             <div class="rm-modal-title modal-title">Primește oferta</div>
