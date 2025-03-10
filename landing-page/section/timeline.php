@@ -139,16 +139,4 @@
             </div>
         </div>
     </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            lottie.loadAnimation({
-                container: document.getElementById('lottieRealmen'),
-                renderer: 'svg',
-                loop: true,
-                autoplay: true,
-                path: '<?php echo get_template_directory_uri(); ?>/assets/lottie/realmen.json'
-            });
-        })
-    </script>
 </section>

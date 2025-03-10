@@ -1,33 +1,31 @@
-@import "variables";
+@use 'icomoon' as *;
 
-@import "icomoon";
+@use 'general' as *;
 
-@import "general";
+@use 'header' as *;
 
-@import "header";
+@use 'banner' as *;
 
-@import "banner";
+@use 'page-slider' as *;
 
-@import "page-slider";
+@use 'services' as *;
 
-@import "services";
+@use 'subsidiaries' as *;
 
-@import "subsidiaries";
+@use 'modal' as *;
 
-@import "modal";
+@use 'timeline' as *;
 
-@import "timeline";
+@use 'franchise' as *;
 
-@import "franchise";
+@use 'career' as *;
 
-@import "career";
+@use 'contacts' as *;
 
-@import "contacts";
+@use 'reviews' as *;
 
-@import "reviews";
+@use 'fixed-buttons' as *;
 
-@import "fixed-buttons";
+@use 'footer' as *;
 
-@import "footer";
-
-@import "forms";
+@use 'forms' as *;

@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 /** ----- subsidiary block ----- **/
 .rm-subsidiary-block {
   display: flex;
@@ -96,6 +98,12 @@
       color: $green-rm-color;
     }
   }
+
+  .rm-subsidiary-tab {
+    &:has(.rm-subsidiary-tab-button.active) {
+      border-color: $green-rm-color;
+    }
+  }
 }
 
 .rm-subsidiary-modal-two {
@@ -106,6 +114,12 @@
   .rm-subsidiary-tab-button {
     &.active {
       color: $purple-rm-color;
+    }
+  }
+
+  .rm-subsidiary-tab {
+    &:has(.rm-subsidiary-tab-button.active) {
+      border-color: $purple-rm-color;
     }
   }
 }
@@ -120,6 +134,12 @@
       color: $red-two-rm-color;
     }
   }
+
+  .rm-subsidiary-tab {
+    &:has(.rm-subsidiary-tab-button.active) {
+      border-color: $red-two-rm-color;
+    }
+  }
 }
 
 .rm-subsidiary-modal-four {
@@ -130,6 +150,12 @@
   .rm-subsidiary-tab-button {
     &.active {
       color: $yellow-rm-color;
+    }
+  }
+
+  .rm-subsidiary-tab {
+    &:has(.rm-subsidiary-tab-button.active) {
+      border-color: $yellow-rm-color;
     }
   }
 }
@@ -152,10 +178,6 @@
 
     &:last-of-type {
       border: none;
-    }
-
-    &:has(.rm-subsidiary-tab-button.active) {
-      border-color: $green-rm-color;
     }
   }
 
@@ -239,10 +261,14 @@
     font-weight: 500;
   }
 
-  .rm-rm-subsidiary-modal-contacts-links {
+  .rm-subsidiary-modal-contacts-links {
     display: flex;
     justify-content: center;
     gap: 30px;
+
+    a {
+      text-decoration: none;
+    }
 
     i {
       font-size: 54px;
