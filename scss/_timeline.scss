@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 .rm-timeline-animation {
   max-width: 900px;
   margin: auto;
@@ -45,6 +47,13 @@
   }
 
   .rm-timeline-nav {
+    min-height: 60px;
+    visibility: hidden;
+
+    &.slick-slider {
+      visibility: visible;
+    }
+
     &:before {
       content: '';
       width: 100%;
@@ -56,13 +65,8 @@
       right: 0;
     }
 
-    .rm-timeline-nav-item {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-
-      &.slick-current {
+    .slick-current {
+      .rm-timeline-nav-item {
         .rm-timeline-nav-item-label {
           color: $white-rm-color;
         }
@@ -71,8 +75,16 @@
           background-color: $red-two-rm-color
         }
       }
+    }
+
+    .rm-timeline-nav-item {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
 
       .rm-timeline-nav-item-point {
+        text-align: center;
         margin-bottom: 15px;
 
         &:hover {

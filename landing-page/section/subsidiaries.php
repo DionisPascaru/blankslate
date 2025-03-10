@@ -62,7 +62,10 @@
             </div>
 
             <!-- Modal -->
-            <?php get_template_part('landing-page/section/subsidiaries/subsidiary'); ?>
+            <?php get_template_part('landing-page/section/subsidiaries/subsidiary-one'); ?>
+            <?php get_template_part('landing-page/section/subsidiaries/subsidiary-two'); ?>
+            <?php get_template_part('landing-page/section/subsidiaries/subsidiary-three'); ?>
+            <?php get_template_part('landing-page/section/subsidiaries/subsidiary-four'); ?>
         </div>
     </div>
 </section>
