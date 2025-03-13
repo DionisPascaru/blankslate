@@ -1,62 +1,59 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const TerserPlugin = require('terser-webpack-plugin'); // Optional: For JS minification
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+
+const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
-    mode: 'development',
-    entry: ['./js/main.js', './scss/main.scss'],
+    entry: './js/main.js',
     output: {
-        filename: 'js/bundle.min.js',
+        filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
-        clean: true,
     },
+    mode: isProduction ? 'production' : 'development',
+    devtool: isProduction ? false : 'source-map',
     module: {
         rules: [
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: 'babel-loader',
-            },
-            {
-                test: /\.css$/,
-                use: [
-                    MiniCssExtractPlugin.loader, // Extract CSS to separate file
-                    'css-loader',
-                ],
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env'],
+                    },
+                },
             },
             {
                 test: /\.scss$/,
                 use: [
-                    MiniCssExtractPlugin.loader, // Extract compiled SCSS to a CSS file
-                    'css-loader', // Translates CSS into CommonJS
-                    'sass-loader', // Compiles SCSS to CSS
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'sass-loader'
                 ],
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/,
+                type: 'asset/resource',
+                generator: {
+                    filename: './scss/main.css',
+                },
             },
         ],
     },
-    optimization: {
-        minimize: true,
-        minimizer: [
-            new TerserPlugin({
-                terserOptions: {
-                    compress: { drop_console: true },
-                },
-            }),
-        ],
-    },
     plugins: [
-        new MiniCssExtractPlugin({
-            filename: '../scss/main.css', // Output compiled CSS
-        }),
+        new CleanWebpackPlugin(),
+        new MiniCssExtractPlugin({ filename: './scss/main.css' }),
     ],
+    optimization: {
+        minimize: isProduction,
+        minimizer: [new TerserPlugin()],
+    },
     devServer: {
         static: path.resolve(__dirname, 'dist'),
         hot: true,
-        watchFiles: ['js/**/*.js', 'scss/**/*.scss'], // Ensure Webpack watches SCSS files
-    },
-    watchOptions: {
-        ignored: /scss\/main.css$/,
-        aggregateTimeout: 300,
-        poll: 1000,
+        watchFiles: ['js/**/*.js', 'scss/**/*.scss'],
+        open: false,
     },
 };

@@ -22,6 +22,17 @@
             &copy; 2025 Designed by <strong>REABOV STUDIO</strong>
         </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            lottie.loadAnimation({
+                container: document.getElementById('lottieRealmenFooter'),
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: '<?php echo get_template_directory_uri(); ?>/js/lottie/realmen.json'
+            });
+        })
+    </script>
 </footer>
 </div>
 

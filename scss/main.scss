@@ -1,31 +1,36 @@
-@use 'icomoon' as *;
+@import './../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import './../node_modules/bootstrap-icons/font/bootstrap-icons.min.css';
+@import './../node_modules/slick-carousel/slick/slick.css';
+@import './../node_modules/slick-carousel/slick/slick-theme.css';
 
-@use 'general' as *;
+@import 'icomoon';
 
-@use 'header' as *;
+@import 'general';
 
-@use 'banner' as *;
+@import 'header';
 
-@use 'page-slider' as *;
+@import 'banner';
 
-@use 'services' as *;
+@import 'page-slider';
 
-@use 'subsidiaries' as *;
+@import 'services';
 
-@use 'modal' as *;
+@import 'subsidiaries';
 
-@use 'timeline' as *;
+@import 'modal';
 
-@use 'franchise' as *;
+@import 'timeline';
 
-@use 'career' as *;
+@import 'franchise';
 
-@use 'contacts' as *;
+@import 'career';
 
-@use 'reviews' as *;
+@import 'contacts';
 
-@use 'fixed-buttons' as *;
+@import 'reviews';
 
-@use 'footer' as *;
+@import 'fixed-buttons';
 
-@use 'forms' as *;
+@import 'footer';
+
+@import 'forms';

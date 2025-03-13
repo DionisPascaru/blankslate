@@ -1,19 +1,22 @@
-import lottie from 'lottie-web';
-import bannerAnimation from './banner.json';
-import realmenAnimation from './realmen.json';
-
-document.addEventListener("DOMContentLoaded", function () {
-    loadLottieAnimation('lottie-banner', bannerAnimation);
-    loadLottieAnimation('lottieRealmen', realmenAnimation);
-    loadLottieAnimation('lottieRealmenFooter', realmenAnimation);
-});
-
-function loadLottieAnimation(containerId, animationData) {
-    lottie.loadAnimation({
-        container: document.getElementById(containerId),
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        animationData
-    });
-}
+// document.addEventListener("DOMContentLoaded", async function () {
+//     try {
+//         const bannerAnimation = require('./banner.json');
+//         const realmenAnimation = require('./realmen.json');
+//
+//         loadLottieAnimation('lottie-banner', bannerAnimation);
+//         loadLottieAnimation('lottieRealmen', realmenAnimation);
+//         loadLottieAnimation('lottieRealmenFooter', realmenAnimation);
+//     } catch (error) {
+//         console.error("Error loading animations:", error);
+//     }
+// });
+//
+// function loadLottieAnimation(containerId, animationData) {
+//     lottie.loadAnimation({
+//         container: document.getElementById(containerId),
+//         renderer: 'svg',
+//         loop: true,
+//         autoplay: true,
+//         animationData
+//     });
+// }
