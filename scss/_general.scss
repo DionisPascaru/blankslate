@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  background-color: $black-rm-color !important;
+  background-color: var(--bg-color);
 }
 
 a {
@@ -82,5 +82,13 @@ section {
         color: $white-rm-color;
       }
     }
+  }
+}
+
+.rm-shop-page {
+  padding: 50px 0;
+
+  @include for-lg {
+    padding: 100px 0;
   }
 }

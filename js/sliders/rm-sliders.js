@@ -1,5 +1,5 @@
-(function($) {
-    $(document).ready(function() {
+(function ($) {
+    $(document).ready(function () {
         /**
          * Timeline slider.
          */
@@ -57,5 +57,17 @@
             draggable: false,
             dots: true,
         });
+        /**
+         * Reviews slider.
+         */
+        $('#rmProductViewGallery').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            variableWidth: true
+        });
     });
 })(jQuery);
+
+console.log('test');
