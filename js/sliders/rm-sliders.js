@@ -57,5 +57,16 @@
             draggable: false,
             dots: true,
         });
+        /**
+         * Reviews slider.
+         */
+        $('#rmProductViewGallery').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+        });
     });
 })(jQuery);
+
+console.log('test');
