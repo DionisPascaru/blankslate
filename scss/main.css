@@ -1,7 +1,7 @@
-@import './../node_modules/bootstrap/dist/css/bootstrap.min.css';
-@import './../node_modules/bootstrap-icons/font/bootstrap-icons.min.css';
-@import './../node_modules/slick-carousel/slick/slick.css';
-@import './../node_modules/slick-carousel/slick/slick-theme.css';
+@import './../libraries/bootstrap/dist/css/bootstrap.min.css';
+@import './../libraries/bootstrap-icons/font/bootstrap-icons.min.css';
+@import './../libraries/slick-carousel/slick/slick.css';
+@import './../libraries/slick-carousel/slick/slick-theme.css';
 @font-face {
   font-family: "icomoon";
   src: url("./fonts/icomoon.eot?izghwu");
@@ -76,6 +76,8 @@
   --small-font-size: 14px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
+  --shop-heading-font-size: 50px;
+  --shop-title-font-size: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -85,11 +87,13 @@
     --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
+    --shop-heading-font-size: 80px;
+    --shop-title-font-size: 50px ;
   }
 }
 body {
   margin: 0;
-  background-color: #000 !important;
+  background-color: var(--bg-color);
 }
 
 a {
@@ -111,7 +115,7 @@ section {
 }
 
 .rm-heading {
-  font-family: "Montserrat", sans-serif;
+  font-family: normal normal 300 18px/23px Montserrat;
   font-weight: 500;
   font-size: var(--heading-font-size);
   color: #fff;
@@ -124,7 +128,7 @@ section {
 .rm-list-group .rm-list-group-item {
   text-align: center;
   margin-bottom: 5px;
-  font-family: "Montserrat", sans-serif;
+  font-family: normal normal 300 18px/23px Montserrat;
   font-size: var(--normal-font-size);
   font-weight: 500;
 }
@@ -138,7 +142,7 @@ section {
 .rm-btn {
   background-color: #fff;
   color: #000;
-  font-family: "Montserrat", sans-serif;
+  font-family: normal normal 300 18px/23px Montserrat;
   font-size: var(--normal-font-size);
   font-weight: 500;
   padding: 13px 35px;
@@ -165,6 +169,10 @@ section {
   color: #fff;
 }
 
+.rm-shop-page {
+  padding: 100px 0;
+}
+
 /** ----- Colors ----- **/
 /** ------ Small screen ------ **/
 /** ------ Medium screen ------ **/
@@ -178,6 +186,8 @@ section {
   --small-font-size: 14px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
+  --shop-heading-font-size: 50px;
+  --shop-title-font-size: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -187,6 +197,8 @@ section {
     --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
+    --shop-heading-font-size: 80px;
+    --shop-title-font-size: 50px ;
   }
 }
 .rm-navbar {
@@ -223,7 +235,7 @@ section {
 }
 .rm-navbar .menu-item a {
   color: #B3B3B3;
-  font-family: "Montserrat", sans-serif;
+  font-family: normal normal 300 18px/23px Montserrat;
   font-size: var(--small-font-size);
   text-decoration: none;
   padding: 10px 0;
@@ -368,6 +380,8 @@ section {
   --small-font-size: 14px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
+  --shop-heading-font-size: 50px;
+  --shop-title-font-size: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -377,6 +391,8 @@ section {
     --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
+    --shop-heading-font-size: 80px;
+    --shop-title-font-size: 50px ;
   }
 }
 .rm-page-slider {
@@ -457,6 +473,8 @@ section {
   --small-font-size: 14px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
+  --shop-heading-font-size: 50px;
+  --shop-title-font-size: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -466,6 +484,8 @@ section {
     --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
+    --shop-heading-font-size: 80px;
+    --shop-title-font-size: 50px ;
   }
 }
 .rm-services {
@@ -552,7 +572,7 @@ section {
   border-top: 1px solid #54595F;
 }
 .rm-services .accordion-item .rm-accordion-heading {
-  font-family: "Montserrat", sans-serif;
+  font-family: normal normal 300 18px/23px Montserrat;
   font-size: var(--normal-font-size);
   background-color: #000;
   color: #fff;
@@ -567,7 +587,7 @@ section {
   font-size: 14px;
 }
 .rm-services .accordion-item .accordion-body {
-  font-family: "Montserrat", sans-serif;
+  font-family: normal normal 300 18px/23px Montserrat;
   font-size: var(--normal-font-size);
   color: #fff;
   text-align: center;
@@ -586,6 +606,8 @@ section {
   --small-font-size: 14px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
+  --shop-heading-font-size: 50px;
+  --shop-title-font-size: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -595,6 +617,8 @@ section {
     --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
+    --shop-heading-font-size: 80px;
+    --shop-title-font-size: 50px ;
   }
 }
 /** ----- subsidiary block ----- **/
@@ -606,7 +630,7 @@ section {
   text-align: center;
 }
 .rm-subsidiary-block .rm-subsidiary-block-address {
-  font-family: "Montserrat", sans-serif;
+  font-family: normal normal 300 18px/23px Montserrat;
   font-size: var(--small-font-size);
   font-weight: 500;
   color: #fff;
@@ -622,7 +646,7 @@ section {
 .rm-subsidiary-block .rm-subsidiary-block-button button {
   border: 1px solid #fff;
   text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
+  font-family: normal normal 300 18px/23px Montserrat;
   font-size: var(--small-font-size);
   font-weight: 500;
   padding: 6px 15px;
@@ -790,7 +814,7 @@ section {
 .rm-subsidiary-modal-contacts .rm-subsidiary-modal-contacts-address,
 .rm-subsidiary-modal-contacts .rm-subsidiary-modal-contacts-phone {
   color: #fff;
-  font-family: "Montserrat", sans-serif;
+  font-family: normal normal 300 18px/23px Montserrat;
   font-size: var(--small-font-size);
   font-weight: 500;
 }
@@ -824,6 +848,8 @@ section {
   --small-font-size: 14px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
+  --shop-heading-font-size: 50px;
+  --shop-title-font-size: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -833,6 +859,8 @@ section {
     --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
+    --shop-heading-font-size: 80px;
+    --shop-title-font-size: 50px ;
   }
 }
 .modal-backdrop {
@@ -861,7 +889,7 @@ section {
   padding-top: 50px;
 }
 .rm-modal .rm-modal-header .rm-modal-title {
-  font-family: "Montserrat", sans-serif;
+  font-family: normal normal 300 18px/23px Montserrat;
   font-size: var(--modal-title-font-size);
   font-weight: 500;
   color: #fff;
@@ -888,7 +916,7 @@ section {
   text-align: center;
 }
 .rm-modal .rm-modal-body .rm-modal-body-title {
-  font-family: "Montserrat", sans-serif;
+  font-family: normal normal 300 18px/23px Montserrat;
   font-size: var(--title-font-size);
   font-weight: 500;
   color: #fff;
@@ -898,7 +926,7 @@ section {
   margin-bottom: 15px;
 }
 .rm-modal .rm-modal-body .rm-modal-body-content p {
-  font-family: "Montserrat", sans-serif;
+  font-family: normal normal 300 18px/23px Montserrat;
   font-size: var(--small-font-size);
   font-weight: 500;
   color: #fff;
@@ -918,6 +946,8 @@ section {
   --small-font-size: 14px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
+  --shop-heading-font-size: 50px;
+  --shop-title-font-size: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -927,6 +957,8 @@ section {
     --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
+    --shop-heading-font-size: 80px;
+    --shop-title-font-size: 50px ;
   }
 }
 .rm-timeline-animation {
@@ -1011,7 +1043,7 @@ section {
   cursor: pointer;
 }
 .rm-timeline .rm-timeline-nav .rm-timeline-nav-item .rm-timeline-nav-item-label {
-  font-family: "Montserrat", sans-serif;
+  font-family: normal normal 300 18px/23px Montserrat;
   font-size: var(--normal-font-size);
   font-weight: 500;
   color: #54595F;
@@ -1041,7 +1073,7 @@ section {
   padding: 50px 0;
 }
 .rm-timeline .rm-timeline-for .rm-timeline-for-heading {
-  font-family: "Montserrat", sans-serif;
+  font-family: normal normal 300 18px/23px Montserrat;
   font-size: var(--title-font-size);
   font-weight: 500;
   color: #fff;
@@ -1061,7 +1093,7 @@ section {
   height: auto;
 }
 .rm-timeline .rm-timeline-for .rm-timeline-for-item p {
-  font-family: "Montserrat", sans-serif;
+  font-family: normal normal 300 18px/23px Montserrat;
   font-size: var(--small-font-size);
   font-weight: 500;
   color: #fff;
@@ -1080,6 +1112,8 @@ section {
   --small-font-size: 14px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
+  --shop-heading-font-size: 50px;
+  --shop-title-font-size: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1089,6 +1123,8 @@ section {
     --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
+    --shop-heading-font-size: 80px;
+    --shop-title-font-size: 50px ;
   }
 }
 .rm-franchise {
@@ -1100,7 +1136,7 @@ section {
   margin-bottom: 40px;
 }
 .rm-franchise .rm-franchise-heading h2 {
-  font-family: "Montserrat", sans-serif;
+  font-family: normal normal 300 18px/23px Montserrat;
   font-size: 40px;
   font-weight: 500;
   color: #fff;
@@ -1136,6 +1172,8 @@ section {
   --small-font-size: 14px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
+  --shop-heading-font-size: 50px;
+  --shop-title-font-size: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1145,6 +1183,8 @@ section {
     --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
+    --shop-heading-font-size: 80px;
+    --shop-title-font-size: 50px ;
   }
 }
 .rm-career .rm-career-content {
@@ -1154,7 +1194,7 @@ section {
   margin: auto;
 }
 .rm-career .rm-career-content-title {
-  font-family: "Montserrat", sans-serif;
+  font-family: normal normal 300 18px/23px Montserrat;
   font-size: var(--title-font-size);
   font-weight: 500;
   color: #fff;
@@ -1165,7 +1205,7 @@ section {
   margin-bottom: 40px;
 }
 .rm-career .rm-career-content-text p {
-  font-family: "Montserrat", sans-serif;
+  font-family: normal normal 300 18px/23px Montserrat;
   font-size: var(--small-font-size);
   font-weight: 500;
   color: #fff;
@@ -1178,7 +1218,7 @@ section {
   margin-bottom: 40px;
 }
 .rm-career .rm-career-content-positions .rm-career-content-position {
-  font-family: "Montserrat", sans-serif;
+  font-family: normal normal 300 18px/23px Montserrat;
   font-size: var(--title-font-size);
   font-weight: 500;
   color: #fff;
@@ -1198,6 +1238,8 @@ section {
   --small-font-size: 14px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
+  --shop-heading-font-size: 50px;
+  --shop-title-font-size: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1207,6 +1249,8 @@ section {
     --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
+    --shop-heading-font-size: 80px;
+    --shop-title-font-size: 50px ;
   }
 }
 .rm-contacts .rm-contacts-items {
@@ -1221,7 +1265,7 @@ section {
 }
 .rm-contacts .rm-contact-item .rm-contact-item-hash {
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: normal normal 300 18px/23px Montserrat;
   font-size: 50px;
   font-weight: 600;
   line-height: 1;
@@ -1230,14 +1274,14 @@ section {
   text-align: center;
 }
 .rm-contacts .rm-contact-item .rm-contact-item-text .rm-contact-item-text-phone a {
-  font-family: "Montserrat", sans-serif;
+  font-family: normal normal 300 18px/23px Montserrat;
   font-size: var(--small-font-size);
   font-weight: 500;
   color: #fff;
   text-decoration: none;
 }
 .rm-contacts .rm-contact-item .rm-contact-item-text .rm-contact-item-text-address {
-  font-family: "Montserrat", sans-serif;
+  font-family: normal normal 300 18px/23px Montserrat;
   font-size: var(--small-font-size);
   font-weight: 500;
   color: #fff;
@@ -1295,6 +1339,8 @@ section {
   --small-font-size: 14px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
+  --shop-heading-font-size: 50px;
+  --shop-title-font-size: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1304,6 +1350,8 @@ section {
     --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
+    --shop-heading-font-size: 80px;
+    --shop-title-font-size: 50px ;
   }
 }
 .rm-reviews .rm-reviews-items {
@@ -1357,7 +1405,7 @@ section {
   }
 }
 .rm-reviews .rm-reviews-items .rm-review-item .rm-review-item-title {
-  font-family: "Montserrat", sans-serif;
+  font-family: normal normal 300 18px/23px Montserrat;
   font-size: var(--title-font-size);
   font-weight: 500;
   color: #fff;
@@ -1365,7 +1413,7 @@ section {
 }
 .rm-reviews .rm-reviews-items .rm-review-item .rm-review-item-text p {
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: normal normal 300 18px/23px Montserrat;
   font-size: var(--small-font-size);
   font-weight: 500;
   color: #fff;
@@ -1392,7 +1440,7 @@ section {
   margin: auto;
 }
 .rm-review-form-content .rm-review-form-title {
-  font-family: "Montserrat", sans-serif;
+  font-family: normal normal 300 18px/23px Montserrat;
   font-size: var(--title-font-size);
   font-weight: 500;
   color: #fff;
@@ -1404,7 +1452,7 @@ section {
   margin-bottom: 40px;
 }
 .rm-review-form-content .rm-review-form-text p {
-  font-family: "Montserrat", sans-serif;
+  font-family: normal normal 300 18px/23px Montserrat;
   font-size: var(--small-font-size);
   font-weight: 500;
   color: #fff;
@@ -1429,6 +1477,8 @@ section {
   --small-font-size: 14px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
+  --shop-heading-font-size: 50px;
+  --shop-title-font-size: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1438,6 +1488,8 @@ section {
     --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
+    --shop-heading-font-size: 80px;
+    --shop-title-font-size: 50px ;
   }
 }
 .rm-fixed-buttons {
@@ -1472,7 +1524,7 @@ section {
 .rm-fixed-buttons .rm-fixed-buttons-items .rm-fixed-button .rm-fixed-btn span {
   color: #fff;
   line-height: 1;
-  font-family: "Montserrat", sans-serif;
+  font-family: normal normal 300 18px/23px Montserrat;
   font-weight: 500;
   font-size: var(--normal-font-size);
 }
@@ -1494,6 +1546,8 @@ section {
   --small-font-size: 14px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
+  --shop-heading-font-size: 50px;
+  --shop-title-font-size: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1503,9 +1557,12 @@ section {
     --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
+    --shop-heading-font-size: 80px;
+    --shop-title-font-size: 50px ;
   }
 }
 .rm-footer {
+  background-color: #000;
   padding: 50px 0;
   display: flex;
   flex-direction: column;
@@ -1515,7 +1572,7 @@ section {
 }
 .rm-footer .rm-footer-logo {
   max-width: 400px;
-  margin: auto;
+  margin: 20px auto;
 }
 .rm-footer .rm-footer-media {
   display: flex;
@@ -1536,7 +1593,7 @@ section {
 
 .rm-copyright {
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: normal normal 300 18px/23px Montserrat;
   font-size: var(--normal-font-size);
   font-weight: 500;
   color: #fff;
@@ -1557,6 +1614,8 @@ section {
   --small-font-size: 14px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
+  --shop-heading-font-size: 50px;
+  --shop-title-font-size: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1566,6 +1625,8 @@ section {
     --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
+    --shop-heading-font-size: 80px;
+    --shop-title-font-size: 50px ;
   }
 }
 .fluentform .frm-fluent-form .ff-el-ratings {
@@ -1583,7 +1644,7 @@ section {
   justify-content: left;
 }
 .fluentform .frm-fluent-form .ff-el-input--label label {
-  font-family: "Montserrat", sans-serif;
+  font-family: normal normal 300 18px/23px Montserrat;
   color: #fff;
   font-weight: 600;
   font-size: var(--small-font-size);
@@ -1595,7 +1656,7 @@ section {
 .fluentform .frm-fluent-form .ff-el-group button.ff-btn {
   background-color: #fff;
   color: #000;
-  font-family: "Montserrat", sans-serif;
+  font-family: normal normal 300 18px/23px Montserrat;
   font-size: var(--normal-font-size);
   font-weight: 500;
   padding: 13px 35px;
@@ -1608,6 +1669,410 @@ section {
   .fluentform .frm-fluent-form .ff-el-group button.ff-btn {
     padding: 15px 40px;
   }
+}
+
+/** ----- Colors ----- **/
+/** ------ Small screen ------ **/
+/** ------ Medium screen ------ **/
+/** ------ Large screen ------ **/
+/** ------ Extra large screen ------ **/
+/** ------ 2x large screen ------ **/
+/** ----- font sizes ----- **/
+:root {
+  --heading-font-size: 44px;
+  --normal-font-size: 16px;
+  --small-font-size: 14px;
+  --title-font-size: 20px;
+  --modal-title-font-size: 28px;
+  --shop-heading-font-size: 50px;
+  --shop-title-font-size: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --heading-font-size: 70px;
+    --normal-font-size: 18px;
+    --small-font-size: 16px;
+    --title-font-size: 22px;
+    --modal-title-font-size: 50px;
+    --shop-heading-font-size: 80px;
+    --shop-title-font-size: 50px ;
+  }
+}
+/** Products grid **/
+.rm-products-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) {
+  .rm-products-grid {
+    max-width: 700px;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .rm-products-grid {
+    max-width: unset;
+  }
+}
+
+.rm-shop-category-title {
+  font-size: var(--shop-heading-font-size);
+  font-family: normal normal 300 18px/23px Montserrat;
+  font-style: italic;
+  font-weight: 600;
+  color: #C80000;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.rm-product-card {
+  width: 50%;
+}
+@media screen and (min-width: 1024px) {
+  .rm-product-card {
+    width: 25%;
+  }
+}
+.rm-product-card .rm-product-card-content {
+  margin: 5px;
+  border: 1px solid #54595F;
+  text-align: center;
+}
+.rm-product-card .rm-product-price {
+  font-size: var(--normal-font-size);
+  color: #C80000;
+  font-family: normal normal 300 18px/23px Montserrat;
+  font-style: italic;
+  font-weight: 600;
+}
+.rm-product-card .rm-product-title {
+  font-family: normal normal 300 18px/23px Montserrat;
+  font-size: var(--normal-font-size);
+  color: #000;
+  font-weight: 600;
+}
+.rm-product-card .rm-product-buttons {
+  background-color: #B3B3B3;
+  padding: 10px 0;
+  text-align: center;
+  border-top: 1px solid #54595F;
+}
+.rm-product-card .rm-product-buttons a {
+  font-family: normal normal 300 18px/23px Montserrat;
+  font-size: var(--small-font-size);
+  font-weight: 600;
+  color: #fff;
+}
+
+/** ----- Colors ----- **/
+/** ------ Small screen ------ **/
+/** ------ Medium screen ------ **/
+/** ------ Large screen ------ **/
+/** ------ Extra large screen ------ **/
+/** ------ 2x large screen ------ **/
+/** ----- font sizes ----- **/
+:root {
+  --heading-font-size: 44px;
+  --normal-font-size: 16px;
+  --small-font-size: 14px;
+  --title-font-size: 20px;
+  --modal-title-font-size: 28px;
+  --shop-heading-font-size: 50px;
+  --shop-title-font-size: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --heading-font-size: 70px;
+    --normal-font-size: 18px;
+    --small-font-size: 16px;
+    --title-font-size: 22px;
+    --modal-title-font-size: 50px;
+    --shop-heading-font-size: 80px;
+    --shop-title-font-size: 50px ;
+  }
+}
+.rm-shop-navbar {
+  background-color: #000;
+}
+.rm-shop-navbar .rm-shop-nav-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rm-shop-navbar .rm-shop-nav-column img {
+  width: 100%;
+}
+.rm-shop-navbar .menu {
+  display: flex;
+  gap: 10px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (min-width: 1280px) {
+  .rm-shop-navbar .menu {
+    gap: 20px;
+  }
+}
+.rm-shop-navbar .menu-item {
+  display: flex;
+}
+.rm-shop-navbar .menu-item.current-language-menu-item a, .rm-shop-navbar .menu-item.current-menu-item a {
+  color: #C80000;
+}
+.rm-shop-navbar .menu-item a {
+  color: #fff;
+  font-family: normal normal 300 18px/23px Montserrat;
+  font-size: var(--small-font-size);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+.rm-shop-navbar .menu-item a:hover {
+  color: #C80000;
+}
+.rm-shop-navbar .current-language-menu-item a {
+  color: #fff;
+}
+
+.rm-shop-desktop-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1054;
+}
+@media screen and (min-width: 1024px) {
+  .rm-shop-desktop-menu {
+    display: block;
+  }
+}
+.rm-shop-desktop-menu .rm-shop-desktop-menu-bar {
+  padding: 10px 0;
+  background-color: #000;
+  position: relative;
+  z-index: 1054;
+}
+.rm-shop-desktop-menu .menu {
+  flex-direction: row;
+}
+
+.rm-shop-mobile-menu {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1054;
+}
+@media screen and (min-width: 1024px) {
+  .rm-shop-mobile-menu {
+    display: none;
+  }
+}
+.rm-shop-mobile-menu .rm-shop-mobile-menu-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1054;
+  padding: 20px 20px;
+  background-color: #000;
+}
+.rm-shop-mobile-menu .rm-shop-navbar-toggler {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.rm-shop-mobile-menu .rm-shop-navbar-toggler[aria-expanded=false] i::before {
+  content: "\f479";
+}
+.rm-shop-mobile-menu .rm-shop-navbar-toggler[aria-expanded=true] i::before {
+  content: "\f659";
+}
+.rm-shop-mobile-menu .rm-shop-navbar-toggler i {
+  color: #fff;
+  font-size: 32px;
+}
+.rm-shop-mobile-menu .collapse {
+  position: relative;
+  z-index: 1054;
+}
+.rm-shop-mobile-menu .rm-shop-nav-collapse {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  height: calc(100vh - 46px);
+}
+.rm-shop-mobile-menu .rm-shop-nav-mobile-row .menu {
+  flex-direction: row;
+  justify-content: center;
+}
+.rm-shop-mobile-menu .rm-shop-nav-mobile-column {
+  display: flex;
+  justify-content: center;
+}
+.rm-shop-mobile-menu .rm-shop-nav-mobile-column .menu {
+  flex-direction: column;
+}
+.rm-shop-mobile-menu .menu .menu-item {
+  display: flex;
+  justify-content: center;
+}
+.rm-shop-mobile-menu .menu .menu-item a {
+  font-size: 24px;
+  line-height: 1;
+}
+
+/** ----- Colors ----- **/
+/** ------ Small screen ------ **/
+/** ------ Medium screen ------ **/
+/** ------ Large screen ------ **/
+/** ------ Extra large screen ------ **/
+/** ------ 2x large screen ------ **/
+/** ----- font sizes ----- **/
+:root {
+  --heading-font-size: 44px;
+  --normal-font-size: 16px;
+  --small-font-size: 14px;
+  --title-font-size: 20px;
+  --modal-title-font-size: 28px;
+  --shop-heading-font-size: 50px;
+  --shop-title-font-size: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --heading-font-size: 70px;
+    --normal-font-size: 18px;
+    --small-font-size: 16px;
+    --title-font-size: 22px;
+    --modal-title-font-size: 50px;
+    --shop-heading-font-size: 80px;
+    --shop-title-font-size: 50px ;
+  }
+}
+/** Product view **/
+.rm-product-view {
+  position: relative;
+  min-height: 100vh;
+}
+.rm-product-view .rm-product-view-bg {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+.rm-product-view .rm-product-view-bg .rm-product-view-bg-red {
+  width: 50%;
+  height: 100%;
+  background-color: #C80000;
+}
+.rm-product-view .rm-product-view-bg .rm-product-view-bg-white {
+  width: 50%;
+  height: 100%;
+  background-color: #fff;
+}
+.rm-product-view .rm-product-view-gallery {
+  padding: 50px 50px 50px 0;
+  width: 100%;
+}
+.rm-product-view .rm-product-view-gallery .slick-dots {
+  position: unset;
+  text-align: unset;
+}
+.rm-product-view .rm-product-view-gallery .slick-dots li {
+  width: auto;
+  height: auto;
+  margin: 0;
+}
+.rm-product-view .rm-product-view-gallery .slick-dots li button {
+  margin-right: 5px;
+  width: auto;
+  height: auto;
+}
+.rm-product-view .rm-product-view-gallery .slick-dots li button:before {
+  background-color: #fff;
+  color: #fff;
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  line-height: 10px;
+}
+.rm-product-view .rm-product-view-gallery .slick-dots li.slick-active button::before {
+  background-color: #000;
+  color: #000;
+}
+.rm-product-view .rm-sticky-block {
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+}
+.rm-product-view .rm-sticky-block .rm-sticky-block-vertical-center {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.rm-product-view .rm-product-view-info {
+  padding: 100px 0 100px 50px;
+}
+
+/** Product view info**/
+.rm-product-view-info .rm-product-view-info-title h1 {
+  font-family: normal normal 300 18px/23px Montserrat;
+  font-size: var(--shop-title-font-size);
+  font-weight: 600;
+  font-style: italic;
+  text-transform: uppercase;
+  color: #000;
+}
+.rm-product-view-info .rm-product-view-info-tags {
+  display: flex;
+  gap: 5px;
+}
+.rm-product-view-info .rm-product-view-info-tags .rm-product-view-info-tag {
+  font-family: normal normal 300 18px/23px Montserrat;
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+  color: #000;
+}
+.swatchly-type-wrap {
+  gap: 10px;
+}
+.swatchly-type-wrap .swatchly-swatch {
+  border-color: #B3B3B3;
+  border-radius: 5px;
+  margin: 0;
+  min-width: unset;
+  min-height: unset;
+}
+.swatchly-type-wrap .swatchly-swatch .swatchly-content {
+  padding: 2px 30px;
+}
+.swatchly-type-wrap .swatchly-swatch .swatchly-content .swatchly-text {
+  font-family: normal normal 300 18px/23px Montserrat;
+  font-size: var(--normal-font-size);
+  color: #000;
+}
+
+.woocommerce-product-details__short-description span {
+  font-family: normal normal 300 18px/23px Montserrat;
+  font-size: var(--normal-font-size);
+  color: #000;
 }
 
 /*# sourceMappingURL=main.css.map */

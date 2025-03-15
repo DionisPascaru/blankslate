@@ -12,7 +12,7 @@ $yellow-rm-color: #F7FF00;
 $modal-bg: blur(37px) brightness(50%);
 
 // Font Families
-$font-primary: "Montserrat", sans-serif;
+$font-primary: normal normal 300 18px/23px Montserrat;
 $font-secondary: "Oswald", sans-serif;
 
 /** ------ Small screen ------ **/
@@ -57,6 +57,8 @@ $font-secondary: "Oswald", sans-serif;
   --small-font-size: 14px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
+  --shop-heading-font-size: 50px;
+  --shop-title-font-size: 30px;
 
   @include for-md {
     --heading-font-size: 70px;
@@ -64,5 +66,7 @@ $font-secondary: "Oswald", sans-serif;
     --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
+    --shop-heading-font-size: 80px;
+    --shop-title-font-size: 50px
   }
 }

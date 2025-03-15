@@ -1,7 +1,7 @@
-@import './../node_modules/bootstrap/dist/css/bootstrap.min.css';
-@import './../node_modules/bootstrap-icons/font/bootstrap-icons.min.css';
-@import './../node_modules/slick-carousel/slick/slick.css';
-@import './../node_modules/slick-carousel/slick/slick-theme.css';
+@import './../libraries/bootstrap/dist/css/bootstrap.min.css';
+@import './../libraries/bootstrap-icons/font/bootstrap-icons.min.css';
+@import './../libraries/slick-carousel/slick/slick.css';
+@import './../libraries/slick-carousel/slick/slick-theme.css';
 
 @import 'icomoon';
 
@@ -34,3 +34,9 @@
 @import 'footer';
 
 @import 'forms';
+
+@import "products";
+
+@import "shop-header";
+
+@import "single_product";

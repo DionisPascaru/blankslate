@@ -3,6 +3,7 @@
     get_header();
 ?>
 
+<?php get_template_part('landing-page/section/header'); ?>
 <?php get_template_part('landing-page/section/banner'); ?>
 <?php get_template_part('landing-page/section/page-slider'); ?>
 <?php get_template_part('landing-page/section/services'); ?>

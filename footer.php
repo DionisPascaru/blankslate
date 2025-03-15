@@ -1,8 +1,8 @@
 </main>
 </div>
-<footer id="footer" role="contentinfo">
+<footer id="footer" role="contentinfo" class="rm-footer">
     <div class="container">
-        <div class="rm-footer">
+        <div>
             <div class="rm-footer-logo">
                 <div id="lottieRealmenFooter" class="rm-footer-animation"></div>
             </div>

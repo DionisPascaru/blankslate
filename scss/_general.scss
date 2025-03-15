@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  background-color: $black-rm-color !important;
+  background-color: var(--bg-color);
 }
 
 a {
@@ -83,4 +83,8 @@ section {
       }
     }
   }
+}
+
+.rm-shop-page {
+  padding: 100px 0;
 }
