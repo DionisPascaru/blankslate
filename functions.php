@@ -250,7 +250,7 @@ function add_meta_description() {
 add_action('wp_head', 'add_meta_description');
 
 function custom_dynamic_bg_color() {
-    if (is_page('')) {
+    if (is_front_page()) {
         $bg_color = '#000000'; // Black for Page 1
     } else {
         $bg_color = '#fff'; // Default color

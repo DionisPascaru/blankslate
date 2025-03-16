@@ -46,6 +46,7 @@ get_template_part('woocommerce/header');
 
             if (!empty($product_categories)) {
                 foreach ($product_categories as $category) {
+                    echo '<div class="rm-shop-category">';
                     echo '<div class="rm-shop-category-title">' . esc_html($category->name) . '</div>';
 
                     $products = new WP_Query(array(
@@ -68,6 +69,7 @@ get_template_part('woocommerce/header');
                         }
                         echo '</div>';
                     }
+                    echo '</div>';
 
                     wp_reset_postdata();
                 }
