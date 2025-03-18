@@ -40,6 +40,19 @@ get_template_part('woocommerce/header');
                         <div class="rm-product-view-info-breadcrumb">
                             <?php woocommerce_breadcrumb(); ?>
                         </div>
+
+                        <?php
+                        $notices = wc_get_notices('success');
+                        if (!empty($notices)) {
+                            foreach ($notices as $notice) {
+                                echo '<div class="woocommerce-message">';
+                                echo $notice['notice'];
+                                echo '</div>';
+                            }
+                        }
+                        wc_clear_notices();
+                        ?>
+
 						<div class="rm-product-view-info-title">
 							<?php woocommerce_template_single_title(); ?>
 						</div>

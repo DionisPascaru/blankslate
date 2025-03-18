@@ -1,0 +1,16 @@
+@use 'variables' as *;
+
+.woocommerce-message {
+  border-top-color: $green-rm-color;
+  //background-color: $grey-two-rm-color;
+
+  &:before {
+    color: $green-rm-color;
+  }
+
+  button.wc-forward {
+    background-color: $grey-one-rm-color;
+    color: $white-rm-color;
+    font-family: $font-primary;
+  }
+}
