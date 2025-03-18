@@ -42,3 +42,21 @@
         </div>
     </nav>
 </header>
+<div class="rm-fixed-buttons rm-shop-fixed-buttons">
+    <div class="">
+        <div class="rm-fixed-buttons-items">
+            <div class="rm-fixed-button rm-shop-fixed-button-left">
+                <a href="<?php echo home_url(); ?>" type="button" class="rm-fixed-btn">
+                    <i class="icon-home"></i>
+                </a>
+            </div>
+            <div class="rm-fixed-button rm-shop-fixed-button-right">
+                <a href="<?php echo wc_get_cart_url(); ?>" type="button" class="rm-fixed-btn">
+                    <i class="icon-home"></i>
+                    <div class="rm-fixed-button-badge"><?php echo WC()->cart->get_cart_contents_count(); ?></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+

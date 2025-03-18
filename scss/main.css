@@ -1583,6 +1583,7 @@ section {
   gap: 15px;
 }
 .rm-fixed-buttons .rm-fixed-buttons-items .rm-fixed-button .rm-fixed-btn {
+  position: relative;
   height: 52px;
   border-radius: 8px;
   border: none;
@@ -1595,9 +1596,6 @@ section {
   justify-content: center;
   align-items: center;
 }
-.rm-fixed-buttons .rm-fixed-buttons-items .rm-fixed-button .rm-fixed-btn:hover {
-  background-color: #C80000;
-}
 .rm-fixed-buttons .rm-fixed-buttons-items .rm-fixed-button .rm-fixed-btn span {
   color: #fff;
   line-height: 1;
@@ -1608,6 +1606,32 @@ section {
 .rm-fixed-buttons .rm-fixed-buttons-items .rm-fixed-button .rm-fixed-btn i {
   color: #fff;
   font-size: 22px;
+}
+
+.rm-shop-fixed-buttons {
+  max-width: 1460px;
+  padding: 0 30px;
+  margin: auto;
+}
+
+.rm-fixed-button-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 22px;
+  height: 22px;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 50%;
+  line-height: 1;
+  font-family: normal normal 300 18px/23px Montserrat;
+  font-weight: 600;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: -1px;
 }
 
 /** ----- Colors ----- **/
@@ -2501,6 +2525,52 @@ section {
   color: #fff;
   font-weight: 500;
   padding: 2px 20px;
+}
+
+/** ----- Colors ----- **/
+/** ------ Small screen ------ **/
+/** ------ Medium screen ------ **/
+/** ------ Large screen ------ **/
+/** ------ Extra large screen ------ **/
+/** ------ 2x large screen ------ **/
+/** ----- font sizes ----- **/
+:root {
+  --heading-font-size: 44px;
+  --normal-font-size: 16px;
+  --small-font-size: 14px;
+  --title-font-size: 20px;
+  --modal-title-font-size: 28px;
+  --shop-heading-font-size: 50px;
+  --shop-title-font-size: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --heading-font-size: 70px;
+    --normal-font-size: 18px;
+    --small-font-size: 16px;
+    --title-font-size: 22px;
+    --modal-title-font-size: 50px;
+    --shop-heading-font-size: 60px;
+    --shop-title-font-size: 40px ;
+  }
+}
+@media screen and (min-width: 992px) {
+  :root {
+    --shop-heading-font-size: 80px;
+    --shop-title-font-size: 50px ;
+  }
+}
+.woocommerce-message {
+  border-top-color: #00FF00;
+}
+.woocommerce-message:before {
+  color: #00FF00;
+}
+.woocommerce-message button.wc-forward {
+  background-color: #54595F;
+  color: #fff;
+  font-family: normal normal 300 18px/23px Montserrat;
 }
 
 /*# sourceMappingURL=main.css.map */

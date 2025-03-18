@@ -19,8 +19,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! $notices ) {
-	return;
+if ( empty( $notices ) || ! is_array( $notices ) ) {
+    return;
 }
 
 ?>
