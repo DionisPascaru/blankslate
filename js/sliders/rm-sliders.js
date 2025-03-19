@@ -69,5 +69,3 @@
         });
     });
 })(jQuery);
-
-console.log('test');

@@ -39,9 +39,13 @@
             <div>
                 <?php the_custom_logo(); ?>
             </div>
-            <div class="rm-navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent"
+            <div class="rm-navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent"
                  aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="bi bi-list"></i>
+                <div class="hamburger">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
             </div>
         </div>
         <div class="collapse" id="navbarToggleExternalContent">
