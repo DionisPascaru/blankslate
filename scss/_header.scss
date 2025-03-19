@@ -102,33 +102,6 @@
     background-color: $black-rm-color;
   }
 
-  .rm-navbar-toggler {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-
-    &[aria-expanded="false"] {
-      i {
-        &::before {
-          content: '\f479';
-        }
-      }
-    }
-
-    &[aria-expanded="true"] {
-      i {
-        &::before {
-          content: '\f659';
-        }
-      }
-    }
-
-    i {
-      color: $white-rm-color;
-      font-size: 32px;
-    }
-  }
-
   .collapse {
     position: relative;
     z-index: 1054;
