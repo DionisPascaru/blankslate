@@ -37,7 +37,7 @@ get_template_part('woocommerce/header');
 				</div>
 				<div class="col-lg-6">
 					<div class="rm-product-view-info">
-                        <div class="rm-product-view-info-breadcrumb">
+                        <div class="rm-page-view-info-breadcrumb">
                             <?php woocommerce_breadcrumb(); ?>
                         </div>
 

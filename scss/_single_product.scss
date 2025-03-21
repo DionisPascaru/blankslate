@@ -196,18 +196,6 @@
 
 /** Product view info**/
 .rm-product-view-info {
-  .rm-product-view-info-breadcrumb {
-    margin-bottom: 40px;
-
-    @include for-lg {
-      margin-bottom: unset;
-    }
-
-    a {
-
-    }
-  }
-
   .rm-product-view-info-title {
     margin-bottom: 20px;
     text-align: center;
@@ -265,6 +253,20 @@
       @include for-lg {
         display: unset;
       }
+
+      .woo-variation-items-wrapper {
+        .variable-item {
+
+          &.selected {
+            background-color: $red-one-rm-color!important;
+            box-shadow: unset;
+
+            .variable-item-span {
+              color: $white-rm-color;
+            }
+          }
+        }
+      }
     }
 
     .value {
@@ -294,19 +296,7 @@
     .woocommerce-variation-add-to-cart {
       display: flex;
       gap: 5px;
-
-      .quantity {
-        display: flex;
-        font-family: $font-primary;
-        font-size: var(--normal-font-size);
-        color: $black-rm-color;
-        border: none;
-
-        .qty {
-          border: 1px solid $grey-two-rm-color;
-          border-radius: 5px;
-        }
-      }
+      height: 40px;
 
       .single_add_to_cart_button {
         background-color: $grey-one-rm-color;
@@ -343,38 +333,6 @@
       b {
         color: $black-rm-color;
       }
-    }
-  }
-}
-
-.swatchly-type-wrap {
-  gap: 10px;
-
-  .swatchly-swatch {
-    border-color: $grey-two-rm-color;
-    border-radius: 5px;
-    margin: 0;
-    min-width: unset;
-    min-height: unset;
-
-    &.swatchly-selected {
-      border-color: $red-one-rm-color;
-      background-color: $red-one-rm-color;
-
-      .swatchly-text {
-        color: $white-rm-color;
-      }
-    }
-
-    .swatchly-content {
-      padding: 2px 30px;
-    }
-
-    .swatchly-text {
-      font-family: $font-primary;
-      font-size: var(--normal-font-size);
-      color: $black-rm-color;
-      font-weight: 500;
     }
   }
 }

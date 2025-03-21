@@ -56,6 +56,8 @@
             infinite: true,
             draggable: false,
             dots: true,
+            prevArrow: '<button type="button" class="slick-prev"><i class="icon-chevron-left"></i></button>',
+            nextArrow: '<button type="button" class="slick-next"><i class="icon-chevron-right"></i></button>',
         });
         /**
          * Reviews slider.
@@ -65,7 +67,9 @@
             infinite: true,
             speed: 300,
             slidesToShow: 1,
-            variableWidth: true
+            variableWidth: true,
+            prevArrow: '<button type="button" class="slick-prev"><i class="icon-chevron-left"></i></button>',
+            nextArrow: '<button type="button" class="slick-next"><i class="icon-chevron-right"></i></button>',
         });
     });
 })(jQuery);

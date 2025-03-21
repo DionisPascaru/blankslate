@@ -65,8 +65,9 @@
       right: 0;
     }
 
-    .slick-current {
-      .rm-timeline-nav-item {
+
+    .rm-timeline-nav-item {
+      &.slick-current {
         .rm-timeline-nav-item-label {
           color: $white-rm-color;
         }

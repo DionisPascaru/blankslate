@@ -6,6 +6,9 @@ get_template_part('woocommerce/header');
 
 <div class="rm-shop-page">
     <div class="container">
+        <div class="rm-page-view-info-breadcrumb">
+            <?php woocommerce_breadcrumb(); ?>
+        </div>
         <?php
         // Check if we are on a category page
         if (is_tax('product_cat')) {

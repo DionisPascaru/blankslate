@@ -52,7 +52,7 @@
             </div>
             <div class="rm-fixed-button rm-shop-fixed-button-right">
                 <a href="<?php echo wc_get_cart_url(); ?>" type="button" class="rm-fixed-btn">
-                    <i class="icon-home"></i>
+                    <i class="icon-shopping-bag"></i>
                     <div class="rm-fixed-button-badge"><?php echo WC()->cart->get_cart_contents_count(); ?></div>
                 </a>
             </div>
