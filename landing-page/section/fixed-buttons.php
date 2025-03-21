@@ -5,7 +5,7 @@
             <div class="rm-fixed-buttons-items">
                 <div class="rm-fixed-button">
                     <a href="<?php echo wc_get_page_permalink('shop'); ?>" type="button" class="rm-fixed-btn">
-                        <i class="icon-home"></i>
+                        <i class="icon-shopping-bag"></i>
                     </a>
                 </div>
                 <div class="rm-fixed-button">

@@ -5,8 +5,9 @@ get_template_part('woocommerce/header');
 ?>
     <div class="rm-shop-page">
         <div class="container">
-            <!-- Display WooCommerce Notices and Clear Them -->
-            <?php wc_print_notices(); wc_clear_notices(); ?>
+            <div class="rm-page-view-info-breadcrumb">
+                <?php woocommerce_breadcrumb(); ?>
+            </div>
             <div class="rm-cart-view">
                 <div class="rm-cart-view-title">Produsele tale</div>
                 <div class="rm-cart-view-table">

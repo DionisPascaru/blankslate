@@ -23,10 +23,6 @@
         }
       }
 
-      .product-remove {
-
-      }
-
       .product-thumbnail {
         img {
           width: auto;
@@ -37,6 +33,9 @@
 
       .product-name {
         font-family: $font-primary;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
 
         a {
           font-size: var(--title-font-size);
@@ -46,6 +45,8 @@
 
         .variation {
           display: flex;
+          gap: 10px;
+          width: 100%;
 
           .variation-Volume {
             p {
@@ -53,7 +54,7 @@
               background-color: $red-one-rm-color;
               border-radius: 5px;
               margin: 0;
-              font-size: var(--normal-font-size);
+              font-size: var(--small-font-size);
               color: $white-rm-color;
               font-weight: 500;
               padding: 2px 20px;

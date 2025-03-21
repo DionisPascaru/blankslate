@@ -249,18 +249,15 @@ function add_meta_description() {
 }
 add_action('wp_head', 'add_meta_description');
 
-function custom_dynamic_bg_color() {
-    if (is_front_page()) {
-        $bg_color = '#000000'; // Black for Page 1
-    } else {
-        $bg_color = '#fff'; // Default color
-    }
-    ?>
-    <style>
-        :root {
-            --bg-color: <?php echo esc_html($bg_color); ?>;
-        }
-    </style>
-    <?php
+function custom_woocommerce_checkout_fields($fields) {
+    // Keep only the required fields
+    $fields['billing'] = array(
+        'billing_first_name' => $fields['billing']['billing_first_name'],
+        'billing_last_name'  => $fields['billing']['billing_last_name'],
+        'billing_email'      => $fields['billing']['billing_email'],
+        'billing_phone'      => $fields['billing']['billing_phone'],
+    );
+
+    return $fields;
 }
-add_action('wp_head', 'custom_dynamic_bg_color');
+add_filter('woocommerce_checkout_fields', 'custom_woocommerce_checkout_fields');

@@ -2,7 +2,14 @@
 
 body {
   margin: 0;
-  background-color: var(--bg-color);
+
+  &.page-template-landing-page {
+    background-color: $black-rm-color;
+  }
+
+  &.woocommerce-shop {
+    background-color: $white-rm-color;
+  }
 }
 
 a {
@@ -91,4 +98,48 @@ section {
   @include for-lg {
     padding: 100px 0;
   }
+}
+
+.rm-page-view-info-breadcrumb {
+  margin-bottom: 40px;
+
+  @include for-lg {
+    margin-bottom: unset;
+  }
+}
+
+
+.slick-prev {
+  &:before {
+    content: '';
+  }
+
+  i {
+    color: $white-rm-color;
+    font-size: 20px;
+    font-weight: 100;
+  }
+}
+
+.slick-next {
+  &:before {
+    content: '';
+  }
+
+  i {
+    color: $white-rm-color;
+    font-size: 20px;
+    font-weight: 100;
+  }
+}
+
+textarea,
+input {
+  border: 1px solid $grey-two-rm-color;
+  border-radius: 8px;
+  color: $grey-one-rm-color;
+  line-height: 1;
+  max-width: 100%;
+  padding: 11px 15px;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
