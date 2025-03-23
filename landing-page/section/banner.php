@@ -1,5 +1,5 @@
 <?php ?>
-<section>
+<section class="rm-pt-none">
     <div class="container">
         <div id="lottie-banner" class="rm-banner"></div>
     </div>

@@ -143,3 +143,29 @@ input {
   padding: 11px 15px;
   transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
+
+.rm-pt-none {
+  padding-top: 0;
+}
+
+
+.woocommerce-breadcrumb {
+
+  a {
+    &:first-child {
+      color: $black-rm-color!important;
+    }
+
+    font-weight: 500;
+    color: $red-one-rm-color!important;
+    text-decoration: underline;
+    padding: 5px 10px;
+  }
+
+  span {
+    padding: 5px;
+    color: $red-one-rm-color;
+    opacity: .7;
+    font-weight: 500;
+  }
+}

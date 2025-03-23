@@ -9,7 +9,12 @@ global $product;
                 <?php echo woocommerce_get_product_thumbnail(); ?>
             </div>
             <div class="rm-product-price"><?php echo $product->get_price_html(); ?></div>
-            <div class="rm-product-title"><?php the_title(); ?></div>
+            <div class="rm-product-title">
+                <?php
+                $title = get_the_title();
+                echo strlen($title) > 15 ? substr($title, 0, 15) . '...' : $title;
+                ?>
+            </div>
         </a>
 
         <div class="rm-product-buttons">

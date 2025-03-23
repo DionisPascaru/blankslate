@@ -234,6 +234,26 @@ input {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+.rm-pt-none {
+  padding-top: 0;
+}
+
+.woocommerce-breadcrumb a {
+  font-weight: 500;
+  color: #C80000 !important;
+  text-decoration: underline;
+  padding: 5px 10px;
+}
+.woocommerce-breadcrumb a:first-child {
+  color: #000 !important;
+}
+.woocommerce-breadcrumb span {
+  padding: 5px;
+  color: #C80000;
+  opacity: 0.7;
+  font-weight: 500;
+}
+
 /** ----- Colors ----- **/
 /** ------ Small screen ------ **/
 /** ------ Medium screen ------ **/
@@ -339,16 +359,19 @@ input {
 
 .rm-mobile-menu {
   display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1054;
 }
 @media screen and (min-width: 992px) {
   .rm-mobile-menu {
     display: none;
   }
+}
+.rm-mobile-menu .rm-mobile-menu-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1054;
+  background-color: #000;
 }
 .rm-mobile-menu .rm-mobile-menu-bar {
   display: flex;
@@ -2027,16 +2050,19 @@ input {
 
 .rm-shop-mobile-menu {
   display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1054;
+  height: 66px;
 }
 @media screen and (min-width: 992px) {
   .rm-shop-mobile-menu {
     display: none;
   }
+}
+.rm-shop-mobile-menu .rm-shop-navbar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1054;
 }
 .rm-shop-mobile-menu .rm-shop-mobile-menu-bar {
   display: flex;
@@ -2073,6 +2099,7 @@ input {
   align-items: center;
   gap: 30px;
   height: calc(100vh - 46px);
+  background-color: #000;
 }
 .rm-shop-mobile-menu .rm-shop-nav-mobile-row .menu {
   flex-direction: row;
@@ -2614,6 +2641,89 @@ input {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+/** ----- Colors ----- **/
+/** ------ Small screen ------ **/
+/** ------ Medium screen ------ **/
+/** ------ Large screen ------ **/
+/** ------ Extra large screen ------ **/
+/** ------ 2x large screen ------ **/
+/** ----- font sizes ----- **/
+:root {
+  --heading-font-size: 44px;
+  --normal-font-size: 16px;
+  --small-font-size: 14px;
+  --title-font-size: 20px;
+  --modal-title-font-size: 28px;
+  --shop-heading-font-size: 50px;
+  --shop-title-font-size: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --heading-font-size: 70px;
+    --normal-font-size: 18px;
+    --small-font-size: 16px;
+    --title-font-size: 22px;
+    --modal-title-font-size: 50px;
+    --shop-heading-font-size: 60px;
+    --shop-title-font-size: 40px ;
+  }
+}
+@media screen and (min-width: 992px) {
+  :root {
+    --shop-heading-font-size: 80px;
+    --shop-title-font-size: 50px ;
+  }
+}
+.rm-shop-bg {
+  background-color: #C80000;
+  padding: 100px 0;
+}
+
+.rm-shop-wrapper {
+  position: relative;
+  font-family: normal normal 300 18px/23px Montserrat;
+  color: #fff;
+}
+.rm-shop-wrapper .rm-shop-categories {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.rm-shop-wrapper .rm-shop-categories .rm-shop-category {
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+}
+.rm-shop-wrapper .rm-shop-image {
+  display: flex;
+  justify-content: center;
+}
+.rm-shop-wrapper .rm-shop-title {
+  text-align: center;
+  font-size: 120px;
+  font-weight: 500;
+}
+.rm-shop-wrapper .rm-shop-text {
+  text-align: center;
+  font-size: var(--title-font-size);
+  font-weight: 500;
+}
+.rm-shop-wrapper .rm-shop-button {
+  color: #000;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.rm-shop-wrapper .rm-shop-button a {
+  margin: auto;
+  font-weight: 600;
+}
+.rm-shop-wrapper .rm-shop-button i {
+  margin-left: 10px;
+  font-weight: 100;
 }
 
 /*# sourceMappingURL=main.css.map */

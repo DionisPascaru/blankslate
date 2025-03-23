@@ -83,14 +83,18 @@
 
 .rm-shop-mobile-menu {
   display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1054;
+  height: 66px;
 
   @include for-lg {
     display: none;
+  }
+
+  .rm-shop-navbar-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1054;
   }
 
   .rm-shop-mobile-menu-bar {
@@ -142,7 +146,7 @@
     align-items: center;
     gap: 30px;
     height: calc(100vh - 46px);
-
+    background-color: $black-rm-color;
   }
 
   .rm-shop-nav-mobile-row {

@@ -21,22 +21,28 @@
 
     <!-- shop mobile menu -->
     <nav id="rmShopMobileMenu" class="rm-shop-navbar rm-shop-mobile-menu">
-        <div class="rm-shop-mobile-menu-bar">
-            <div>
-                <?php the_custom_logo(); ?>
-            </div>
-            <div class="rm-shop-navbar-toggler" data-bs-toggle="collapse" data-bs-target="#shopNavbarToggle"
-                 aria-controls="shopNavbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="bi bi-list"></i>
-            </div>
-        </div>
-        <div class="collapse" id="shopNavbarToggle">
-            <div class="rm-shop-nav-collapse">
-                <div class="rm-shop-nav-mobile-row">
-                    <?php wp_nav_menu(array('theme_location' => 'languages-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>')); ?>
+        <div class="rm-shop-navbar-fixed">
+            <div class="rm-shop-mobile-menu-bar">
+                <div>
+                    <?php the_custom_logo(); ?>
                 </div>
-                <div class="rm-shop-nav-mobile-column">
-                    <?php wp_nav_menu(array('theme_location' => 'shop-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>')); ?>
+                <div class="rm-navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#shopNavbarToggle"
+                     aria-controls="shopNavbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="hamburger">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="collapse" id="shopNavbarToggle">
+                <div class="rm-shop-nav-collapse">
+                    <div class="rm-shop-nav-mobile-row">
+                        <?php wp_nav_menu(array('theme_location' => 'languages-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>')); ?>
+                    </div>
+                    <div class="rm-shop-nav-mobile-column">
+                        <?php wp_nav_menu(array('theme_location' => 'shop-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>')); ?>
+                    </div>
                 </div>
             </div>
         </div>
