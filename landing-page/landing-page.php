@@ -7,6 +7,7 @@
 <?php get_template_part('landing-page/section/banner'); ?>
 <?php get_template_part('landing-page/section/page-slider'); ?>
 <?php get_template_part('landing-page/section/services'); ?>
+<?php get_template_part('landing-page/section/shop'); ?>
 <?php get_template_part('landing-page/section/subsidiaries'); ?>
 <?php get_template_part('landing-page/section/timeline'); ?>
 <?php get_template_part('landing-page/section/franchise'); ?>

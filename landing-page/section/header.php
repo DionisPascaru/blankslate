@@ -34,36 +34,38 @@
     </nav>
 
     <!-- mobile menu -->
-    <nav id="rmMobileMenu" class="rm-navbar rm-mobile-menu rm-menu-gradient">
-        <div class="rm-mobile-menu-bar">
-            <div>
-                <?php the_custom_logo(); ?>
-            </div>
-            <div class="rm-navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent"
-                 aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                <div class="hamburger">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
+    <nav id="rmMobileMenu" class="rm-navbar rm-mobile-menu">
+        <div class="rm-mobile-menu-fixed rm-menu-gradient">
+            <div class="rm-mobile-menu-bar">
+                <div>
+                    <?php the_custom_logo(); ?>
+                </div>
+                <div class="rm-navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent"
+                     aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="hamburger">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="collapse" id="navbarToggleExternalContent">
-            <div class="rm-nav-collapse">
-                <div class="rm-nav-mobile-row">
-                    <?php wp_nav_menu(array('theme_location' => 'languages-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>')); ?>
-                </div>
-                <div class="rm-nav-mobile-column">
-                    <?php wp_nav_menu(array('theme_location' => 'mobile-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>')); ?>
-                </div>
-                <!-- social media-->
-                <div class="rm-nav-mobile-row">
-                    <div class="rm-social-media">
-                        <div class="rm-social-media-item">
-                            <i class="icon-facebook"></i>
-                        </div>
-                        <div class="rm-social-media-item">
-                            <i class="icon-instagram"></i>
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="rm-nav-collapse">
+                    <div class="rm-nav-mobile-row">
+                        <?php wp_nav_menu(array('theme_location' => 'languages-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>')); ?>
+                    </div>
+                    <div class="rm-nav-mobile-column">
+                        <?php wp_nav_menu(array('theme_location' => 'mobile-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>')); ?>
+                    </div>
+                    <!-- social media-->
+                    <div class="rm-nav-mobile-row">
+                        <div class="rm-social-media">
+                            <div class="rm-social-media-item">
+                                <i class="icon-facebook"></i>
+                            </div>
+                            <div class="rm-social-media-item">
+                                <i class="icon-instagram"></i>
+                            </div>
                         </div>
                     </div>
                 </div>

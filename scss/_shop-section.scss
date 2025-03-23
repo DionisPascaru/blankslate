@@ -1,0 +1,58 @@
+@use 'variables' as *;
+
+.rm-shop-bg {
+  background-color: $red-one-rm-color;
+  padding: 100px 0;
+}
+
+.rm-shop-wrapper {
+  position: relative;
+  font-family: $font-primary;
+  color: $white-rm-color;
+
+  .rm-shop-categories {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    .rm-shop-category {
+      font-size: var(--normal-font-size);
+      font-weight: 500;
+    }
+  }
+
+  .rm-shop-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .rm-shop-title {
+    text-align: center;
+    font-size: 120px;
+    font-weight: 500;
+  }
+
+  .rm-shop-text {
+    text-align: center;
+    font-size: var(--title-font-size);
+    font-weight: 500;
+  }
+
+  .rm-shop-button {
+    color: $black-rm-color;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin-top: 30px;
+
+    a {
+      margin: auto;
+      font-weight: 600;
+    }
+
+    i {
+      margin-left: 10px;
+      font-weight: 100;
+    }
+  }
+}
