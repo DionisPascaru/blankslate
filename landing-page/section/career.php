@@ -37,7 +37,7 @@
                     <div class="rm-modal-header modal-header">
                         <div class="rm-modal-title modal-title">Completează cererea</div>
                         <button type="button" class="btn rm-btn-close" data-bs-dismiss="modal">
-                            <i class="bi bi-x-lg"></i>
+                            <i class="icon-close"></i>
                         </button>
                     </div>
                     <div class="rm-modal-body modal-body">

@@ -223,7 +223,9 @@ function theme_custom_logo_setup()
 }
 add_action('after_setup_theme', 'theme_custom_logo_setup');
 
-// Restrict staff-members URLS, if the plugin not used anymore, the method are redundant
+/**
+ * Restrict staff-members URLS, if the plugin not used anymore, the method are redundant.
+ */
 function restrict_plugin_access() {
     if (strpos($_SERVER['REQUEST_URI'], '/staff-members/') !== false) {
         if (!is_user_logged_in() || !current_user_can('manage_options')) {
@@ -237,27 +239,75 @@ function restrict_plugin_access() {
 }
 add_action('init', 'restrict_plugin_access');
 
-function add_meta_description() {
-    if (is_single() || is_page()) {
-        global $post;
-        $description = strip_tags($post->post_excerpt);
-        if (empty($description)) {
-            $description = wp_trim_words(strip_tags($post->post_content), 30);
+//function custom_woocommerce_checkout_fields($fields) {
+//    // Keep only the required fields
+//    $fields['billing'] = array(
+//        'billing_first_name' => $fields['billing']['billing_first_name'],
+//        'billing_last_name'  => $fields['billing']['billing_last_name'],
+//        'billing_email'      => $fields['billing']['billing_email'],
+//        'billing_phone'      => $fields['billing']['billing_phone'],
+//        'billing_address'      => $fields['billing']['billing_address_1'],
+//    );
+//
+//    // Make phone field required
+//    $fields['billing']['billing_phone']['required'] = true;
+//
+//    return $fields;
+//}
+//add_filter('woocommerce_checkout_fields', 'custom_woocommerce_checkout_fields');
+
+
+/**
+ * Fluent form filters for fields validation.
+ *
+ * - fluentform/validate_input_item_input_text
+ * - fluentform/validate_input_item_phone
+ * - fluentform/validate_input_item_textarea
+ */
+add_filter('fluentform/validate_input_item_input_text', function ($errorMessage, $field, $formData, $fields, $form) {
+    $fieldName = $field['name'];
+
+    if (isset($formData['names']) && is_array($formData['names'])) {
+        if ($fieldName === 'names[first_name]') {
+            $value = trim($formData['names']['first_name'] ?? '');
+            if (strlen($value) < 5) {
+                return 'First name must be at least 5 characters long.';
+            }
         }
-        echo '<meta name="description" content="Barbershop Chișinău — Creat de bărbați adevărați, pentru bărbați adevărați. Din 2017 rămânem fideli miusiunii noastre!">';
+
+        if ($fieldName === 'names[last_name]') {
+            $value = trim($formData['names']['last_name'] ?? '');
+            if (strlen($value) < 5) {
+                return 'Last name must be at least 5 characters long.';
+            }
+        }
     }
-}
-add_action('wp_head', 'add_meta_description');
 
-function custom_woocommerce_checkout_fields($fields) {
-    // Keep only the required fields
-    $fields['billing'] = array(
-        'billing_first_name' => $fields['billing']['billing_first_name'],
-        'billing_last_name'  => $fields['billing']['billing_last_name'],
-        'billing_email'      => $fields['billing']['billing_email'],
-        'billing_phone'      => $fields['billing']['billing_phone'],
-    );
+    return $errorMessage;
+}, 10, 5);
 
-    return $fields;
-}
-add_filter('woocommerce_checkout_fields', 'custom_woocommerce_checkout_fields');
+add_filter('fluentform/validate_input_item_phone', function ($errorMessage, $field, $formData, $fields, $form) {
+    $fieldName = $field['name'];
+
+    if ($fieldName === 'phone') {
+        $value = trim($formData['phone'] ?? '');
+        if (!preg_match('/^\d{9,}$/', $value)) {
+            return 'The phone number must have at least 10 digits.';
+        }
+    }
+
+    return $errorMessage;
+}, 10, 5);
+
+add_filter('fluentform/validate_input_item_textarea', function ($errorMessage, $field, $formData, $fields, $form) {
+    $fieldName = $field['name'];
+
+    if ($fieldName === 'description') {
+        $value = trim($formData['description'] ?? '');
+        if (str_word_count($value) < 10) {
+            return 'Please enter at least 10 words about yourself.';
+        }
+    }
+
+    return $errorMessage;
+}, 10, 5);

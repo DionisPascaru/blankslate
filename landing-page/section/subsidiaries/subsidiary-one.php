@@ -10,7 +10,7 @@
                     <div class="rm-subsidiary-modal-logo-text">Nr.1</div>
                 </div>
 
-                <button type="button" class="btn rm-btn-close" data-bs-dismiss="modal"><i class="bi bi-x-lg"></i></button>
+                <button type="button" class="btn rm-btn-close" data-bs-dismiss="modal"><i class="icon-close"></i></button>
             </div>
             <div class="rm-modal-body modal-body">
                 <ul class="nav nav-tabs rm-subsidiary-tabs" id="myTab" role="tablist">

@@ -1,0 +1,31 @@
+@use 'variables' as *;
+
+.rm-page-not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 500px;
+
+  .rm-page-not-found-status-code {
+    font-family: $font-primary;
+    font-size: var(--shop-heading-font-size);
+    color: $red-one-rm-color;
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  .rm-page-not-found-status-text {
+    font-family: $font-primary;
+    font-size: var(--shop-title-font-size);
+    color: $red-one-rm-color;
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  .rm-page-not-found-button {
+    border: 1px solid $black-rm-color;
+    border-radius: 8px;
+  }
+}
