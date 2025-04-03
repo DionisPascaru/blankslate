@@ -1,11 +1,11 @@
 <?php get_header(); ?>
-<article id="post-0" class="post not-found">
-<header class="header">
-<h1 class="entry-title" itemprop="name"><?php esc_html_e( 'Not Found', 'blankslate' ); ?></h1>
-</header>
-<div class="entry-content" itemprop="mainContentOfPage">
-<p><?php esc_html_e( 'Nothing found for the requested page. Try a search instead?', 'blankslate' ); ?></p>
-<?php get_search_form(); ?>
-</div>
-</article>
+    <div class="rm-page-not-found">
+        <div class="rm-page-not-found-status-code">404</div>
+        <div class="rm-page-not-found-status-text">page not found</div>
+        <div class="rm-page-not-found-button">
+            <a href="<?php echo home_url(); ?>" type="button" class="rm-btn">
+                Pagina principala
+            </a>
+        </div>
+    </div>
 <?php get_footer(); ?>

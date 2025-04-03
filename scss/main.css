@@ -42,6 +42,10 @@
   content: "\e902";
 }
 
+.icon-close:before {
+  content: "\e90a";
+}
+
 .icon-trash-o:before {
   content: "\e909";
 }
@@ -2724,6 +2728,67 @@ input {
 .rm-shop-wrapper .rm-shop-button i {
   margin-left: 10px;
   font-weight: 100;
+}
+
+/** ----- Colors ----- **/
+/** ------ Small screen ------ **/
+/** ------ Medium screen ------ **/
+/** ------ Large screen ------ **/
+/** ------ Extra large screen ------ **/
+/** ------ 2x large screen ------ **/
+/** ----- font sizes ----- **/
+:root {
+  --heading-font-size: 44px;
+  --normal-font-size: 16px;
+  --small-font-size: 14px;
+  --title-font-size: 20px;
+  --modal-title-font-size: 28px;
+  --shop-heading-font-size: 50px;
+  --shop-title-font-size: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --heading-font-size: 70px;
+    --normal-font-size: 18px;
+    --small-font-size: 16px;
+    --title-font-size: 22px;
+    --modal-title-font-size: 50px;
+    --shop-heading-font-size: 60px;
+    --shop-title-font-size: 40px ;
+  }
+}
+@media screen and (min-width: 992px) {
+  :root {
+    --shop-heading-font-size: 80px;
+    --shop-title-font-size: 50px ;
+  }
+}
+.rm-page-not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 500px;
+}
+.rm-page-not-found .rm-page-not-found-status-code {
+  font-family: normal normal 300 18px/23px Montserrat;
+  font-size: var(--shop-heading-font-size);
+  color: #C80000;
+  font-weight: 600;
+  font-style: italic;
+}
+.rm-page-not-found .rm-page-not-found-status-text {
+  font-family: normal normal 300 18px/23px Montserrat;
+  font-size: var(--shop-title-font-size);
+  color: #C80000;
+  font-weight: 600;
+  font-style: italic;
+}
+.rm-page-not-found .rm-page-not-found-button {
+  border: 1px solid #000;
+  border-radius: 8px;
 }
 
 /*# sourceMappingURL=main.css.map */

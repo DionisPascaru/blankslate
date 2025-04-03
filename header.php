@@ -3,6 +3,10 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width">
+    <?php if (is_front_page()) : ?>
+        <meta name="description" content="Barbershop Chișinău — Creat de bărbați adevărați, pentru bărbați adevărați. Din 2017 rămânem fideli miusiunii noastre!">
+    <?php endif; ?>
+
     <?php wp_head(); ?>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">

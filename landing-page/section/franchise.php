@@ -25,7 +25,7 @@
                         <div class="rm-modal-header modal-header">
                             <div class="rm-modal-title modal-title">Franciza REALMEN</div>
                             <button type="button" class="btn rm-btn-close" data-bs-dismiss="modal"><i
-                                        class="bi bi-x-lg"></i></button>
+                                        class="icon-close"></i></button>
                         </div>
                         <div class="rm-modal-body modal-body">
                             <div class="rm-modal-body-title">Privilegii:</div>
@@ -80,7 +80,7 @@
                         <div class="rm-modal-header modal-header">
                             <div class="rm-modal-title modal-title">Primește oferta</div>
                             <button type="button" class="btn rm-btn-close" data-bs-dismiss="modal"><i
-                                    class="bi bi-x-lg"></i></button>
+                                    class="icon-close"></i></button>
                         </div>
                         <div class="rm-modal-body modal-body">
                             <?php echo do_shortcode('[fluentform id="5"]'); ?>
