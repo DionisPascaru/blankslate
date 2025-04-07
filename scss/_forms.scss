@@ -54,5 +54,25 @@
         }
       }
     }
+
+    .ff-dropzone {
+      display: flex;
+      flex-direction: column;
+
+      .ff-el-input--content {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin-left: unset!important;
+      }
+
+      .ff-upload-details {
+        color: #fff;
+      }
+    }
+
+    .ff-message-success {
+      color: $white-rm-color;
+    }
   }
 }

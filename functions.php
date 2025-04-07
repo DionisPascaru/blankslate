@@ -256,6 +256,18 @@ add_action('init', 'restrict_plugin_access');
 //}
 //add_filter('woocommerce_checkout_fields', 'custom_woocommerce_checkout_fields');
 
+function wc_maintenance_mode() {
+    if (
+        !current_user_can('manage_options') &&
+        !is_admin() &&
+        ( is_woocommerce() || is_cart() || is_checkout() || is_shop() )
+    ) {
+        wp_redirect( home_url('/coming-soon') ); // custom page URL
+        exit;
+    }
+}
+add_action('template_redirect', 'wc_maintenance_mode');
+
 
 /**
  * Fluent form filters for fields validation.

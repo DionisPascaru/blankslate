@@ -21,10 +21,10 @@
                     <div class="col-1 rm-nav-column">
                         <div class="rm-social-media">
                             <div class="rm-social-media-item">
-                                <i class="icon-facebook"></i>
+                                <a href="https://www.facebook.com/realmen.md"><i class="icon-facebook"></i></a>
                             </div>
                             <div class="rm-social-media-item">
-                                <i class="icon-instagram"></i>
+                                <a href="https://www.instagram.com/realmen.md/"><i class="icon-instagram"></i></a>
                             </div>
                         </div>
                     </div>
