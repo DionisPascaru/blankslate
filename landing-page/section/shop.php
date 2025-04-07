@@ -1,5 +1,5 @@
 <?php ?>
-<section id="career">
+<section id="shop">
     <div class="rm-shop-bg">
         <div class="container">
             <div class="rm-shop-wrapper">
