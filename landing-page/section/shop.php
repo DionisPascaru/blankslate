@@ -15,7 +15,7 @@
                 <div class="rm-shop-title">SHOP</div>
                 <div class="rm-shop-text">DESCOPERĂ PRODUSELE NOASTRE</div>
                 <div class="rm-shop-button">
-                    <a class="rm-btn" href="<?php echo wc_get_page_permalink('shop'); ?>">GO<i class="icon-chevron-right"></i></a>
+                    <a class="rm-btn" href="/shop">GO<i class="icon-chevron-right"></i></a>
                 </div>
             </div>
         </div>

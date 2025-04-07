@@ -1551,6 +1551,9 @@ input {
   font-weight: 500;
   color: #fff;
 }
+.rm-reviews .rm-reviews-items .slick-arrow {
+  top: 70px;
+}
 .rm-reviews .rm-reviews-items .slick-prev {
   left: 5px;
   z-index: 100;
@@ -1844,6 +1847,22 @@ input {
   .fluentform .frm-fluent-form .ff-el-group button.ff-btn {
     padding: 15px 40px;
   }
+}
+.fluentform .frm-fluent-form .ff-dropzone {
+  display: flex;
+  flex-direction: column;
+}
+.fluentform .frm-fluent-form .ff-dropzone .ff-el-input--content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-left: unset !important;
+}
+.fluentform .frm-fluent-form .ff-dropzone .ff-upload-details {
+  color: #fff;
+}
+.fluentform .frm-fluent-form .ff-message-success {
+  color: #fff;
 }
 
 /** ----- Colors ----- **/
@@ -2789,6 +2808,66 @@ input {
 .rm-page-not-found .rm-page-not-found-button {
   border: 1px solid #000;
   border-radius: 8px;
+}
+
+/** ----- Colors ----- **/
+/** ------ Small screen ------ **/
+/** ------ Medium screen ------ **/
+/** ------ Large screen ------ **/
+/** ------ Extra large screen ------ **/
+/** ------ 2x large screen ------ **/
+/** ----- font sizes ----- **/
+:root {
+  --heading-font-size: 44px;
+  --normal-font-size: 16px;
+  --small-font-size: 14px;
+  --title-font-size: 20px;
+  --modal-title-font-size: 28px;
+  --shop-heading-font-size: 50px;
+  --shop-title-font-size: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --heading-font-size: 70px;
+    --normal-font-size: 18px;
+    --small-font-size: 16px;
+    --title-font-size: 22px;
+    --modal-title-font-size: 50px;
+    --shop-heading-font-size: 60px;
+    --shop-title-font-size: 40px ;
+  }
+}
+@media screen and (min-width: 992px) {
+  :root {
+    --shop-heading-font-size: 80px;
+    --shop-title-font-size: 50px ;
+  }
+}
+.coming-soon-page-bg {
+  background-color: #000;
+}
+
+.coming-soon-page {
+  height: 100vh;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.coming-soon-page .coming-soon-page-image {
+  width: 300px;
+}
+.coming-soon-page .coming-soon-page-image img {
+  width: 100%;
+}
+.coming-soon-page .coming-soon-page-text {
+  font-family: normal normal 300 18px/23px Montserrat;
+  font-size: var(--title-font-size);
+  color: #fff;
+  font-weight: 600;
+  margin: 10px 0;
 }
 
 /*# sourceMappingURL=main.css.map */

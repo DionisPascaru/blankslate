@@ -1,0 +1,30 @@
+@use 'variables' as *;
+
+.coming-soon-page-bg {
+  background-color: $black-rm-color;
+}
+
+.coming-soon-page {
+  height: 100vh;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .coming-soon-page-image {
+    width: 300px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .coming-soon-page-text {
+    font-family: $font-primary;
+    font-size: var(--title-font-size);
+    color: $white-rm-color;
+    font-weight: 600;
+    margin: 10px 0;
+  }
+}
