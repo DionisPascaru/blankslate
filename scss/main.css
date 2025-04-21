@@ -2870,4 +2870,134 @@ input {
   margin: 10px 0;
 }
 
+/** ----- Colors ----- **/
+/** ------ Small screen ------ **/
+/** ------ Medium screen ------ **/
+/** ------ Large screen ------ **/
+/** ------ Extra large screen ------ **/
+/** ------ 2x large screen ------ **/
+/** ----- font sizes ----- **/
+:root {
+  --heading-font-size: 44px;
+  --normal-font-size: 16px;
+  --small-font-size: 14px;
+  --title-font-size: 20px;
+  --modal-title-font-size: 28px;
+  --shop-heading-font-size: 50px;
+  --shop-title-font-size: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --heading-font-size: 70px;
+    --normal-font-size: 18px;
+    --small-font-size: 16px;
+    --title-font-size: 22px;
+    --modal-title-font-size: 50px;
+    --shop-heading-font-size: 60px;
+    --shop-title-font-size: 40px ;
+  }
+}
+@media screen and (min-width: 992px) {
+  :root {
+    --shop-heading-font-size: 80px;
+    --shop-title-font-size: 50px ;
+  }
+}
+.rm-checkout-block {
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 16px #b3b3b3;
+}
+
+.woocommerce-checkout-review-order-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 30px;
+  margin-top: -30px;
+}
+.woocommerce-checkout-review-order-table .rm-section-title {
+  border-bottom: 1px solid #000;
+}
+
+.product-name {
+  display: flex;
+  gap: 20px;
+}
+.product-name .product-name-image {
+  width: 100px;
+  height: 100px;
+}
+
+.woocommerce-shipping-methods {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+.woocommerce-shipping-methods li {
+  display: flex;
+  border: 1px solid #B3B3B3;
+  border-radius: 18px;
+  position: relative;
+  margin-bottom: 5px;
+  color: #B3B3B3;
+}
+.woocommerce-shipping-methods li:has(input[type=radio]:checked) {
+  background-color: #C80000;
+  border-color: #C80000;
+  color: #fff;
+}
+
+input[type=radio]:checked,
+input[type=radio]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+input[type=radio]:checked + label,
+input[type=radio]:not(:checked) + label {
+  position: relative;
+  width: 100%;
+  padding: 5px 20px 5px 40px;
+}
+input[type=radio]:checked + label:hover,
+input[type=radio]:not(:checked) + label:hover {
+  cursor: pointer;
+}
+
+input[type=radio]:checked + label:before,
+input[type=radio]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ddd;
+  border-radius: 100%;
+}
+
+input[type=radio]:checked + label:after,
+input[type=radio]:not(:checked) + label:after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  position: absolute;
+  top: 11px;
+  left: 13px;
+  border-radius: 100%;
+  transition: all 0.2s ease;
+}
+
+input[type=radio]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+
+input[type=radio]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
 /*# sourceMappingURL=main.css.map */

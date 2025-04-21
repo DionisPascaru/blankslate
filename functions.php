@@ -239,35 +239,18 @@ function restrict_plugin_access() {
 }
 add_action('init', 'restrict_plugin_access');
 
-//function custom_woocommerce_checkout_fields($fields) {
-//    // Keep only the required fields
-//    $fields['billing'] = array(
-//        'billing_first_name' => $fields['billing']['billing_first_name'],
-//        'billing_last_name'  => $fields['billing']['billing_last_name'],
-//        'billing_email'      => $fields['billing']['billing_email'],
-//        'billing_phone'      => $fields['billing']['billing_phone'],
-//        'billing_address'      => $fields['billing']['billing_address_1'],
-//    );
-//
-//    // Make phone field required
-//    $fields['billing']['billing_phone']['required'] = true;
-//
-//    return $fields;
-//}
-//add_filter('woocommerce_checkout_fields', 'custom_woocommerce_checkout_fields');
-
 function wc_maintenance_mode() {
+    $coming_soon_mode = false;
+
     if (
-        !current_user_can('manage_options') &&
-        !is_admin() &&
+        $coming_soon_mode &&
         ( is_woocommerce() || is_cart() || is_checkout() || is_shop() )
     ) {
-        wp_redirect( home_url('/coming-soon') ); // custom page URL
+        include get_template_directory() . '/woocommerce/coming-soon.php';
         exit;
     }
 }
 add_action('template_redirect', 'wc_maintenance_mode');
-
 
 /**
  * Fluent form filters for fields validation.
