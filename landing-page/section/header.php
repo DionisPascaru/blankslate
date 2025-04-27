@@ -1,5 +1,10 @@
 <?php ?>
 <header id="header">
+    <style>
+        section {
+            padding: 50px 0;
+        }
+    </style>
     <!-- desktop menu -->
     <nav id="menu" class="rm-navbar rm-desktop-menu rm-menu-gradient">
         <div class="rm-desktop-menu-bar">

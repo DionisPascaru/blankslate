@@ -122,10 +122,6 @@ a {
   text-decoration: none;
 }
 
-section {
-  padding: 50px 0;
-}
-
 .rm-section-head {
   text-align: center;
 }
@@ -234,7 +230,6 @@ input {
   color: #54595F;
   line-height: 1;
   max-width: 100%;
-  padding: 11px 15px;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
@@ -1642,10 +1637,26 @@ input {
   z-index: 1000;
 }
 .rm-fixed-buttons .rm-fixed-buttons-items {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
+  position: relative;
+}
+.rm-fixed-buttons .rm-fixed-buttons-items .rm-fixed-button-left {
+  left: -52px;
+  right: auto;
+}
+.rm-fixed-buttons .rm-fixed-buttons-items .rm-fixed-button-right {
+  left: auto;
+  right: -52px;
+}
+.rm-fixed-buttons .rm-fixed-buttons-items .rm-fixed-button-center {
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: fit-content;
+}
+.rm-fixed-buttons .rm-fixed-buttons-items .rm-fixed-button {
+  position: absolute;
+  bottom: 0;
+  z-index: 1000;
 }
 .rm-fixed-buttons .rm-fixed-buttons-items .rm-fixed-button .rm-fixed-btn {
   position: relative;
@@ -1671,12 +1682,6 @@ input {
 .rm-fixed-buttons .rm-fixed-buttons-items .rm-fixed-button .rm-fixed-btn i {
   color: #fff;
   font-size: 22px;
-}
-
-.rm-shop-fixed-buttons {
-  max-width: 1460px;
-  padding: 0 30px;
-  margin: auto;
 }
 
 .rm-fixed-button-badge {
@@ -2532,51 +2537,11 @@ input {
     --shop-title-font-size: 50px ;
   }
 }
-.rm-cart-view .rm-cart-view-title {
-  font-size: var(--shop-title-font-size);
-  font-family: normal normal 300 18px/23px Montserrat;
-  font-style: italic;
-  font-weight: 600;
-  color: #000;
-  text-align: center;
-  text-transform: uppercase;
-}
-.rm-cart-view .rm-cart-view-table .woocommerce table.shop_table {
-  border: none;
-}
-.rm-cart-view .rm-cart-view-table .woocommerce table.shop_table td {
-  border-top: 1px solid #54595F;
-}
-.rm-cart-view .rm-cart-view-table .woocommerce .product-thumbnail img {
-  width: auto;
-  height: 100%;
-  max-height: 100px;
-}
-.rm-cart-view .rm-cart-view-table .woocommerce .product-name {
-  font-family: normal normal 300 18px/23px Montserrat;
+.wp-block-woocommerce-empty-cart-block {
+  height: 100dvh;
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.rm-cart-view .rm-cart-view-table .woocommerce .product-name a {
-  font-size: var(--title-font-size);
-  font-weight: 500;
-  color: #000;
-}
-.rm-cart-view .rm-cart-view-table .woocommerce .product-name .variation {
-  display: flex;
-  gap: 10px;
-  width: 100%;
-}
-.rm-cart-view .rm-cart-view-table .woocommerce .product-name .variation .variation-Volume p {
-  border-color: #C80000;
-  background-color: #C80000;
-  border-radius: 5px;
-  margin: 0;
-  font-size: var(--small-font-size);
-  color: #fff;
-  font-weight: 500;
-  padding: 2px 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 /** ----- Colors ----- **/
@@ -2613,16 +2578,51 @@ input {
     --shop-title-font-size: 50px ;
   }
 }
+.woocommerce-message,
+.woocommerce-info,
+.woocommerce-error {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  padding: 5px 20px 5px 60px;
+  color: #000;
+}
+.woocommerce-message:before,
+.woocommerce-info:before,
+.woocommerce-error:before {
+  top: unset;
+}
+.woocommerce-message .button.wc-forward,
+.woocommerce-info .button.wc-forward,
+.woocommerce-error .button.wc-forward {
+  color: #000;
+  font-family: normal normal 300 18px/23px Montserrat;
+  margin-left: auto;
+}
+
 .woocommerce-message {
-  border-top-color: #00FF00;
+  border: 1px solid #00FF00;
 }
 .woocommerce-message:before {
   color: #00FF00;
 }
-.woocommerce-message button.wc-forward {
-  background-color: #54595F;
-  color: #fff;
-  font-family: normal normal 300 18px/23px Montserrat;
+
+.woocommerce-info {
+  border: 1px solid #B3B3B3;
+}
+.woocommerce-info:before {
+  color: #B3B3B3;
+}
+
+.woocommerce-error {
+  border: 1px solid #FF0000;
+}
+.woocommerce-error:before {
+  color: #FF0000;
+}
+.woocommerce-error ul {
+  margin-bottom: 0;
 }
 
 .rm-navbar-toggler {
@@ -2749,6 +2749,16 @@ input {
   font-weight: 100;
 }
 
+.rm-entry-content {
+  min-height: 100dvh;
+  padding: 50px 0;
+}
+@media screen and (min-width: 768px) {
+  .rm-entry-content {
+    padding: 100px 0;
+  }
+}
+
 /** ----- Colors ----- **/
 /** ------ Small screen ------ **/
 /** ------ Medium screen ------ **/
@@ -2868,6 +2878,101 @@ input {
   color: #fff;
   font-weight: 600;
   margin: 10px 0;
+}
+
+/** ----- Colors ----- **/
+/** ------ Small screen ------ **/
+/** ------ Medium screen ------ **/
+/** ------ Large screen ------ **/
+/** ------ Extra large screen ------ **/
+/** ------ 2x large screen ------ **/
+/** ----- font sizes ----- **/
+:root {
+  --heading-font-size: 44px;
+  --normal-font-size: 16px;
+  --small-font-size: 14px;
+  --title-font-size: 20px;
+  --modal-title-font-size: 28px;
+  --shop-heading-font-size: 50px;
+  --shop-title-font-size: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --heading-font-size: 70px;
+    --normal-font-size: 18px;
+    --small-font-size: 16px;
+    --title-font-size: 22px;
+    --modal-title-font-size: 50px;
+    --shop-heading-font-size: 60px;
+    --shop-title-font-size: 40px ;
+  }
+}
+@media screen and (min-width: 992px) {
+  :root {
+    --shop-heading-font-size: 80px;
+    --shop-title-font-size: 50px ;
+  }
+}
+.rm-order {
+  max-width: 700px;
+  margin: auto;
+}
+.rm-order .rm-order-block-title {
+  font-size: var(--title-font-size);
+  font-weight: 600;
+  color: #000;
+  text-align: center;
+  text-transform: uppercase;
+}
+.rm-order strong {
+  font-size: var(--small-font-size) !important;
+}
+.rm-order span {
+  font-weight: 400;
+  font-size: var(--small-font-size) !important;
+}
+
+.rm-order-received {
+  margin-bottom: 2rem;
+}
+.rm-order-received .rm-order-received-text {
+  font-size: var(--normal-font-size);
+  color: #000;
+  text-align: center;
+  font-weight: 500;
+}
+.rm-order-received .rm-order-overview.order_details {
+  padding: 0;
+  margin: 0;
+}
+.rm-order-received .rm-order-overview.order_details li {
+  float: unset;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rm-shadow-block {
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 16px #b3b3b3;
+}
+
+.product-name {
+  display: flex;
+  gap: 20px;
+}
+.product-name .product-name-image {
+  width: 100px;
+  height: 100px;
+}
+
+.wc-block-components-main .wc-block-components-form .wc-block-components-checkout-step {
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */

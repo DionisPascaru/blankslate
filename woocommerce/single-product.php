@@ -42,15 +42,7 @@ get_template_part('woocommerce/header');
                         </div>
 
                         <?php
-                        $notices = wc_get_notices('success');
-                        if (!empty($notices)) {
-                            foreach ($notices as $notice) {
-                                echo '<div class="woocommerce-message">';
-                                echo $notice['notice'];
-                                echo '</div>';
-                            }
-                        }
-                        wc_clear_notices();
+                            wc_print_notices();
                         ?>
 
 						<div class="rm-product-view-info-title">

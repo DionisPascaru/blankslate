@@ -48,15 +48,15 @@
         </div>
     </nav>
 </header>
-<div class="rm-fixed-buttons rm-shop-fixed-buttons">
-    <div class="">
+<div class="rm-fixed-buttons">
+    <div class="container">
         <div class="rm-fixed-buttons-items">
-            <div class="rm-fixed-button rm-shop-fixed-button-left">
+            <div class="rm-fixed-button rm-fixed-button-left">
                 <a href="<?php echo home_url(); ?>" type="button" class="rm-fixed-btn">
                     <i class="icon-home"></i>
                 </a>
             </div>
-            <div class="rm-fixed-button rm-shop-fixed-button-right">
+            <div class="rm-fixed-button rm-fixed-button-right">
                 <a href="<?php echo wc_get_cart_url(); ?>" type="button" class="rm-fixed-btn">
                     <i class="icon-shopping-bag"></i>
                     <div class="rm-fixed-button-badge"><?php echo WC()->cart->get_cart_contents_count(); ?></div>
