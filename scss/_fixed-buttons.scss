@@ -8,13 +8,30 @@
   z-index: 1000;
 
   .rm-fixed-buttons-items {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
+    position: relative;
 
+    .rm-fixed-button-left {
+      left: -52px;
+      right: auto;
+    }
+
+    .rm-fixed-button-right {
+      left: auto;
+      right: -52px;
+    }
+
+    .rm-fixed-button-center {
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: fit-content;
+    }
 
     .rm-fixed-button {
+      position: absolute;
+      bottom: 0;
+      z-index: 1000;
+
       .rm-fixed-btn {
         position: relative;
         height: 52px;
@@ -47,13 +64,6 @@
   }
 }
 
-
-.rm-shop-fixed-buttons {
-  max-width: 1460px;
-  padding: 0 30px;
-  margin: auto;
-}
-
 .rm-fixed-button-badge {
   position: absolute;
   top: -5px;
@@ -73,3 +83,5 @@
   align-items: center;
   letter-spacing: -1px;
 }
+
+

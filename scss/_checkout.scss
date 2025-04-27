@@ -1,22 +1,58 @@
 @use 'variables' as *;
 
+.rm-order {
+  max-width: 700px;
+  margin: auto;
 
-.rm-checkout-block {
+  .rm-order-block-title {
+    font-size: var(--title-font-size);
+    font-weight: 600;
+    color: $black-rm-color;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  strong {
+    font-size: var(--small-font-size) !important;
+  }
+  span {
+    font-weight: 400;
+    font-size: var(--small-font-size) !important;
+  }
+}
+
+.rm-order-received {
+  margin-bottom: 2rem;
+
+  .rm-order-received-text {
+    font-size: var(--normal-font-size);
+    color: $black-rm-color;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  .rm-order-overview {
+    &.order_details {
+      padding: 0;
+      margin: 0;
+
+      li {
+        float: unset;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: none;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.rm-shadow-block {
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 4px 16px rgba($grey-two-rm-color, 1);
-}
-
-// order table
-.woocommerce-checkout-review-order-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0 30px;
-  margin-top: -30px;
-
-  .rm-section-title {
-    border-bottom: 1px solid $black-rm-color;
-  }
 }
 
 .product-name {
@@ -29,77 +65,10 @@
   }
 }
 
-.woocommerce-shipping-methods {
-  list-style-type: none;
-  padding: 0;
-  margin: 10px 0;
-
-  li {
-    display: flex;
-    border: 1px solid $grey-two-rm-color;
-    border-radius: 18px;
-    position: relative;
-    margin-bottom: 5px;
-    color: $grey-two-rm-color;
-
-    &:has(input[type="radio"]:checked) {
-      background-color: $red-one-rm-color;
-      border-color: $red-one-rm-color;
-      color: $white-rm-color;
+.wc-block-components-main {
+  .wc-block-components-form {
+    .wc-block-components-checkout-step {
+      margin-bottom: 20px;
     }
-
-
   }
-}
-
-input[type="radio"]:checked,
-input[type="radio"]:not(:checked) {
-  position: absolute;
-  left: -9999px;
-}
-
-input[type="radio"]:checked + label,
-input[type="radio"]:not(:checked) + label {
-  position: relative;
-  width: 100%;
-  padding: 5px 20px 5px 40px;
-
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-input[type="radio"]:checked + label:before,
-input[type="radio"]:not(:checked) + label:before {
-  content: '';
-  position: absolute;
-  left: 10px;
-  top: 8px;
-  width: 18px;
-  height: 18px;
-  border: 1px solid #ddd;
-  border-radius: 100%;
-}
-
-input[type="radio"]:checked + label:after,
-input[type="radio"]:not(:checked) + label:after {
-  content: '';
-  width: 12px;
-  height: 12px;
-  background: $white-rm-color;
-  position: absolute;
-  top: 11px;
-  left: 13px;
-  border-radius: 100%;
-  transition: all 0.2s ease;
-}
-
-input[type="radio"]:not(:checked) + label:after {
-  opacity: 0;
-  transform: scale(0);
-}
-
-input[type="radio"]:checked + label:after {
-  opacity: 1;
-  transform: scale(1);
 }

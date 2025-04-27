@@ -1,16 +1,50 @@
 @use 'variables' as *;
 
+.woocommerce-message,
+.woocommerce-info,
+.woocommerce-error {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  padding: 5px 20px 5px 60px;
+  color: $black-rm-color;
+
+  &:before {
+    top: unset;
+  }
+
+  .button.wc-forward {
+    color: $black-rm-color;
+    font-family: $font-primary;
+    margin-left: auto;
+  }
+}
+
 .woocommerce-message {
-  border-top-color: $green-rm-color;
-  //background-color: $grey-two-rm-color;
+  border: 1px solid $green-rm-color;
 
   &:before {
     color: $green-rm-color;
   }
+}
 
-  button.wc-forward {
-    background-color: $grey-one-rm-color;
-    color: $white-rm-color;
-    font-family: $font-primary;
+.woocommerce-info {
+  border: 1px solid $grey-two-rm-color;
+
+  &:before {
+    color: $grey-two-rm-color;
+  }
+}
+
+.woocommerce-error {
+  border: 1px solid $red-two-rm-color;
+
+  &:before {
+    color: $red-two-rm-color;
+  }
+
+  ul {
+    margin-bottom: 0;
   }
 }
