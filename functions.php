@@ -239,19 +239,6 @@ function restrict_plugin_access() {
 }
 add_action('init', 'restrict_plugin_access');
 
-function wc_maintenance_mode() {
-    $coming_soon_mode = false;
-
-    if (
-        $coming_soon_mode &&
-        ( is_woocommerce() || is_cart() || is_checkout() || is_shop() )
-    ) {
-        include get_template_directory() . '/woocommerce/coming-soon.php';
-        exit;
-    }
-}
-add_action('template_redirect', 'wc_maintenance_mode');
-
 /**
  * Fluent form filters for fields validation.
  *

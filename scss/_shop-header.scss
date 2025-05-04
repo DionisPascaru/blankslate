@@ -15,18 +15,19 @@
 
   .menu {
     display: flex;
-    gap: 10px;
+    //gap: 10px;
     list-style-type: none;
     margin: 0;
     padding: 0;
 
     @include for-xl {
-      gap: 20px;
+      //gap: 20px;
     }
   }
 
   .menu-item {
     display: flex;
+    padding: 0 10px;
 
     &.current-language-menu-item,
     &.current-menu-item {
@@ -63,7 +64,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1054;
+  z-index: 1044;
 
   @include for-lg {
     display: block;
@@ -73,7 +74,7 @@
     padding: 10px 0;
     background-color: $black-rm-color;
     position: relative;
-    z-index: 1054;
+    z-index: 1044;
   }
 
   .menu {
@@ -94,7 +95,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1054;
+    z-index: 1044;
   }
 
   .rm-shop-mobile-menu-bar {
@@ -102,7 +103,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    z-index: 1054;
+    z-index: 1044;
     padding: 20px 20px;
     background-color: $black-rm-color;
   }
@@ -173,6 +174,57 @@
       a {
         font-size: 24px;
         line-height: 1;
+      }
+    }
+  }
+}
+
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  > li {
+    position: relative;
+    display: inline-block; // or flex if you want
+
+    ul {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background-color: $black-rm-color;
+      border: 1px solid #ccc;
+      z-index: 999;
+
+      li {
+        display: block;
+        white-space: nowrap;
+
+        a {
+          padding: 5px 0;
+        }
+      }
+    }
+
+    &:hover > ul {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .sub-menu {
+    padding: 10px 0;
+
+    li {
+      a {
+        padding: 5px 0;
       }
     }
   }

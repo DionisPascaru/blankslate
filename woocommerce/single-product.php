@@ -47,18 +47,18 @@ get_template_part('woocommerce/header');
 
 						<div class="rm-product-view-info-title">
 							<?php woocommerce_template_single_title(); ?>
-						</div>
-						<?php
-						$product_tags = wp_get_post_terms(get_the_ID(), 'product_tag');
+                            <?php
+                            $product_tags = wp_get_post_terms(get_the_ID(), 'product_tag');
 
-						if (!empty($product_tags) && !is_wp_error($product_tags)) {
-							echo '<div class="rm-product-view-info-tags">';
-							foreach ($product_tags as $tag) {
-								echo '<span class="rm-product-view-info-tag">#' . esc_html($tag->name) . '</span> ';
-							}
-							echo '</div>';
-						}
-						?>
+                            if (!empty($product_tags) && !is_wp_error($product_tags)) {
+                                echo '<div class="rm-product-view-info-tags">';
+                                foreach ($product_tags as $tag) {
+                                    echo '<span class="rm-product-view-info-tag">#' . esc_html($tag->name) . '</span> ';
+                                }
+                                echo '</div>';
+                            }
+                            ?>
+						</div>
 						<div class="rm-product-view-info-add-to-cart">
                             <?php woocommerce_template_single_add_to_cart(); ?>
                         </div>
