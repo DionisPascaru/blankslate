@@ -1,0 +1,124 @@
+@use 'variables' as *;
+
+.rm-shop-primary-btn {
+  background-color: $red-one-rm-color;
+  color: #fff;
+  font-size: var(--normal-font-size);
+  font-weight: 600;
+  padding: 5px 35px;
+  border-radius: 5px;
+  border: 1px solid $red-one-rm-color;
+  display: flex;
+  align-items: center;
+
+  i {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+
+  &:hover {
+    background-color: $grey-two-rm-color;
+    border-color: $grey-two-rm-color;
+  }
+}
+.rm-shop-secondary-btn {
+  background-color: $white-rm-color;
+  color: $black-rm-color;
+  font-size: var(--normal-font-size);
+  font-weight: 600;
+  padding: 5px 35px;
+  border-radius: 5px;
+  border: 1px solid $black-rm-color;
+  display: flex;
+  align-items: center;
+
+  i {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+
+  &:hover {
+    background-color: $grey-two-rm-color;
+    color: $white-rm-color;
+    border-color: $grey-two-rm-color;
+  }
+}
+
+
+.rm-filters {
+  margin-bottom: 30px;
+
+  .rm-filter-label {
+    color: $black-rm-color;
+    font-weight: 600;
+  }
+
+  .rm-filter-option {
+    margin: 3px 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+
+      &:checked {
+        accent-color: $red-one-rm-color;
+      }
+    }
+  }
+
+  .rm-filters-actions {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.rm-shop-category-block {
+  margin-bottom: 50px;
+}
+
+.rm-products-category-redirect {
+  margin: 30px auto;
+  color: $grey-two-rm-color;
+  font-size: var(--title-font-size);
+  font-style: italic;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+
+  i {
+    color: $black-rm-color;
+    font-size: 28px;
+  }
+}
+
+.rm-product-thumbnail {
+  img {
+    max-width: 300px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.rm-product-actions {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin: 30px auto;
+}
+
+.rm-offcanvas {
+  max-width: 320px;
+}
