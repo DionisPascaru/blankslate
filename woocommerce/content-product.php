@@ -12,7 +12,7 @@ global $product;
             <div class="rm-product-title">
                 <?php
                 $title = get_the_title();
-                echo strlen($title) > 15 ? substr($title, 0, 15) . '...' : $title;
+                echo strlen($title) > 25 ? substr($title, 0, 25) . '...' : $title;
                 ?>
             </div>
         </a>

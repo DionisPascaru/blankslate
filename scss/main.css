@@ -2621,6 +2621,8 @@ input {
 .woocommerce-info,
 .woocommerce-error {
   display: flex;
+  gap: 10px;
+  flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
   border-radius: 8px;
@@ -2638,6 +2640,7 @@ input {
   color: #000;
   font-family: normal normal 300 18px/23px Montserrat;
   margin-left: auto;
+  white-space: nowrap;
 }
 
 .woocommerce-message {
