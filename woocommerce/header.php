@@ -6,13 +6,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-2 rm-shop-nav-column">
-                        <?php
-                        $custom_logo_id = get_theme_mod( 'custom_logo' );
-                        if ( $custom_logo_id ) {
-                            $logo = wp_get_attachment_image( $custom_logo_id , 'full' );
-                            echo "<a href='/shop'>{$logo}</a>";
-                        }
-                        ?>
+                        <?php the_custom_logo(); ?>
                     </div>
                     <div class="col-8 rm-shop-nav-column">
                         <?php wp_nav_menu(array('theme_location' => 'shop-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>')); ?>

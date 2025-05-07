@@ -16,7 +16,7 @@ get_template_part('woocommerce/header');
 					<div class="rm-sticky-block">
 						<div class="rm-sticky-block-vertical-center">
 
-							<div id="rmProductViewGallery" class="rm-product-view-gallery">
+							<div class="rm-product-view-gallery-block">
 								<?php
 								global $product;
 								$main_image_id = $product->get_image_id();
@@ -24,12 +24,20 @@ get_template_part('woocommerce/header');
 
 								$gallery_ids = array_filter(array_merge([$main_image_id], $attachment_ids));
 
-								foreach ($gallery_ids as $gallery_id) {
-									echo '<div class="rm-product-view-gallery-slider">';
-									echo wp_get_attachment_image($gallery_id, 'large');
-									echo '</div>';
-								}
-
+                                echo '<div id="rmProductViewGalleryNav" class="rm-product-view-gallery rm-product-view-gallery-nav">';
+                                foreach ($gallery_ids as $gallery_id) {
+                                    echo '<div class="rm-product-view-gallery-slider">';
+                                    echo wp_get_attachment_image($gallery_id, 'large');
+                                    echo '</div>';
+                                }
+                                echo '</div>';
+                                echo '<div id="rmProductViewGalleryFor" class="rm-product-view-gallery-thumbnail rm-product-view-gallery-for">';
+                                foreach ($gallery_ids as $gallery_id) {
+                                    echo '<div class="rm-product-view-gallery-slider-thumbnail">';
+                                    echo wp_get_attachment_image($gallery_id, 'large');
+                                    echo '</div>';
+                                }
+                                echo '</div>';
 								?>
 							</div>
 						</div>
