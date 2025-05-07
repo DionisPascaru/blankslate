@@ -17,19 +17,20 @@
     bottom: 0;
     z-index: -1;
     width: 100%;
-    height: 470px;
-
-    @include for-sm {
-      height: 570px;
-    }
-
-    @include for-md {
-      height: 700px;
-    }
-
-    @include for-lg {
-      height: 100%;
-    }
+    height: 100%;
+    //height: 600px;
+    //
+    //@include for-sm {
+    //  height: 700px;
+    //}
+    //
+    //@include for-md {
+    //  height: 800px;
+    //}
+    //
+    //@include for-lg {
+    //  height: 100%;
+    //}
 
     .rm-product-view-bg-red {
       width: 100%;
@@ -46,6 +47,45 @@
         width: 50%;
         height: 100%;
         background-color: $white-rm-color;
+      }
+    }
+  }
+
+  .rm-product-view-gallery-block {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rm-sticky-block {
+    @include for-lg {
+      position: sticky;
+      top: 0;
+      bottom: 0;
+      height: 100vh;
+    }
+
+    .rm-sticky-block-vertical-center {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      padding: 50px 30px 50px;
+
+      @include for-sm {
+        padding: 80px 30px 50px;
+      }
+
+      @include for-lg {
+        justify-content: right;
+      }
+
+      @include for-xl {
+        padding: 50px 50px 50px 0;
       }
     }
   }
@@ -75,38 +115,17 @@
     }
 
     @include for-xxl {
-      width: 500px;
-      height: 500px;
+      width: 600px;
+      height: 600px;
+    }
+
+    .slick-list, .slick-track {
+      height: 100%;
     }
 
     .rm-product-view-gallery-slider {
-      width: 300px;
-      height: 300px;
-
-      @include for-sm {
-        width: 400px;
-        height: 400px;
-      }
-
-      @include for-md {
-        width: 500px;
-        height: 500px;
-      }
-
-      @include for-lg {
-        width: 400px;
-        height: 400px;
-      }
-
-      @include for-xl {
-        width: 450px;
-        height: 450px;
-      }
-
-      @include for-xxl {
-        width: 500px;
-        height: 500px;
-      }
+      width: 100%;
+      height: 100%;
 
       img {
         width: 100%;
@@ -114,69 +133,57 @@
         object-fit: cover;
       }
     }
-
-    .slick-dots {
-      position: unset;
-      text-align: unset;
-
-      li {
-        width: auto;
-        height: auto;
-        margin: 0;
-
-        button {
-          margin-right: 5px;
-          width: auto;
-          height: auto;
-
-          &:before {
-            background-color: $white-rm-color;
-            color: $white-rm-color;
-            opacity: 1;
-            width: 10px;
-            height: 10px;
-            line-height: 10px;
-          }
-        }
-
-        &.slick-active {
-
-          button::before {
-            background-color: $black-rm-color;
-            color: $black-rm-color;
-          }
-        }
-      }
-    }
   }
 
-  .rm-sticky-block {
-    @include for-lg {
-      position: sticky;
-      top: 0;
-      bottom: 0;
-      height: 100vh;
+  .rm-product-view-gallery-thumbnail {
+    width: 300px;
+
+    @include for-sm {
+      width: 400px;
     }
 
-    .rm-sticky-block-vertical-center {
-      position: relative;
+    @include for-md {
+      width: 500px;
+    }
+
+    @include for-lg {
+      width: 400px;
+    }
+
+    @include for-xl {
+      width: 450px;
+    }
+
+    @include for-xxl {
+      width: 600px;
+    }
+
+    .slick-track {
+      margin-top: 5px;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 100%;
-      padding: 70px 30px 50px;
+      gap: 5px;
+    }
 
-      @include for-sm {
-        padding: 100px 30px 50px;
+    .rm-product-view-gallery-slider-thumbnail {
+      width: 100px!important;
+      height: 100px;
+      background-color: $black-rm-color;
+
+      &:hover {
+        cursor: pointer;
       }
 
-      @include for-lg {
-        justify-content: right;
+      &.slick-current {
+        img {
+          opacity: 1;
+        }
       }
 
-      @include for-xl {
-        padding: 50px 50px 50px 0;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: .3;
       }
     }
   }
@@ -189,7 +196,7 @@
     }
 
     @include for-xl {
-      padding: 100px 0 100px 50px;
+      padding: 80px 0 80px 50px;
     }
   }
 }
@@ -201,7 +208,7 @@
     text-align: center;
 
     @include for-lg {
-      margin-bottom: 50px;
+      margin-bottom: 30px;
       text-align: unset;
     }
 
@@ -223,7 +230,7 @@
 
     @include for-lg {
       justify-content: start;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
     }
 
     .rm-product-view-info-tag {
@@ -241,7 +248,7 @@
 
     @include for-lg {
       justify-content: start;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
     }
 
     .variations_form {
@@ -319,19 +326,16 @@
         }
       }
     }
+
+    .woovr-variation-price {
+      font-size: var(--normal-font-size);
+      font-weight: 600;
+      color: $red-one-rm-color;
+    }
   }
 
   .rm-product-view-info-description {
     margin-top: 50px;
-
-    span {
-      font-family: normal normal 300 18px/23px Montserrat;
-      font-size: var(--normal-font-size);
-      color: $grey-one-rm-color;
-
-      b {
-        color: $black-rm-color;
-      }
-    }
+    font-size: var(--normal-font-size);
   }
 }

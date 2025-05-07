@@ -10,6 +10,9 @@ function blankslate_setup()
     add_theme_support('html5', array('search-form', 'navigation-widgets'));
     add_theme_support('appearance-tools');
     add_theme_support('woocommerce');
+    add_theme_support('wc-product-gallery-zoom');
+    add_theme_support('wc-product-gallery-lightbox');
+    add_theme_support('wc-product-gallery-slider');
     global $content_width;
     if (!isset($content_width)) {
         $content_width = 1920;
@@ -293,3 +296,17 @@ add_filter('fluentform/validate_input_item_textarea', function ($errorMessage, $
 
     return $errorMessage;
 }, 10, 5);
+
+add_filter( 'woocommerce_variable_price_html', 'custom_variable_price_html', 10, 2 );
+function custom_variable_price_html( $price, $product ) {
+    $available_variations = $product->get_available_variations();
+
+    if ( ! empty( $available_variations ) ) {
+        $min_price_variation = min( array_column( $available_variations, 'display_price' ) );
+        $formatted_price = wc_price( $min_price_variation );
+
+        return $formatted_price;
+    }
+
+    return $price;
+}

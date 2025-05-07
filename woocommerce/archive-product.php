@@ -6,10 +6,6 @@ get_template_part('woocommerce/header');
 
 <div class="rm-shop-page">
     <div class="container">
-        <div class="rm-page-view-info-breadcrumb">
-            <?php woocommerce_breadcrumb(); ?>
-        </div>
-
         <?php if (is_shop()) : ?>
             <?php
             // === START: Your Shop Home layout ===
@@ -59,6 +55,9 @@ get_template_part('woocommerce/header');
             ?>
 
         <?php elseif (is_product_category()) : ?>
+            <div class="rm-page-view-info-breadcrumb">
+                <?php woocommerce_breadcrumb(); ?>
+            </div>
 
             <?php
             $term = get_queried_object();

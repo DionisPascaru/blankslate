@@ -59,17 +59,38 @@
             prevArrow: '<button type="button" class="slick-prev"><i class="icon-chevron-left"></i></button>',
             nextArrow: '<button type="button" class="slick-next"><i class="icon-chevron-right"></i></button>',
         });
+
         /**
-         * Reviews slider.
+         * Single product slider.
          */
-        $('#rmProductViewGallery').slick({
-            dots: true,
-            infinite: true,
-            speed: 300,
+        // $('#rmProductViewGalleryFor').slick({
+        //     dots: true,
+        //     infinite: true,
+        //     speed: 300,
+        //     slidesToShow: 1,
+        //     variableWidth: true,
+        //     prevArrow: '<button type="button" class="slick-prev"><i class="icon-chevron-left"></i></button>',
+        //     nextArrow: '<button type="button" class="slick-next"><i class="icon-chevron-right"></i></button>',
+        // });
+
+        $('.rm-product-view-gallery-nav').slick({
             slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            draggable: false,
+            fade: true,
+            asNavFor: '.rm-product-view-gallery-for'
+        });
+        $('.rm-product-view-gallery-for').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            centerMode: false,
+            focusOnSelect: true,
             variableWidth: true,
+            arrows: true,
             prevArrow: '<button type="button" class="slick-prev"><i class="icon-chevron-left"></i></button>',
             nextArrow: '<button type="button" class="slick-next"><i class="icon-chevron-right"></i></button>',
+            asNavFor: '.rm-product-view-gallery-nav',
         });
     });
 })(jQuery);

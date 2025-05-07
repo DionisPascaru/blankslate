@@ -87,29 +87,27 @@
 /** ----- font sizes ----- **/
 :root {
   --heading-font-size: 44px;
-  --normal-font-size: 16px;
-  --small-font-size: 14px;
+  --normal-font-size: 14px;
+  --small-font-size: 13px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
   --shop-heading-font-size: 50px;
-  --shop-title-font-size: 30px;
+  --shop-title-font-size: 25px;
 }
 
 @media screen and (min-width: 768px) {
   :root {
     --heading-font-size: 70px;
-    --normal-font-size: 18px;
-    --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
     --shop-heading-font-size: 60px;
-    --shop-title-font-size: 40px ;
+    --shop-title-font-size: 30px ;
   }
 }
 @media screen and (min-width: 992px) {
   :root {
     --shop-heading-font-size: 80px;
-    --shop-title-font-size: 50px ;
+    --shop-title-font-size: 40px ;
   }
 }
 body {
@@ -201,7 +199,7 @@ a {
 }
 
 .rm-page-view-info-breadcrumb {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 992px) {
   .rm-page-view-info-breadcrumb {
@@ -237,6 +235,44 @@ input {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+/* Hide the default radio */
+input[type=radio] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #B3B3B3;
+  border-radius: 50%;
+  position: relative;
+  background-color: white;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: border-color 0.3s ease;
+}
+
+/* Checked style */
+input[type=radio]:checked {
+  border-color: #C80000;
+}
+
+/* Inner dot */
+input[type=radio]:checked::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #C80000;
+}
+
+/* Hover effect */
+input[type=radio]:hover {
+  border-color: #005f8d;
+}
+
 .rm-pt-none {
   padding-top: 0;
 }
@@ -245,7 +281,7 @@ input {
   font-weight: 500;
   color: #C80000 !important;
   text-decoration: underline;
-  padding: 5px 10px;
+  padding: 5px 10px 5px 0;
 }
 .woocommerce-breadcrumb a:first-child {
   color: #000 !important;
@@ -266,29 +302,27 @@ input {
 /** ----- font sizes ----- **/
 :root {
   --heading-font-size: 44px;
-  --normal-font-size: 16px;
-  --small-font-size: 14px;
+  --normal-font-size: 14px;
+  --small-font-size: 13px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
   --shop-heading-font-size: 50px;
-  --shop-title-font-size: 30px;
+  --shop-title-font-size: 25px;
 }
 
 @media screen and (min-width: 768px) {
   :root {
     --heading-font-size: 70px;
-    --normal-font-size: 18px;
-    --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
     --shop-heading-font-size: 60px;
-    --shop-title-font-size: 40px ;
+    --shop-title-font-size: 30px ;
   }
 }
 @media screen and (min-width: 992px) {
   :root {
     --shop-heading-font-size: 80px;
-    --shop-title-font-size: 50px ;
+    --shop-title-font-size: 40px ;
   }
 }
 .rm-navbar {
@@ -454,29 +488,27 @@ input {
 /** ----- font sizes ----- **/
 :root {
   --heading-font-size: 44px;
-  --normal-font-size: 16px;
-  --small-font-size: 14px;
+  --normal-font-size: 14px;
+  --small-font-size: 13px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
   --shop-heading-font-size: 50px;
-  --shop-title-font-size: 30px;
+  --shop-title-font-size: 25px;
 }
 
 @media screen and (min-width: 768px) {
   :root {
     --heading-font-size: 70px;
-    --normal-font-size: 18px;
-    --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
     --shop-heading-font-size: 60px;
-    --shop-title-font-size: 40px ;
+    --shop-title-font-size: 30px ;
   }
 }
 @media screen and (min-width: 992px) {
   :root {
     --shop-heading-font-size: 80px;
-    --shop-title-font-size: 50px ;
+    --shop-title-font-size: 40px ;
   }
 }
 .rm-page-slider {
@@ -553,29 +585,27 @@ input {
 /** ----- font sizes ----- **/
 :root {
   --heading-font-size: 44px;
-  --normal-font-size: 16px;
-  --small-font-size: 14px;
+  --normal-font-size: 14px;
+  --small-font-size: 13px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
   --shop-heading-font-size: 50px;
-  --shop-title-font-size: 30px;
+  --shop-title-font-size: 25px;
 }
 
 @media screen and (min-width: 768px) {
   :root {
     --heading-font-size: 70px;
-    --normal-font-size: 18px;
-    --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
     --shop-heading-font-size: 60px;
-    --shop-title-font-size: 40px ;
+    --shop-title-font-size: 30px ;
   }
 }
 @media screen and (min-width: 992px) {
   :root {
     --shop-heading-font-size: 80px;
-    --shop-title-font-size: 50px ;
+    --shop-title-font-size: 40px ;
   }
 }
 .rm-services {
@@ -692,29 +722,27 @@ input {
 /** ----- font sizes ----- **/
 :root {
   --heading-font-size: 44px;
-  --normal-font-size: 16px;
-  --small-font-size: 14px;
+  --normal-font-size: 14px;
+  --small-font-size: 13px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
   --shop-heading-font-size: 50px;
-  --shop-title-font-size: 30px;
+  --shop-title-font-size: 25px;
 }
 
 @media screen and (min-width: 768px) {
   :root {
     --heading-font-size: 70px;
-    --normal-font-size: 18px;
-    --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
     --shop-heading-font-size: 60px;
-    --shop-title-font-size: 40px ;
+    --shop-title-font-size: 30px ;
   }
 }
 @media screen and (min-width: 992px) {
   :root {
     --shop-heading-font-size: 80px;
-    --shop-title-font-size: 50px ;
+    --shop-title-font-size: 40px ;
   }
 }
 /** ----- subsidiary block ----- **/
@@ -940,29 +968,27 @@ input {
 /** ----- font sizes ----- **/
 :root {
   --heading-font-size: 44px;
-  --normal-font-size: 16px;
-  --small-font-size: 14px;
+  --normal-font-size: 14px;
+  --small-font-size: 13px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
   --shop-heading-font-size: 50px;
-  --shop-title-font-size: 30px;
+  --shop-title-font-size: 25px;
 }
 
 @media screen and (min-width: 768px) {
   :root {
     --heading-font-size: 70px;
-    --normal-font-size: 18px;
-    --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
     --shop-heading-font-size: 60px;
-    --shop-title-font-size: 40px ;
+    --shop-title-font-size: 30px ;
   }
 }
 @media screen and (min-width: 992px) {
   :root {
     --shop-heading-font-size: 80px;
-    --shop-title-font-size: 50px ;
+    --shop-title-font-size: 40px ;
   }
 }
 .modal-backdrop {
@@ -1044,29 +1070,27 @@ input {
 /** ----- font sizes ----- **/
 :root {
   --heading-font-size: 44px;
-  --normal-font-size: 16px;
-  --small-font-size: 14px;
+  --normal-font-size: 14px;
+  --small-font-size: 13px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
   --shop-heading-font-size: 50px;
-  --shop-title-font-size: 30px;
+  --shop-title-font-size: 25px;
 }
 
 @media screen and (min-width: 768px) {
   :root {
     --heading-font-size: 70px;
-    --normal-font-size: 18px;
-    --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
     --shop-heading-font-size: 60px;
-    --shop-title-font-size: 40px ;
+    --shop-title-font-size: 30px ;
   }
 }
 @media screen and (min-width: 992px) {
   :root {
     --shop-heading-font-size: 80px;
-    --shop-title-font-size: 50px ;
+    --shop-title-font-size: 40px ;
   }
 }
 .rm-timeline-animation {
@@ -1216,29 +1240,27 @@ input {
 /** ----- font sizes ----- **/
 :root {
   --heading-font-size: 44px;
-  --normal-font-size: 16px;
-  --small-font-size: 14px;
+  --normal-font-size: 14px;
+  --small-font-size: 13px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
   --shop-heading-font-size: 50px;
-  --shop-title-font-size: 30px;
+  --shop-title-font-size: 25px;
 }
 
 @media screen and (min-width: 768px) {
   :root {
     --heading-font-size: 70px;
-    --normal-font-size: 18px;
-    --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
     --shop-heading-font-size: 60px;
-    --shop-title-font-size: 40px ;
+    --shop-title-font-size: 30px ;
   }
 }
 @media screen and (min-width: 992px) {
   :root {
     --shop-heading-font-size: 80px;
-    --shop-title-font-size: 50px ;
+    --shop-title-font-size: 40px ;
   }
 }
 .rm-franchise {
@@ -1282,29 +1304,27 @@ input {
 /** ----- font sizes ----- **/
 :root {
   --heading-font-size: 44px;
-  --normal-font-size: 16px;
-  --small-font-size: 14px;
+  --normal-font-size: 14px;
+  --small-font-size: 13px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
   --shop-heading-font-size: 50px;
-  --shop-title-font-size: 30px;
+  --shop-title-font-size: 25px;
 }
 
 @media screen and (min-width: 768px) {
   :root {
     --heading-font-size: 70px;
-    --normal-font-size: 18px;
-    --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
     --shop-heading-font-size: 60px;
-    --shop-title-font-size: 40px ;
+    --shop-title-font-size: 30px ;
   }
 }
 @media screen and (min-width: 992px) {
   :root {
     --shop-heading-font-size: 80px;
-    --shop-title-font-size: 50px ;
+    --shop-title-font-size: 40px ;
   }
 }
 .rm-career .rm-career-content {
@@ -1354,29 +1374,27 @@ input {
 /** ----- font sizes ----- **/
 :root {
   --heading-font-size: 44px;
-  --normal-font-size: 16px;
-  --small-font-size: 14px;
+  --normal-font-size: 14px;
+  --small-font-size: 13px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
   --shop-heading-font-size: 50px;
-  --shop-title-font-size: 30px;
+  --shop-title-font-size: 25px;
 }
 
 @media screen and (min-width: 768px) {
   :root {
     --heading-font-size: 70px;
-    --normal-font-size: 18px;
-    --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
     --shop-heading-font-size: 60px;
-    --shop-title-font-size: 40px ;
+    --shop-title-font-size: 30px ;
   }
 }
 @media screen and (min-width: 992px) {
   :root {
     --shop-heading-font-size: 80px;
-    --shop-title-font-size: 50px ;
+    --shop-title-font-size: 40px ;
   }
 }
 .rm-contacts .rm-contacts-items {
@@ -1461,29 +1479,27 @@ input {
 /** ----- font sizes ----- **/
 :root {
   --heading-font-size: 44px;
-  --normal-font-size: 16px;
-  --small-font-size: 14px;
+  --normal-font-size: 14px;
+  --small-font-size: 13px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
   --shop-heading-font-size: 50px;
-  --shop-title-font-size: 30px;
+  --shop-title-font-size: 25px;
 }
 
 @media screen and (min-width: 768px) {
   :root {
     --heading-font-size: 70px;
-    --normal-font-size: 18px;
-    --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
     --shop-heading-font-size: 60px;
-    --shop-title-font-size: 40px ;
+    --shop-title-font-size: 30px ;
   }
 }
 @media screen and (min-width: 992px) {
   :root {
     --shop-heading-font-size: 80px;
-    --shop-title-font-size: 50px ;
+    --shop-title-font-size: 40px ;
   }
 }
 .rm-reviews .rm-reviews-items {
@@ -1608,29 +1624,27 @@ input {
 /** ----- font sizes ----- **/
 :root {
   --heading-font-size: 44px;
-  --normal-font-size: 16px;
-  --small-font-size: 14px;
+  --normal-font-size: 14px;
+  --small-font-size: 13px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
   --shop-heading-font-size: 50px;
-  --shop-title-font-size: 30px;
+  --shop-title-font-size: 25px;
 }
 
 @media screen and (min-width: 768px) {
   :root {
     --heading-font-size: 70px;
-    --normal-font-size: 18px;
-    --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
     --shop-heading-font-size: 60px;
-    --shop-title-font-size: 40px ;
+    --shop-title-font-size: 30px ;
   }
 }
 @media screen and (min-width: 992px) {
   :root {
     --shop-heading-font-size: 80px;
-    --shop-title-font-size: 50px ;
+    --shop-title-font-size: 40px ;
   }
 }
 .rm-fixed-buttons {
@@ -1717,29 +1731,27 @@ input {
 /** ----- font sizes ----- **/
 :root {
   --heading-font-size: 44px;
-  --normal-font-size: 16px;
-  --small-font-size: 14px;
+  --normal-font-size: 14px;
+  --small-font-size: 13px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
   --shop-heading-font-size: 50px;
-  --shop-title-font-size: 30px;
+  --shop-title-font-size: 25px;
 }
 
 @media screen and (min-width: 768px) {
   :root {
     --heading-font-size: 70px;
-    --normal-font-size: 18px;
-    --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
     --shop-heading-font-size: 60px;
-    --shop-title-font-size: 40px ;
+    --shop-title-font-size: 30px ;
   }
 }
 @media screen and (min-width: 992px) {
   :root {
     --shop-heading-font-size: 80px;
-    --shop-title-font-size: 50px ;
+    --shop-title-font-size: 40px ;
   }
 }
 .rm-footer {
@@ -1791,29 +1803,27 @@ input {
 /** ----- font sizes ----- **/
 :root {
   --heading-font-size: 44px;
-  --normal-font-size: 16px;
-  --small-font-size: 14px;
+  --normal-font-size: 14px;
+  --small-font-size: 13px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
   --shop-heading-font-size: 50px;
-  --shop-title-font-size: 30px;
+  --shop-title-font-size: 25px;
 }
 
 @media screen and (min-width: 768px) {
   :root {
     --heading-font-size: 70px;
-    --normal-font-size: 18px;
-    --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
     --shop-heading-font-size: 60px;
-    --shop-title-font-size: 40px ;
+    --shop-title-font-size: 30px ;
   }
 }
 @media screen and (min-width: 992px) {
   :root {
     --shop-heading-font-size: 80px;
-    --shop-title-font-size: 50px ;
+    --shop-title-font-size: 40px ;
   }
 }
 .fluentform .frm-fluent-form .ff-el-ratings {
@@ -1883,29 +1893,27 @@ input {
 /** ----- font sizes ----- **/
 :root {
   --heading-font-size: 44px;
-  --normal-font-size: 16px;
-  --small-font-size: 14px;
+  --normal-font-size: 14px;
+  --small-font-size: 13px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
   --shop-heading-font-size: 50px;
-  --shop-title-font-size: 30px;
+  --shop-title-font-size: 25px;
 }
 
 @media screen and (min-width: 768px) {
   :root {
     --heading-font-size: 70px;
-    --normal-font-size: 18px;
-    --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
     --shop-heading-font-size: 60px;
-    --shop-title-font-size: 40px ;
+    --shop-title-font-size: 30px ;
   }
 }
 @media screen and (min-width: 992px) {
   :root {
     --shop-heading-font-size: 80px;
-    --shop-title-font-size: 50px ;
+    --shop-title-font-size: 40px ;
   }
 }
 /** Products grid **/
@@ -1921,7 +1929,7 @@ input {
 }
 @media screen and (min-width: 992px) {
   .rm-products-grid {
-    max-width: unset;
+    max-width: 1100px;
   }
 }
 
@@ -1937,6 +1945,7 @@ input {
   color: #C80000;
   text-align: center;
   text-transform: uppercase;
+  line-height: 1;
 }
 
 .rm-product-card {
@@ -1952,28 +1961,40 @@ input {
   border: 1px solid #54595F;
   text-align: center;
 }
+.rm-product-card .rm-product-thumbnail {
+  padding: 5px;
+}
 .rm-product-card .rm-product-price {
-  font-size: var(--normal-font-size);
+  font-size: var(--title-font-size);
   color: #C80000;
   font-family: normal normal 300 18px/23px Montserrat;
   font-style: italic;
   font-weight: 600;
+  padding: 0 5px;
 }
 .rm-product-card .rm-product-title {
   font-family: normal normal 300 18px/23px Montserrat;
   font-size: var(--normal-font-size);
   color: #000;
   font-weight: 600;
+  padding: 0 5px;
+  line-height: 1;
+  min-height: 40px;
 }
 .rm-product-card .rm-product-buttons {
+  display: flex;
   background-color: #B3B3B3;
-  padding: 10px 0;
   text-align: center;
   border-top: 1px solid #54595F;
 }
+.rm-product-card .rm-product-buttons:hover {
+  background-color: #C80000;
+}
 .rm-product-card .rm-product-buttons a {
+  width: 100%;
+  padding: 10px 0;
   font-family: normal normal 300 18px/23px Montserrat;
-  font-size: var(--small-font-size);
+  font-size: var(--normal-font-size);
   font-weight: 600;
   color: #fff;
 }
@@ -1987,29 +2008,27 @@ input {
 /** ----- font sizes ----- **/
 :root {
   --heading-font-size: 44px;
-  --normal-font-size: 16px;
-  --small-font-size: 14px;
+  --normal-font-size: 14px;
+  --small-font-size: 13px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
   --shop-heading-font-size: 50px;
-  --shop-title-font-size: 30px;
+  --shop-title-font-size: 25px;
 }
 
 @media screen and (min-width: 768px) {
   :root {
     --heading-font-size: 70px;
-    --normal-font-size: 18px;
-    --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
     --shop-heading-font-size: 60px;
-    --shop-title-font-size: 40px ;
+    --shop-title-font-size: 30px ;
   }
 }
 @media screen and (min-width: 992px) {
   :root {
     --shop-heading-font-size: 80px;
-    --shop-title-font-size: 50px ;
+    --shop-title-font-size: 40px ;
   }
 }
 .rm-shop-navbar {
@@ -2198,29 +2217,27 @@ input {
 /** ----- font sizes ----- **/
 :root {
   --heading-font-size: 44px;
-  --normal-font-size: 16px;
-  --small-font-size: 14px;
+  --normal-font-size: 14px;
+  --small-font-size: 13px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
   --shop-heading-font-size: 50px;
-  --shop-title-font-size: 30px;
+  --shop-title-font-size: 25px;
 }
 
 @media screen and (min-width: 768px) {
   :root {
     --heading-font-size: 70px;
-    --normal-font-size: 18px;
-    --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
     --shop-heading-font-size: 60px;
-    --shop-title-font-size: 40px ;
+    --shop-title-font-size: 30px ;
   }
 }
 @media screen and (min-width: 992px) {
   :root {
     --shop-heading-font-size: 80px;
-    --shop-title-font-size: 50px ;
+    --shop-title-font-size: 40px ;
   }
 }
 /** Product view **/
@@ -2241,22 +2258,7 @@ input {
   bottom: 0;
   z-index: -1;
   width: 100%;
-  height: 470px;
-}
-@media screen and (min-width: 576px) {
-  .rm-product-view .rm-product-view-bg {
-    height: 570px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .rm-product-view .rm-product-view-bg {
-    height: 700px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .rm-product-view .rm-product-view-bg {
-    height: 100%;
-  }
+  height: 100%;
 }
 .rm-product-view .rm-product-view-bg .rm-product-view-bg-red {
   width: 100%;
@@ -2273,6 +2275,45 @@ input {
     width: 50%;
     height: 100%;
     background-color: #fff;
+  }
+}
+.rm-product-view .rm-product-view-gallery-block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 992px) {
+  .rm-product-view .rm-sticky-block {
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+  }
+}
+.rm-product-view .rm-sticky-block .rm-sticky-block-vertical-center {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 50px 30px 50px;
+}
+@media screen and (min-width: 576px) {
+  .rm-product-view .rm-sticky-block .rm-sticky-block-vertical-center {
+    padding: 80px 30px 50px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .rm-product-view .rm-sticky-block .rm-sticky-block-vertical-center {
+    justify-content: right;
+  }
+}
+@media screen and (min-width: 1140px) {
+  .rm-product-view .rm-sticky-block .rm-sticky-block-vertical-center {
+    padding: 50px 50px 50px 0;
   }
 }
 .rm-product-view .rm-product-view-gallery {
@@ -2305,106 +2346,71 @@ input {
 }
 @media screen and (min-width: 1320px) {
   .rm-product-view .rm-product-view-gallery {
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
   }
+}
+.rm-product-view .rm-product-view-gallery .slick-list, .rm-product-view .rm-product-view-gallery .slick-track {
+  height: 100%;
 }
 .rm-product-view .rm-product-view-gallery .rm-product-view-gallery-slider {
-  width: 300px;
-  height: 300px;
-}
-@media screen and (min-width: 576px) {
-  .rm-product-view .rm-product-view-gallery .rm-product-view-gallery-slider {
-    width: 400px;
-    height: 400px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .rm-product-view .rm-product-view-gallery .rm-product-view-gallery-slider {
-    width: 500px;
-    height: 500px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .rm-product-view .rm-product-view-gallery .rm-product-view-gallery-slider {
-    width: 400px;
-    height: 400px;
-  }
-}
-@media screen and (min-width: 1140px) {
-  .rm-product-view .rm-product-view-gallery .rm-product-view-gallery-slider {
-    width: 450px;
-    height: 450px;
-  }
-}
-@media screen and (min-width: 1320px) {
-  .rm-product-view .rm-product-view-gallery .rm-product-view-gallery-slider {
-    width: 500px;
-    height: 500px;
-  }
+  width: 100%;
+  height: 100%;
 }
 .rm-product-view .rm-product-view-gallery .rm-product-view-gallery-slider img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.rm-product-view .rm-product-view-gallery .slick-dots {
-  position: unset;
-  text-align: unset;
-}
-.rm-product-view .rm-product-view-gallery .slick-dots li {
-  width: auto;
-  height: auto;
-  margin: 0;
-}
-.rm-product-view .rm-product-view-gallery .slick-dots li button {
-  margin-right: 5px;
-  width: auto;
-  height: auto;
-}
-.rm-product-view .rm-product-view-gallery .slick-dots li button:before {
-  background-color: #fff;
-  color: #fff;
-  opacity: 1;
-  width: 10px;
-  height: 10px;
-  line-height: 10px;
-}
-.rm-product-view .rm-product-view-gallery .slick-dots li.slick-active button::before {
-  background-color: #000;
-  color: #000;
-}
-@media screen and (min-width: 992px) {
-  .rm-product-view .rm-sticky-block {
-    position: sticky;
-    top: 0;
-    bottom: 0;
-    height: 100vh;
-  }
-}
-.rm-product-view .rm-sticky-block .rm-sticky-block-vertical-center {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  padding: 70px 30px 50px;
+.rm-product-view .rm-product-view-gallery-thumbnail {
+  width: 300px;
 }
 @media screen and (min-width: 576px) {
-  .rm-product-view .rm-sticky-block .rm-sticky-block-vertical-center {
-    padding: 100px 30px 50px;
+  .rm-product-view .rm-product-view-gallery-thumbnail {
+    width: 400px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .rm-product-view .rm-product-view-gallery-thumbnail {
+    width: 500px;
   }
 }
 @media screen and (min-width: 992px) {
-  .rm-product-view .rm-sticky-block .rm-sticky-block-vertical-center {
-    justify-content: right;
+  .rm-product-view .rm-product-view-gallery-thumbnail {
+    width: 400px;
   }
 }
 @media screen and (min-width: 1140px) {
-  .rm-product-view .rm-sticky-block .rm-sticky-block-vertical-center {
-    padding: 50px 50px 50px 0;
+  .rm-product-view .rm-product-view-gallery-thumbnail {
+    width: 450px;
   }
+}
+@media screen and (min-width: 1320px) {
+  .rm-product-view .rm-product-view-gallery-thumbnail {
+    width: 600px;
+  }
+}
+.rm-product-view .rm-product-view-gallery-thumbnail .slick-track {
+  margin-top: 5px;
+  display: flex;
+  gap: 5px;
+}
+.rm-product-view .rm-product-view-gallery-thumbnail .rm-product-view-gallery-slider-thumbnail {
+  width: 100px !important;
+  height: 100px;
+  background-color: #000;
+}
+.rm-product-view .rm-product-view-gallery-thumbnail .rm-product-view-gallery-slider-thumbnail:hover {
+  cursor: pointer;
+}
+.rm-product-view .rm-product-view-gallery-thumbnail .rm-product-view-gallery-slider-thumbnail.slick-current img {
+  opacity: 1;
+}
+.rm-product-view .rm-product-view-gallery-thumbnail .rm-product-view-gallery-slider-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
 }
 .rm-product-view .rm-product-view-info {
   padding: 50px 0;
@@ -2416,7 +2422,7 @@ input {
 }
 @media screen and (min-width: 1140px) {
   .rm-product-view .rm-product-view-info {
-    padding: 100px 0 100px 50px;
+    padding: 80px 0 80px 50px;
   }
 }
 
@@ -2427,7 +2433,7 @@ input {
 }
 @media screen and (min-width: 992px) {
   .rm-product-view-info .rm-product-view-info-title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     text-align: unset;
   }
 }
@@ -2448,7 +2454,7 @@ input {
 @media screen and (min-width: 992px) {
   .rm-product-view-info .rm-product-view-info-tags {
     justify-content: start;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 }
 .rm-product-view-info .rm-product-view-info-tags .rm-product-view-info-tag {
@@ -2465,7 +2471,7 @@ input {
 @media screen and (min-width: 992px) {
   .rm-product-view-info .rm-product-view-info-add-to-cart {
     justify-content: start;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 }
 .rm-product-view-info .rm-product-view-info-add-to-cart .variations_form {
@@ -2530,16 +2536,14 @@ input {
 .rm-product-view-info .rm-product-view-info-add-to-cart .woocommerce-variation-add-to-cart .single_add_to_cart_button:hover {
   background-color: #B3B3B3;
 }
+.rm-product-view-info .rm-product-view-info-add-to-cart .woovr-variation-price {
+  font-size: var(--normal-font-size);
+  font-weight: 600;
+  color: #C80000;
+}
 .rm-product-view-info .rm-product-view-info-description {
   margin-top: 50px;
-}
-.rm-product-view-info .rm-product-view-info-description span {
-  font-family: normal normal 300 18px/23px Montserrat;
   font-size: var(--normal-font-size);
-  color: #54595F;
-}
-.rm-product-view-info .rm-product-view-info-description span b {
-  color: #000;
 }
 
 /** ----- Colors ----- **/
@@ -2551,29 +2555,27 @@ input {
 /** ----- font sizes ----- **/
 :root {
   --heading-font-size: 44px;
-  --normal-font-size: 16px;
-  --small-font-size: 14px;
+  --normal-font-size: 14px;
+  --small-font-size: 13px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
   --shop-heading-font-size: 50px;
-  --shop-title-font-size: 30px;
+  --shop-title-font-size: 25px;
 }
 
 @media screen and (min-width: 768px) {
   :root {
     --heading-font-size: 70px;
-    --normal-font-size: 18px;
-    --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
     --shop-heading-font-size: 60px;
-    --shop-title-font-size: 40px ;
+    --shop-title-font-size: 30px ;
   }
 }
 @media screen and (min-width: 992px) {
   :root {
     --shop-heading-font-size: 80px;
-    --shop-title-font-size: 50px ;
+    --shop-title-font-size: 40px ;
   }
 }
 .wp-block-woocommerce-empty-cart-block {
@@ -2592,29 +2594,27 @@ input {
 /** ----- font sizes ----- **/
 :root {
   --heading-font-size: 44px;
-  --normal-font-size: 16px;
-  --small-font-size: 14px;
+  --normal-font-size: 14px;
+  --small-font-size: 13px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
   --shop-heading-font-size: 50px;
-  --shop-title-font-size: 30px;
+  --shop-title-font-size: 25px;
 }
 
 @media screen and (min-width: 768px) {
   :root {
     --heading-font-size: 70px;
-    --normal-font-size: 18px;
-    --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
     --shop-heading-font-size: 60px;
-    --shop-title-font-size: 40px ;
+    --shop-title-font-size: 30px ;
   }
 }
 @media screen and (min-width: 992px) {
   :root {
     --shop-heading-font-size: 80px;
-    --shop-title-font-size: 50px ;
+    --shop-title-font-size: 40px ;
   }
 }
 .woocommerce-message,
@@ -2717,29 +2717,27 @@ input {
 /** ----- font sizes ----- **/
 :root {
   --heading-font-size: 44px;
-  --normal-font-size: 16px;
-  --small-font-size: 14px;
+  --normal-font-size: 14px;
+  --small-font-size: 13px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
   --shop-heading-font-size: 50px;
-  --shop-title-font-size: 30px;
+  --shop-title-font-size: 25px;
 }
 
 @media screen and (min-width: 768px) {
   :root {
     --heading-font-size: 70px;
-    --normal-font-size: 18px;
-    --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
     --shop-heading-font-size: 60px;
-    --shop-title-font-size: 40px ;
+    --shop-title-font-size: 30px ;
   }
 }
 @media screen and (min-width: 992px) {
   :root {
     --shop-heading-font-size: 80px;
-    --shop-title-font-size: 50px ;
+    --shop-title-font-size: 40px ;
   }
 }
 .rm-shop-bg {
@@ -2810,29 +2808,27 @@ input {
 /** ----- font sizes ----- **/
 :root {
   --heading-font-size: 44px;
-  --normal-font-size: 16px;
-  --small-font-size: 14px;
+  --normal-font-size: 14px;
+  --small-font-size: 13px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
   --shop-heading-font-size: 50px;
-  --shop-title-font-size: 30px;
+  --shop-title-font-size: 25px;
 }
 
 @media screen and (min-width: 768px) {
   :root {
     --heading-font-size: 70px;
-    --normal-font-size: 18px;
-    --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
     --shop-heading-font-size: 60px;
-    --shop-title-font-size: 40px ;
+    --shop-title-font-size: 30px ;
   }
 }
 @media screen and (min-width: 992px) {
   :root {
     --shop-heading-font-size: 80px;
-    --shop-title-font-size: 50px ;
+    --shop-title-font-size: 40px ;
   }
 }
 .rm-page-not-found {
@@ -2871,29 +2867,27 @@ input {
 /** ----- font sizes ----- **/
 :root {
   --heading-font-size: 44px;
-  --normal-font-size: 16px;
-  --small-font-size: 14px;
+  --normal-font-size: 14px;
+  --small-font-size: 13px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
   --shop-heading-font-size: 50px;
-  --shop-title-font-size: 30px;
+  --shop-title-font-size: 25px;
 }
 
 @media screen and (min-width: 768px) {
   :root {
     --heading-font-size: 70px;
-    --normal-font-size: 18px;
-    --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
     --shop-heading-font-size: 60px;
-    --shop-title-font-size: 40px ;
+    --shop-title-font-size: 30px ;
   }
 }
 @media screen and (min-width: 992px) {
   :root {
     --shop-heading-font-size: 80px;
-    --shop-title-font-size: 50px ;
+    --shop-title-font-size: 40px ;
   }
 }
 .coming-soon-page-bg {
@@ -2931,29 +2925,27 @@ input {
 /** ----- font sizes ----- **/
 :root {
   --heading-font-size: 44px;
-  --normal-font-size: 16px;
-  --small-font-size: 14px;
+  --normal-font-size: 14px;
+  --small-font-size: 13px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
   --shop-heading-font-size: 50px;
-  --shop-title-font-size: 30px;
+  --shop-title-font-size: 25px;
 }
 
 @media screen and (min-width: 768px) {
   :root {
     --heading-font-size: 70px;
-    --normal-font-size: 18px;
-    --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
     --shop-heading-font-size: 60px;
-    --shop-title-font-size: 40px ;
+    --shop-title-font-size: 30px ;
   }
 }
 @media screen and (min-width: 992px) {
   :root {
     --shop-heading-font-size: 80px;
-    --shop-title-font-size: 50px ;
+    --shop-title-font-size: 40px ;
   }
 }
 .rm-order {
@@ -3026,29 +3018,27 @@ input {
 /** ----- font sizes ----- **/
 :root {
   --heading-font-size: 44px;
-  --normal-font-size: 16px;
-  --small-font-size: 14px;
+  --normal-font-size: 14px;
+  --small-font-size: 13px;
   --title-font-size: 20px;
   --modal-title-font-size: 28px;
   --shop-heading-font-size: 50px;
-  --shop-title-font-size: 30px;
+  --shop-title-font-size: 25px;
 }
 
 @media screen and (min-width: 768px) {
   :root {
     --heading-font-size: 70px;
-    --normal-font-size: 18px;
-    --small-font-size: 16px;
     --title-font-size: 22px;
     --modal-title-font-size: 50px;
     --shop-heading-font-size: 60px;
-    --shop-title-font-size: 40px ;
+    --shop-title-font-size: 30px ;
   }
 }
 @media screen and (min-width: 992px) {
   :root {
     --shop-heading-font-size: 80px;
-    --shop-title-font-size: 50px ;
+    --shop-title-font-size: 40px ;
   }
 }
 .rm-shop-primary-btn {
