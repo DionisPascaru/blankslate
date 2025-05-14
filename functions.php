@@ -310,3 +310,17 @@ function custom_variable_price_html( $price, $product ) {
 
     return $price;
 }
+add_action('template_redirect', function () {
+    if (
+        isset($_POST['add-to-cart']) &&
+        is_product() && // optional: restrict only on single product pages
+        !headers_sent()
+    ) {
+        $product_id = absint($_POST['add-to-cart']);
+        $url = get_permalink($product_id);
+        $redirect_url = add_query_arg('added-to-cart', $product_id, $url);
+        wp_safe_redirect($redirect_url);
+        exit;
+    }
+});
+

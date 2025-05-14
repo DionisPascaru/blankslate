@@ -72,7 +72,7 @@
             asNavFor: '.rm-product-view-gallery-for'
         });
         $('.rm-product-view-gallery-for').slick({
-            slidesToShow: 3,
+            slidesToShow: 5,
             slidesToScroll: 1,
             centerMode: false,
             focusOnSelect: true,

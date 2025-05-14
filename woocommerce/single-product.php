@@ -105,13 +105,14 @@ get_template_part('woocommerce/header');
                                             <label class="rm-product-view-label"><?php echo wc_attribute_label( $attribute_name ); ?></label>
                                             <div class="rm-custom-variation-options" data-attribute-name="<?php echo esc_attr( $attribute_name ); ?>">
                                                 <?php foreach ( $options as $option ) :
-                                                    $id = sanitize_title( $option );
+                                                    $term = get_term_by( 'slug', $option, $attribute_name );
+                                                    $term_name = $term ? $term->name : $option; // Fallback to slug if term not found
                                                     ?>
                                                     <button type="button"
                                                             class="rm-variation-option"
                                                             data-attribute="<?php echo esc_attr( $attribute_name ); ?>"
                                                             data-value="<?php echo esc_attr( $option ); ?>">
-                                                        <?php echo esc_html( $option ); ?>
+                                                        <?php echo esc_html( $term_name ); ?>
                                                     </button>
                                                 <?php endforeach; ?>
                                                 <input type="hidden"
