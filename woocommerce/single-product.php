@@ -4,25 +4,25 @@ get_template_part('woocommerce/header');
 ?>
 
 <div class="rm-product-view">
-	<div class="rm-product-view-bg">
-		<div class="rm-product-view-bg-red"></div>
-		<div class="rm-product-view-bg-white"></div>
-	</div>
-	<div class="container">
-		<?php while (have_posts()) : the_post(); ?>
-			<div class="row rm-sticky-container">
-				<div class="col-lg-6">
+    <div class="rm-product-view-bg">
+        <div class="rm-product-view-bg-red"></div>
+        <div class="rm-product-view-bg-white"></div>
+    </div>
+    <div class="container">
+        <?php while (have_posts()) : the_post(); ?>
+            <div class="row rm-sticky-container">
+                <div class="col-lg-6">
 
-					<div class="rm-sticky-block">
-						<div class="rm-sticky-block-vertical-center">
+                    <div class="rm-sticky-block">
+                        <div class="rm-sticky-block-vertical-center">
 
-							<div class="rm-product-view-gallery-block">
-								<?php
-								global $product;
-								$main_image_id = $product->get_image_id();
-								$attachment_ids = $product->get_gallery_image_ids();
+                            <div class="rm-product-view-gallery-block">
+                                <?php
+                                global $product;
+                                $main_image_id = $product->get_image_id();
+                                $attachment_ids = $product->get_gallery_image_ids();
 
-								$gallery_ids = array_filter(array_merge([$main_image_id], $attachment_ids));
+                                $gallery_ids = array_filter(array_merge([$main_image_id], $attachment_ids));
 
                                 echo '<div id="rmProductViewGalleryNav" class="rm-product-view-gallery rm-product-view-gallery-nav">';
                                 foreach ($gallery_ids as $gallery_id) {
@@ -38,23 +38,23 @@ get_template_part('woocommerce/header');
                                     echo '</div>';
                                 }
                                 echo '</div>';
-								?>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="rm-product-view-info">
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="rm-product-view-info">
                         <div class="rm-page-view-info-breadcrumb">
                             <?php woocommerce_breadcrumb(); ?>
                         </div>
 
                         <?php
-                            wc_print_notices();
+                        wc_print_notices();
                         ?>
 
-						<div class="rm-product-view-info-title">
-							<?php woocommerce_template_single_title(); ?>
+                        <div class="rm-product-view-info-title">
+                            <?php woocommerce_template_single_title(); ?>
                             <?php
                             $product_tags = wp_get_post_terms(get_the_ID(), 'product_tag');
 
@@ -66,17 +66,220 @@ get_template_part('woocommerce/header');
                                 echo '</div>';
                             }
                             ?>
-						</div>
-						<div class="rm-product-view-info-add-to-cart">
-                            <?php woocommerce_template_single_add_to_cart(); ?>
                         </div>
-						<div class="rm-product-view-info-description">
-							<?php woocommerce_template_single_excerpt(); ?>
-						</div>
-					</div>
-				</div>
-			</div>
-		<?php endwhile; ?>
-	</div>
+
+                        <div class="rm-product-view-info-add-to-cart">
+                            <?php if ( $product->is_type( 'simple' ) ) : ?>
+                                <form class="custom-simple-form" method="post" action="<?php echo esc_url( $product->add_to_cart_url() ); ?>">
+                                    <div class="custom-qty-price">
+                                        <!-- Price -->
+                                        <div class="price-wrapper">
+                                            <label class="rm-product-view-label">Price</label>
+                                            <div class="variation-price"><?php echo $product->get_price_html(); ?></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Buttons -->
+                                    <div class="custom-add-buttons">
+                                        <input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" />
+                                        <button type="submit" class="add-to-cart">Add To Cart</button>
+                                    </div>
+                                </form>
+                            <?php endif; ?>
+
+                            <?php if ( $product->is_type( 'variable' ) ) :
+                                $available_variations = $product->get_available_variations();
+                                $attributes = $product->get_variation_attributes();
+                                $default_attributes = $product->get_default_attributes();
+                                $product_id = $product->get_id();
+                                ?>
+
+                                <form class="variations_form custom-variations" method="post"
+                                      action="<?php echo esc_url( $product->get_permalink() ); ?>"
+                                      data-product_id="<?php echo esc_attr( $product_id ); ?>"
+                                      data-product_variations='<?php echo wp_json_encode( $available_variations ); ?>'>
+
+                                    <!-- Loop through each attribute dynamically -->
+                                    <?php foreach ( $attributes as $attribute_name => $options ) : ?>
+                                        <div class="custom-variation-group">
+                                            <label class="rm-product-view-label"><?php echo wc_attribute_label( $attribute_name ); ?></label>
+                                            <div class="rm-custom-variation-options" data-attribute-name="<?php echo esc_attr( $attribute_name ); ?>">
+                                                <?php foreach ( $options as $option ) :
+                                                    $term = get_term_by( 'slug', $option, $attribute_name );
+                                                    $term_name = $term ? $term->name : $option; // Fallback to slug if term not found
+                                                    ?>
+                                                    <button type="button"
+                                                            class="rm-variation-option"
+                                                            data-attribute="<?php echo esc_attr( $attribute_name ); ?>"
+                                                            data-value="<?php echo esc_attr( $option ); ?>">
+                                                        <?php echo esc_html( $term_name ); ?>
+                                                    </button>
+                                                <?php endforeach; ?>
+                                                <input type="hidden"
+                                                       name="attribute_<?php echo esc_attr( $attribute_name ); ?>"
+                                                       id="selected_variation_input" />
+                                            </div>
+                                        </div>
+                                    <?php endforeach; ?>
+
+                                    <!-- Quantity -->
+                                    <div class="custom-qty-price">
+                                        <div class="qty-wrapper">
+                                            <label class="rm-product-view-label">Quantity</label>
+                                            <div class="qty-controls">
+                                                <button type="button" class="qty-count qty-minus">－</button>
+                                                <input type="number" name="quantity" value="1" min="1" class="qty-input" />
+                                                <button type="button" class="qty-count qty-plus">＋</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Price -->
+                                        <div class="price-wrapper">
+                                            <label class="rm-product-view-label">Price</label>
+                                            <div class="variation-price"><?php echo $product->get_price_html(); ?></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Buttons -->
+                                    <div class="custom-add-buttons">
+                                        <input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" />
+                                        <input type="hidden" name="variation_id" class="variation_id" value="0" />
+                                        <button type="submit" class="add-to-cart">Add To Cart</button>
+                                    </div>
+                                </form>
+
+                            <?php endif; ?>
+
+                        </div>
+
+                        <div class="rm-product-view-info-description">
+                            <?php woocommerce_template_single_excerpt(); ?>
+                        </div>
+
+                        <?php
+                        $upsells = $product->get_upsell_ids();
+
+                        if (!empty($upsells)) {
+                            echo '<div class="rm-product-linked-section">';
+                            echo '<h3>Related Products</h3>';
+                            echo '<div class="rm-upsell-products">';
+
+                            foreach ($upsells as $upsell_id) {
+                                $upsell = wc_get_product($upsell_id);
+                                if (!$upsell || !$upsell->is_visible()) continue;
+
+                                $link = get_permalink($upsell_id);
+                                $image = $upsell->get_image(); // uses WooCommerce image size
+                                $title = $upsell->get_name();
+                                $price = $upsell->get_price_html();
+
+                                echo '<div class="rm-upsell-product">';
+                                echo '<div class="rm-upsell-image">';
+                                echo '<a href="' . esc_url($link) . '">' . $image . '</a>';
+                                echo '</div>';
+                                echo '<div class="rm-upsell-info">';
+                                echo '<a href="' . esc_url($link) . '">' . esc_html($title) . '</a>';
+                                echo '<div class="rm-upsell-price">' . $price . '</div>';
+                                echo '</div>';
+                                echo '</div>';
+                            }
+
+                            echo '</div></div>';
+                        }
+                        ?>
+
+                    </div>
+                </div>
+            </div>
+        <?php endwhile; ?>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.querySelector('.variations_form');
+            if (!form) return;
+
+            const variations = JSON.parse(form.dataset.product_variations);
+            const attributeInputs = form.querySelectorAll('[name^="attribute_"]');
+            const variationIdInput = form.querySelector('.variation_id');
+            const priceDisplay = form.querySelector('.variation-price');
+
+            function getSelectedAttributes() {
+                const attrs = {};
+                attributeInputs.forEach(input => {
+                    const name = input.name.replace('attribute_', '');
+                    const value = input.value;
+                    if (value) {
+                        attrs[name] = value;
+                    }
+                });
+                return attrs;
+            }
+
+            function findMatchingVariation(selectedAttrs) {
+                return variations.find(v => {
+                    return Object.entries(selectedAttrs).every(([key, val]) => {
+                        return v.attributes[`attribute_${key}`] === val;
+                    });
+                });
+            }
+
+            function updateVariation() {
+                const selectedAttrs = getSelectedAttributes();
+                const match = findMatchingVariation(selectedAttrs);
+
+                if (match) {
+                    variationIdInput.value = match.variation_id;
+
+                    // Show correct price (even if same)
+                    if (match.price_html && priceDisplay) {
+                        priceDisplay.innerHTML = match.price_html;
+                    }
+                } else {
+                    variationIdInput.value = '0';
+                }
+            }
+
+            // Handle option button clicks
+            form.querySelectorAll('.rm-variation-option').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const attr = this.dataset.attribute;
+                    const value = this.dataset.value;
+
+                    // Visually mark selected
+                    const group = this.closest('.rm-custom-variation-options');
+                    group.querySelectorAll('.rm-variation-option').forEach(b => b.classList.remove('selected'));
+                    this.classList.add('selected');
+
+                    // Set hidden input
+                    const input = form.querySelector(`[name="attribute_${attr}"]`);
+                    if (input) {
+                        input.value = value;
+                    }
+
+                    updateVariation();
+                });
+            });
+
+                document.querySelectorAll('.qty-minus').forEach(btn => {
+                    btn.addEventListener('click', function () {
+                        const input = this.nextElementSibling;
+                        const value = parseInt(input.value, 10);
+                        if (value > 1) input.value = value - 1;
+                    });
+                });
+
+                document.querySelectorAll('.qty-plus').forEach(btn => {
+                    btn.addEventListener('click', function () {
+                        const input = this.previousElementSibling;
+                        const value = parseInt(input.value, 10);
+                        input.value = value + 1;
+                    });
+                });
+
+        });
+
+    </script>
+
 </div>
 <?php get_footer(); ?>

@@ -63,16 +63,6 @@
         /**
          * Single product slider.
          */
-        // $('#rmProductViewGalleryFor').slick({
-        //     dots: true,
-        //     infinite: true,
-        //     speed: 300,
-        //     slidesToShow: 1,
-        //     variableWidth: true,
-        //     prevArrow: '<button type="button" class="slick-prev"><i class="icon-chevron-left"></i></button>',
-        //     nextArrow: '<button type="button" class="slick-next"><i class="icon-chevron-right"></i></button>',
-        // });
-
         $('.rm-product-view-gallery-nav').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -82,7 +72,7 @@
             asNavFor: '.rm-product-view-gallery-for'
         });
         $('.rm-product-view-gallery-for').slick({
-            slidesToShow: 3,
+            slidesToShow: 5,
             slidesToScroll: 1,
             centerMode: false,
             focusOnSelect: true,

@@ -52,7 +52,7 @@
     <div class="container">
         <div class="rm-fixed-buttons-items">
             <div class="rm-fixed-button rm-fixed-button-left">
-                <a href="<?php echo home_url(); ?>" type="button" class="rm-fixed-btn">
+                <a href="/shop" type="button" class="rm-fixed-btn">
                     <i class="icon-home"></i>
                 </a>
             </div>
