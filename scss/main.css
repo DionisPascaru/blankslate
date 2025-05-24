@@ -124,6 +124,17 @@ a {
   text-decoration: none;
 }
 
+.wc-block-components-country-input {
+  display: none;
+}
+
+.admin-bar .rm-desktop-menu {
+  top: 32px;
+}
+.admin-bar .rm-shop-desktop-menu {
+  top: 32px;
+}
+
 .rm-section-head {
   text-align: center;
 }
@@ -759,6 +770,10 @@ input[type=radio]:hover {
   font-weight: 500;
   color: #fff;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .rm-subsidiary-block .rm-subsidiary-block-logo-text {
   font-family: "Oswald", sans-serif;
@@ -793,6 +808,10 @@ input[type=radio]:hover {
 
 .rm-subsidiary-block-four .rm-subsidiary-block-logo-text {
   color: #F7FF00;
+}
+
+.rm-subsidiary-block-five .rm-subsidiary-block-logo-text {
+  color: #FF4E00;
 }
 
 /** ----- subsidiary modal ----- **/
@@ -853,6 +872,16 @@ input[type=radio]:hover {
 }
 .rm-subsidiary-modal-four .rm-subsidiary-tab:has(.rm-subsidiary-tab-button.active) {
   border-color: #F7FF00;
+}
+
+.rm-subsidiary-modal-five .rm-subsidiary-modal-logo-text {
+  color: #FF4E00;
+}
+.rm-subsidiary-modal-five .rm-subsidiary-tab-button.active {
+  color: #FF4E00;
+}
+.rm-subsidiary-modal-five .rm-subsidiary-tab:has(.rm-subsidiary-tab-button.active) {
+  border-color: #FF4E00;
 }
 
 .rm-subsidiary-tabs {
@@ -1946,6 +1975,7 @@ input[type=radio]:hover {
   text-align: center;
   text-transform: uppercase;
   line-height: 1;
+  margin-bottom: 30px;
 }
 
 .rm-product-card {

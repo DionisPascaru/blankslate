@@ -11,9 +11,12 @@
                 </div>
             </div>
             <div class="row mt-5">
-                <div class="col-sm-12 col-md-6 col-lg-3 mb-5">
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2 mb-5">
                     <div class="rm-subsidiary-block rm-subsidiary-block-one">
-                        <div class="rm-subsidiary-block-address">Chișinău, bd. Grigore Vieru, 20</div>
+                        <div class="rm-subsidiary-block-address">
+                            <span>Chișinău,</span>
+                            <span>bd. Grigore Vieru, 20</span>
+                        </div>
                         <div class="rm-subsidiary-block-logo">
                             <div><img src="<?php echo get_template_directory_uri(); ?>/assets/icon-barbershop.svg" alt="barbershop"></div>
                             <div class="rm-subsidiary-block-logo-text">Nr.1</div>
@@ -23,9 +26,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-3 mb-5">
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-5">
                     <div class="rm-subsidiary-block rm-subsidiary-block-two">
-                        <div class="rm-subsidiary-block-address">Chișinău, bd. Dacia, 4</div>
+                        <div class="rm-subsidiary-block-address">
+                            <span>Chișinău,</span>
+                            <span>bd. Dacia, 4</span>
+                        </div>
                         <div class="rm-subsidiary-block-logo">
                             <div><img src="<?php echo get_template_directory_uri(); ?>/assets/icon-barbershop.svg" alt="barbershop"></div>
                             <div class="rm-subsidiary-block-logo-text">Nr.2</div>
@@ -35,9 +41,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-3 mb-5">
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2 mb-5">
                     <div class="rm-subsidiary-block rm-subsidiary-block-three">
-                        <div class="rm-subsidiary-block-address">Chișinău, bd. Mircea cel Bătrân, 14</div>
+                        <div class="rm-subsidiary-block-address">
+                            <span>Chișinău,</span>
+                            <span>bd. Mircea cel Bătrân, 14</span>
+                        </div>
                         <div class="rm-subsidiary-block-logo">
                             <div><img src="<?php echo get_template_directory_uri(); ?>/assets/icon-barbershop.svg" alt="barbershop"></div>
                             <div class="rm-subsidiary-block-logo-text">Nr.3</div>
@@ -47,9 +56,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-3 mb-5">
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-5">
                     <div class="rm-subsidiary-block rm-subsidiary-block-four">
-                        <div class="rm-subsidiary-block-address">Chișinău, str. Alba-Iulia 160</div>
+                        <div class="rm-subsidiary-block-address">
+                            <span>Chișinău,</span>
+                            <span>str. Alba-Iulia 160</span>
+                        </div>
                         <div class="rm-subsidiary-block-logo">
                             <div><img src="<?php echo get_template_directory_uri(); ?>/assets/icon-barbershop.svg" alt="barbershop"></div>
                             <div class="rm-subsidiary-block-logo-text">Nr.4</div>
@@ -59,6 +71,22 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2 mb-5">
+                    <div class="rm-subsidiary-block rm-subsidiary-block-five">
+                        <div class="rm-subsidiary-block-address">
+                            <span>Chișinău,</span>
+                            <span>str. Alexei Şciusev, 55</span>
+                        </div>
+                        <div class="rm-subsidiary-block-logo">
+                            <div><img src="<?php echo get_template_directory_uri(); ?>/assets/icon-barbershop.svg" alt="barbershop"></div>
+                            <div class="rm-subsidiary-block-logo-text">Nr.5</div>
+                        </div>
+                        <div class="rm-subsidiary-block-button">
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#subsidiaryFive" disabled>Coming soon</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2"></div>
             </div>
 
             <!-- Modal -->

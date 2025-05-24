@@ -14,6 +14,10 @@
     font-weight: 500;
     color: $white-rm-color;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .rm-subsidiary-block-logo-text {
@@ -60,6 +64,12 @@
 .rm-subsidiary-block-four {
   .rm-subsidiary-block-logo-text {
     color: $yellow-rm-color;
+  }
+}
+
+.rm-subsidiary-block-five {
+  .rm-subsidiary-block-logo-text {
+    color: $orange-rm-color;
   }
 }
 
@@ -156,6 +166,24 @@
   .rm-subsidiary-tab {
     &:has(.rm-subsidiary-tab-button.active) {
       border-color: $yellow-rm-color;
+    }
+  }
+}
+
+.rm-subsidiary-modal-five {
+  .rm-subsidiary-modal-logo-text {
+    color: $orange-rm-color;
+  }
+
+  .rm-subsidiary-tab-button {
+    &.active {
+      color: $orange-rm-color;
+    }
+  }
+
+  .rm-subsidiary-tab {
+    &:has(.rm-subsidiary-tab-button.active) {
+      border-color: $orange-rm-color;
     }
   }
 }
