@@ -16,6 +16,20 @@ a {
   text-decoration: none;
 }
 
+.wc-block-components-country-input {
+  display: none;
+}
+
+.admin-bar {
+  .rm-desktop-menu {
+    top: 32px;
+  }
+
+  .rm-shop-desktop-menu {
+    top: 32px;
+  }
+}
+
 .rm-section-head {
   text-align: center;
 }
@@ -90,6 +104,7 @@ a {
 
 .rm-shop-page {
   padding: 50px 0;
+  min-height: 500px;
 
   @include for-lg {
     padding: 100px 0;

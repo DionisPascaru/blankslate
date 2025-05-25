@@ -124,6 +124,3 @@ if ($show_downloads) {
  */
 do_action('woocommerce_after_order_details', $order);
 
-if ($show_customer_details) {
-    wc_get_template('order/order-details-customer.php', array('order' => $order));
-}

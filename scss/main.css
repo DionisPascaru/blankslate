@@ -124,6 +124,17 @@ a {
   text-decoration: none;
 }
 
+.wc-block-components-country-input {
+  display: none;
+}
+
+.admin-bar .rm-desktop-menu {
+  top: 32px;
+}
+.admin-bar .rm-shop-desktop-menu {
+  top: 32px;
+}
+
 .rm-section-head {
   text-align: center;
 }
@@ -191,6 +202,7 @@ a {
 
 .rm-shop-page {
   padding: 50px 0;
+  min-height: 500px;
 }
 @media screen and (min-width: 992px) {
   .rm-shop-page {
@@ -759,6 +771,10 @@ input[type=radio]:hover {
   font-weight: 500;
   color: #fff;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .rm-subsidiary-block .rm-subsidiary-block-logo-text {
   font-family: "Oswald", sans-serif;
@@ -793,6 +809,10 @@ input[type=radio]:hover {
 
 .rm-subsidiary-block-four .rm-subsidiary-block-logo-text {
   color: #F7FF00;
+}
+
+.rm-subsidiary-block-five .rm-subsidiary-block-logo-text {
+  color: #FF4E00;
 }
 
 /** ----- subsidiary modal ----- **/
@@ -853,6 +873,16 @@ input[type=radio]:hover {
 }
 .rm-subsidiary-modal-four .rm-subsidiary-tab:has(.rm-subsidiary-tab-button.active) {
   border-color: #F7FF00;
+}
+
+.rm-subsidiary-modal-five .rm-subsidiary-modal-logo-text {
+  color: #FF4E00;
+}
+.rm-subsidiary-modal-five .rm-subsidiary-tab-button.active {
+  color: #FF4E00;
+}
+.rm-subsidiary-modal-five .rm-subsidiary-tab:has(.rm-subsidiary-tab-button.active) {
+  border-color: #FF4E00;
 }
 
 .rm-subsidiary-tabs {
@@ -1946,6 +1976,7 @@ input[type=radio]:hover {
   text-align: center;
   text-transform: uppercase;
   line-height: 1;
+  margin-bottom: 30px;
 }
 
 .rm-product-card {
@@ -2067,6 +2098,9 @@ input[type=radio]:hover {
 .rm-shop-navbar .menu-item a:hover {
   color: #C80000;
 }
+.rm-shop-navbar .menu-item a:not([href]) {
+  color: #54595F;
+}
 .rm-shop-navbar .current-language-menu-item a {
   color: #fff;
 }
@@ -2096,7 +2130,6 @@ input[type=radio]:hover {
 
 .rm-shop-mobile-menu {
   display: block;
-  height: 66px;
 }
 @media screen and (min-width: 992px) {
   .rm-shop-mobile-menu {
@@ -2498,6 +2531,10 @@ input[type=radio]:hover {
   flex-direction: column;
   gap: 10px;
 }
+.rm-product-view-info .rm-product-view-info-add-to-cart .custom-add-buttons {
+  display: flex;
+  gap: 10px;
+}
 .rm-product-view-info .rm-product-view-info-description {
   margin-top: 50px;
   font-size: var(--normal-font-size);
@@ -2590,14 +2627,31 @@ input[type=radio]:hover {
   border-radius: 5px;
   border: none;
 }
-.add-to-cart.disabled {
+.add-to-cart[disabled] {
   background-color: #B3B3B3;
 }
-.add-to-cart.disabled:hover {
+.add-to-cart[disabled]:hover {
   background-color: #B3B3B3;
 }
 .add-to-cart:hover {
   background-color: #B3B3B3;
+}
+
+.rm-out-of-stock,
+.rm-out-of-stock-message {
+  background-color: #fff;
+  color: #C80000;
+  font-family: normal normal 300 18px/23px Montserrat;
+  font-size: var(--normal-font-size);
+  font-weight: 600;
+  padding: 10px 35px;
+  border-radius: 5px;
+  border: 1px solid #C80000;
+  width: fit-content;
+}
+
+.rm-out-of-stock-message {
+  display: none;
 }
 
 .qty-controls {

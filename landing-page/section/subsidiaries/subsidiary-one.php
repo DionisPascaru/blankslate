@@ -33,7 +33,7 @@
                     </div>
                     <div class="tab-pane fade" id="subsidiaryOneAboutTabPane" role="tabpanel" tabindex="0">
                         <div class="rm-subsidiary-tab-content-gallery">
-<!--                            --><?php //echo do_shortcode('[rl_gallery id="2585"]'); ?>
+                            <?php echo do_shortcode('[rl_gallery id="2567"]'); ?>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="subsidiaryOneGraphTabPane" role="tabpanel" tabindex="0">
