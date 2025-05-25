@@ -158,8 +158,27 @@ get_template_part('woocommerce/header');
                         </div>
 
                         <div class="rm-product-view-info-description">
-                            <?php woocommerce_template_single_excerpt(); ?>
+                            <?php
+                            global $TRP_LANGUAGE;
+
+                            if ($TRP_LANGUAGE) {
+                                $lang = isset($TRP_LANGUAGE) ? substr($TRP_LANGUAGE, 0, 2) : 'ro'; // Normalize to 'ru', 'ro', etc.
+                                $desc = '';
+
+                                if ($lang === 'ro') {
+                                    // Ro language state
+                                    woocommerce_template_single_excerpt();
+                                } elseif ($lang === 'ru') {
+                                    // Ru language state
+                                    $desc = get_field('product_short_description_ru');
+                                    if ($desc) {
+                                        echo wp_kses_post($desc);
+                                    }
+                                }
+                            }
+                            ?>
                         </div>
+
 
                         <?php
                         $upsells = $product->get_upsell_ids();
