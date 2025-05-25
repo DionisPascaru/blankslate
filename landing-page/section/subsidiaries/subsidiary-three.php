@@ -33,7 +33,7 @@
                     </div>
                     <div class="tab-pane fade" id="subsidiaryThreeAboutTabPane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
                         <div class="rm-subsidiary-tab-content-gallery">
-                            <?php echo do_shortcode('[rl_gallery id="2585"]'); ?>
+                            <?php echo do_shortcode('[rl_gallery id="2565"]'); ?>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="subsidiaryThreeGraphTabPane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">

@@ -202,6 +202,7 @@ a {
 
 .rm-shop-page {
   padding: 50px 0;
+  min-height: 500px;
 }
 @media screen and (min-width: 992px) {
   .rm-shop-page {
@@ -2097,6 +2098,9 @@ input[type=radio]:hover {
 .rm-shop-navbar .menu-item a:hover {
   color: #C80000;
 }
+.rm-shop-navbar .menu-item a:not([href]) {
+  color: #54595F;
+}
 .rm-shop-navbar .current-language-menu-item a {
   color: #fff;
 }
@@ -2126,7 +2130,6 @@ input[type=radio]:hover {
 
 .rm-shop-mobile-menu {
   display: block;
-  height: 66px;
 }
 @media screen and (min-width: 992px) {
   .rm-shop-mobile-menu {
@@ -2528,6 +2531,10 @@ input[type=radio]:hover {
   flex-direction: column;
   gap: 10px;
 }
+.rm-product-view-info .rm-product-view-info-add-to-cart .custom-add-buttons {
+  display: flex;
+  gap: 10px;
+}
 .rm-product-view-info .rm-product-view-info-description {
   margin-top: 50px;
   font-size: var(--normal-font-size);
@@ -2620,14 +2627,31 @@ input[type=radio]:hover {
   border-radius: 5px;
   border: none;
 }
-.add-to-cart.disabled {
+.add-to-cart[disabled] {
   background-color: #B3B3B3;
 }
-.add-to-cart.disabled:hover {
+.add-to-cart[disabled]:hover {
   background-color: #B3B3B3;
 }
 .add-to-cart:hover {
   background-color: #B3B3B3;
+}
+
+.rm-out-of-stock,
+.rm-out-of-stock-message {
+  background-color: #fff;
+  color: #C80000;
+  font-family: normal normal 300 18px/23px Montserrat;
+  font-size: var(--normal-font-size);
+  font-weight: 600;
+  padding: 10px 35px;
+  border-radius: 5px;
+  border: 1px solid #C80000;
+  width: fit-content;
+}
+
+.rm-out-of-stock-message {
+  display: none;
 }
 
 .qty-controls {

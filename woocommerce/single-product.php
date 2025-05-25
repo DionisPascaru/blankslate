@@ -70,21 +70,25 @@ get_template_part('woocommerce/header');
 
                         <div class="rm-product-view-info-add-to-cart">
                             <?php if ( $product->is_type( 'simple' ) ) : ?>
-                                <form class="custom-simple-form" method="post" action="<?php echo esc_url( $product->add_to_cart_url() ); ?>">
-                                    <div class="custom-qty-price">
-                                        <!-- Price -->
-                                        <div class="price-wrapper">
-                                            <label class="rm-product-view-label">Price</label>
-                                            <div class="variation-price"><?php echo $product->get_price_html(); ?></div>
+                                <?php if ( !$product->is_in_stock() ) : ?>
+                                    <div class="rm-out-of-stock">Out of stock</div>
+                                <?php else: ?>
+                                    <form class="custom-simple-form" method="post" action="<?php echo esc_url( $product->add_to_cart_url() ); ?>">
+                                        <div class="custom-qty-price">
+                                            <!-- Price -->
+                                            <div class="price-wrapper">
+                                                <label class="rm-product-view-label">Price</label>
+                                                <div class="variation-price"><?php echo $product->get_price_html(); ?></div>
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <!-- Buttons -->
-                                    <div class="custom-add-buttons">
-                                        <input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" />
-                                        <button type="submit" class="add-to-cart">Add To Cart</button>
-                                    </div>
-                                </form>
+                                        <!-- Buttons -->
+                                        <div class="custom-add-buttons">
+                                            <input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" />
+                                            <button type="submit" class="add-to-cart">Add To Cart</button>
+                                        </div>
+                                    </form>
+                                <?php endif; ?>
                             <?php endif; ?>
 
                             <?php if ( $product->is_type( 'variable' ) ) :
@@ -106,7 +110,7 @@ get_template_part('woocommerce/header');
                                             <div class="rm-custom-variation-options" data-attribute-name="<?php echo esc_attr( $attribute_name ); ?>">
                                                 <?php foreach ( $options as $option ) :
                                                     $term = get_term_by( 'slug', $option, $attribute_name );
-                                                    $term_name = $term ? $term->name : $option; // Fallback to slug if term not found
+                                                    $term_name = $term ? $term->name : $option;
                                                     ?>
                                                     <button type="button"
                                                             class="rm-variation-option"
@@ -144,7 +148,8 @@ get_template_part('woocommerce/header');
                                     <div class="custom-add-buttons">
                                         <input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" />
                                         <input type="hidden" name="variation_id" class="variation_id" value="0" />
-                                        <button type="submit" class="add-to-cart">Add To Cart</button>
+                                        <button type="submit" class="add-to-cart" disabled>Add To Cart</button>
+                                        <div class="rm-out-of-stock-message" style="display:none;">Out of stock</div>
                                     </div>
                                 </form>
 
@@ -228,17 +233,31 @@ get_template_part('woocommerce/header');
                 const selectedAttrs = getSelectedAttributes();
                 const match = findMatchingVariation(selectedAttrs);
 
+                const addToCartBtn = form.querySelector('.add-to-cart');
+                const outOfStockMsg = form.querySelector('.rm-out-of-stock-message');
+
                 if (match) {
                     variationIdInput.value = match.variation_id;
 
-                    // Show correct price (even if same)
                     if (match.price_html && priceDisplay) {
                         priceDisplay.innerHTML = match.price_html;
                     }
+
+                    if (match.is_in_stock) {
+                        addToCartBtn.disabled = false;
+                        outOfStockMsg.style.display = 'none';
+                    } else {
+                        addToCartBtn.disabled = true;
+                        outOfStockMsg.style.display = 'block';
+                    }
+
                 } else {
                     variationIdInput.value = '0';
+                    addToCartBtn.disabled = true;
+                    outOfStockMsg.style.display = 'none';
                 }
             }
+
 
             // Handle option button clicks
             form.querySelectorAll('.rm-variation-option').forEach(btn => {

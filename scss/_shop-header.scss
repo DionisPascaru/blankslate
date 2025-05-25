@@ -15,14 +15,9 @@
 
   .menu {
     display: flex;
-    //gap: 10px;
     list-style-type: none;
     margin: 0;
     padding: 0;
-
-    @include for-xl {
-      //gap: 20px;
-    }
   }
 
   .menu-item {
@@ -47,6 +42,10 @@
 
       &:hover {
         color: $red-one-rm-color;
+      }
+
+      &:not([href]) {
+        color: $grey-one-rm-color
       }
     }
   }
@@ -84,7 +83,7 @@
 
 .rm-shop-mobile-menu {
   display: block;
-  height: 66px;
+  //height: 66px;
 
   @include for-lg {
     display: none;
