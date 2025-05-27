@@ -812,7 +812,7 @@ input[type=radio]:hover {
 }
 
 .rm-subsidiary-block-five .rm-subsidiary-block-logo-text {
-  color: #FF4E00;
+  color: #00D4FF;
 }
 
 /** ----- subsidiary modal ----- **/
@@ -876,13 +876,13 @@ input[type=radio]:hover {
 }
 
 .rm-subsidiary-modal-five .rm-subsidiary-modal-logo-text {
-  color: #FF4E00;
+  color: #00D4FF;
 }
 .rm-subsidiary-modal-five .rm-subsidiary-tab-button.active {
-  color: #FF4E00;
+  color: #00D4FF;
 }
 .rm-subsidiary-modal-five .rm-subsidiary-tab:has(.rm-subsidiary-tab-button.active) {
-  border-color: #FF4E00;
+  border-color: #00D4FF;
 }
 
 .rm-subsidiary-tabs {
@@ -1459,6 +1459,10 @@ input[type=radio]:hover {
   font-size: var(--small-font-size);
   font-weight: 500;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .rm-contacts .rm-contact-item .rm-contact-item-icons {
   display: flex;
@@ -1498,6 +1502,12 @@ input[type=radio]:hover {
 }
 .rm-contacts .rm-contact-item-four .rm-contact-item-icons i {
   color: #F7FF00;
+}
+.rm-contacts .rm-contact-item-five .rm-contact-item-hash {
+  color: #00D4FF;
+}
+.rm-contacts .rm-contact-item-five .rm-contact-item-icons i {
+  color: #00D4FF;
 }
 
 /** ----- Colors ----- **/
