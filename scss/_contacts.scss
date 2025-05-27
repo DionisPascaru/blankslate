@@ -38,6 +38,10 @@
         font-size: var(--small-font-size);
         font-weight: 500;
         color: $white-rm-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
       }
     }
 
@@ -107,6 +111,18 @@
     .rm-contact-item-icons {
       i {
         color: $yellow-rm-color;
+      }
+    }
+  }
+
+  .rm-contact-item-five {
+    .rm-contact-item-hash {
+      color: $blue-light-rm-color;
+    }
+
+    .rm-contact-item-icons {
+      i {
+        color: $blue-light-rm-color;
       }
     }
   }
