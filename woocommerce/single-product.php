@@ -77,7 +77,7 @@ get_template_part('woocommerce/header');
                                         <div class="custom-qty-price">
                                             <!-- Price -->
                                             <div class="price-wrapper">
-                                                <label class="rm-product-view-label">Price</label>
+                                                <label class="rm-product-view-label">Preţ</label>
                                                 <div class="variation-price"><?php echo $product->get_price_html(); ?></div>
                                             </div>
                                         </div>
@@ -129,7 +129,7 @@ get_template_part('woocommerce/header');
                                     <!-- Quantity -->
                                     <div class="custom-qty-price">
                                         <div class="qty-wrapper">
-                                            <label class="rm-product-view-label">Quantity</label>
+                                            <label class="rm-product-view-label">Cantitate</label>
                                             <div class="qty-controls">
                                                 <button type="button" class="qty-count qty-minus">－</button>
                                                 <input type="number" name="quantity" value="1" min="1" class="qty-input" />
@@ -139,7 +139,7 @@ get_template_part('woocommerce/header');
 
                                         <!-- Price -->
                                         <div class="price-wrapper">
-                                            <label class="rm-product-view-label">Price</label>
+                                            <label class="rm-product-view-label">Preţ</label>
                                             <div class="variation-price"><?php echo $product->get_price_html(); ?></div>
                                         </div>
                                     </div>
@@ -148,8 +148,8 @@ get_template_part('woocommerce/header');
                                     <div class="custom-add-buttons">
                                         <input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" />
                                         <input type="hidden" name="variation_id" class="variation_id" value="0" />
-                                        <button type="submit" class="add-to-cart" disabled>Add To Cart</button>
-                                        <div class="rm-out-of-stock-message" style="display:none;">Out of stock</div>
+                                        <button type="submit" class="add-to-cart" disabled>Adaugă in coş</button>
+                                        <div class="rm-out-of-stock-message" style="display:none;">Nu este in stoc</div>
                                     </div>
                                 </form>
 
@@ -185,7 +185,7 @@ get_template_part('woocommerce/header');
 
                         if (!empty($upsells)) {
                             echo '<div class="rm-product-linked-section">';
-                            echo '<h3>Related Products</h3>';
+                            echo '<h3>Produse similare</h3>';
                             echo '<div class="rm-upsell-products">';
 
                             foreach ($upsells as $upsell_id) {
@@ -299,21 +299,21 @@ get_template_part('woocommerce/header');
                 });
             });
 
-                document.querySelectorAll('.qty-minus').forEach(btn => {
-                    btn.addEventListener('click', function () {
-                        const input = this.nextElementSibling;
-                        const value = parseInt(input.value, 10);
-                        if (value > 1) input.value = value - 1;
-                    });
+            document.querySelectorAll('.qty-minus').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const input = this.nextElementSibling;
+                    const value = parseInt(input.value, 10);
+                    if (value > 1) input.value = value - 1;
                 });
+            });
 
-                document.querySelectorAll('.qty-plus').forEach(btn => {
-                    btn.addEventListener('click', function () {
-                        const input = this.previousElementSibling;
-                        const value = parseInt(input.value, 10);
-                        input.value = value + 1;
-                    });
+            document.querySelectorAll('.qty-plus').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const input = this.previousElementSibling;
+                    const value = parseInt(input.value, 10);
+                    input.value = value + 1;
                 });
+            });
 
         });
 

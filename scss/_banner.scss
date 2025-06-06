@@ -1,6 +1,23 @@
+@use 'variables' as *;
+
 .rm-banner {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  img {
+    width: 100%;
+  }
+}
+
+.rm-banner-mobile {
+  display: block;
+}
+.rm-banner-tablet {
+  display: none;
+}
+
+@include for-md {
+  .rm-banner-mobile {
+    display: none;
+  }
+  .rm-banner-tablet {
+    display: block;
+  }
 }

@@ -10,6 +10,7 @@
   border: 1px solid $red-one-rm-color;
   display: flex;
   align-items: center;
+  justify-content: center;
 
   i {
     margin-right: 10px;
@@ -41,43 +42,6 @@
     background-color: $grey-two-rm-color;
     color: $white-rm-color;
     border-color: $grey-two-rm-color;
-  }
-}
-
-
-.rm-filters {
-  margin-bottom: 30px;
-
-  .rm-filter-label {
-    color: $black-rm-color;
-    font-weight: 600;
-  }
-
-  .rm-filter-option {
-    margin: 3px 0;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-
-    &:hover {
-      cursor: pointer;
-    }
-
-    input[type="checkbox"] {
-      width: 16px;
-      height: 16px;
-
-      &:checked {
-        accent-color: $red-one-rm-color;
-      }
-    }
-  }
-
-  .rm-filters-actions {
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
   }
 }
 
@@ -121,4 +85,27 @@
 
 .rm-offcanvas {
   max-width: 320px;
+}
+
+.wc-block-components-button {
+  background-color: $red-one-rm-color;
+  color: #fff;
+  font-size: var(--normal-font-size);
+  font-weight: 600;
+  padding: 5px 35px;
+  border-radius: 5px;
+  border: 1px solid $red-one-rm-color;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background-color: $grey-two-rm-color;
+    border-color: $grey-two-rm-color;
+  }
+
+  &:focus,
+  &:focus-visible {
+    box-shadow: unset!important;
+    outline: unset;
+  }
 }

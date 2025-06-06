@@ -1,17 +1,106 @@
 @use 'variables' as *;
 
+.rm-shop-category-layout {
+  position: relative;
+
+  @include for-md {
+    display: flex;
+  }
+}
+
+.rm-products-filter {
+  width: 100%;
+
+  @include for-md {
+    position: sticky;
+    top: 150px;
+    height: fit-content;
+    max-width: 200px;
+    width: fit-content;
+  }
+
+  .rm-products-filter-title {
+    font-size: var(--title-font-size);
+    color: $black-rm-color;
+    font-weight: 500;
+  }
+}
+
+.rm-filters {
+  margin-bottom: 30px;
+  width: 100%;
+
+  @include for-md {
+    flex-direction: column;
+  }
+
+  .rm-filter-label {
+    color: $black-rm-color;
+    font-weight: 600;
+  }
+
+  .rm-filter-options {
+    margin: 20px 0;
+  }
+
+  .rm-filter-option {
+    margin: 3px 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+
+      &:checked {
+        accent-color: $red-one-rm-color;
+      }
+    }
+  }
+
+  .rm-filters-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    @include for-md {
+      margin-top: 20px;
+    }
+
+    a,
+    button {
+      text-align: center;
+      width: 150px;
+    }
+  }
+}
+
 /** Products grid **/
 .rm-products-grid {
   display: flex;
   flex-wrap: wrap;
+  gap: 10px;
 
   @include for-md {
-    max-width: 700px;
+    max-width: 500px;
     margin: auto;
   }
 
   @include for-lg {
-    max-width: 1100px;
+    max-width: 760px;
+  }
+
+  @include for-xl {
+    max-width: 940px;
+  }
+  
+  @media only screen and (min-width: 1400px){
+    max-width: 1120px;
   }
 }
 
@@ -31,14 +120,13 @@
   margin-bottom: 30px;
 }
 .rm-product-card {
-  width: 50%;
+  width: calc(50% - 10px);
 
   @include for-lg {
-    width: 25%;
+    width: calc(25% - 10px);
   }
 
   .rm-product-card-content {
-    margin: 5px;
     border: 1px solid $grey-one-rm-color;
     text-align: center;
   }
