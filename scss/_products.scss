@@ -175,3 +175,15 @@
     }
   }
 }
+
+.term-gift-cards {
+  .rm-product-card {
+    @include for-lg {
+      width: calc(33.3% - 10px);
+    }
+  }
+
+  .rm-product-title {
+    display: none;
+  }
+}
