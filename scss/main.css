@@ -2170,6 +2170,15 @@ input[type=radio]:hover {
   color: #fff;
 }
 
+@media screen and (min-width: 992px) {
+  .term-gift-cards .rm-product-card {
+    width: calc(33.3% - 10px);
+  }
+}
+.term-gift-cards .rm-product-title {
+  display: none;
+}
+
 /** ----- Colors ----- **/
 /** ------ Small screen ------ **/
 /** ------ Medium screen ------ **/
