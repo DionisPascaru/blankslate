@@ -33,8 +33,10 @@ get_template_part('woocommerce/header');
                         ),
                     ));
 
+                    $gridCategoryClass = 'rm-shop-products-grid-' . $category->slug;
+
                     if ($products->have_posts()) :
-                        echo '<div class="rm-products-grid">';
+                        echo '<div class="rm-products-grid ' . $gridCategoryClass . '">';
                         while ($products->have_posts()) :
                             $products->the_post();
                             wc_get_template_part('content', 'product');
@@ -104,8 +106,10 @@ get_template_part('woocommerce/header');
             endif;
             echo '</aside>';
 
+            $gridCategoryClass = 'rm-products-grid-' . $term->slug;
+
             // Product grid
-            echo '<div class="rm-products-grid">';
+            echo '<div class="rm-products-grid ' . $gridCategoryClass . '">';
 
             $tax_query = array(
                 array(

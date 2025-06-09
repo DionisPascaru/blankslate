@@ -2170,12 +2170,19 @@ input[type=radio]:hover {
   color: #fff;
 }
 
+.rm-shop-products-grid-gift-cards .rm-product-title {
+  display: none;
+}
+
+.rm-products-grid-gift-cards {
+  max-width: 810px;
+}
 @media screen and (min-width: 992px) {
-  .term-gift-cards .rm-product-card {
+  .rm-products-grid-gift-cards .rm-product-card {
     width: calc(33.3% - 10px);
   }
 }
-.term-gift-cards .rm-product-title {
+.rm-products-grid-gift-cards .rm-product-title {
   display: none;
 }
 
