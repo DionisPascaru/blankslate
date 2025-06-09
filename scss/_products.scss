@@ -176,7 +176,15 @@
   }
 }
 
-.term-gift-cards {
+.rm-shop-products-grid-gift-cards {
+  .rm-product-title {
+    display: none;
+  }
+}
+
+.rm-products-grid-gift-cards {
+  max-width: 810px;
+
   .rm-product-card {
     @include for-lg {
       width: calc(33.3% - 10px);
