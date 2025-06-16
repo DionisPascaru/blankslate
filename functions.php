@@ -50,6 +50,7 @@ function blankslate_enqueue()
     wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/libraries/bootstrap/dist/js/bootstrap.bundle.min.js', array('jquery'), $theme_version, true);
     wp_enqueue_script('lottie-web-master', get_template_directory_uri() . '/libraries/lottie-web/build/player/lottie.min.js', array('jquery'), $theme_version, true);
     wp_enqueue_script('slick-js', get_template_directory_uri() . '/libraries/slick-carousel/slick/slick.min.js', array('jquery'), $theme_version, true);
+    wp_enqueue_script('checkout-js', get_template_directory_uri() . '/js/checkout.js', array('jquery'), $theme_version, true);
 
     wp_enqueue_script('rm-sliders', get_template_directory_uri() . '/js/sliders/rm-sliders.js', array('jquery'), $theme_version, true);
 }
@@ -323,4 +324,56 @@ add_action('template_redirect', function () {
         exit;
     }
 });
+
+add_filter('rest_pre_dispatch', function ($result, $server, $request) {
+    if (
+        $request->get_route() === '/wc/store/v1/checkout' &&
+        $request->get_method() === 'POST'
+    ) {
+        $params = $request->get_json_params();
+        $errors = [];
+
+        $billing = $params['billing_address'] ?? [];
+
+        $first_name = trim($billing['first_name'] ?? '');
+        $last_name  = trim($billing['last_name'] ?? '');
+        $phone      = trim($billing['phone'] ?? '');
+
+        // Collect field-specific errors
+        if (mb_strlen($first_name) < 3) {
+            $errors['billing_address.first_name'] = __('Numele trebuie să aibă cel puțin 3 caractere', 'woocommerce');
+        }
+
+        if (mb_strlen($last_name) < 3) {
+            $errors['billing_address.last_name'] = __('Prenumele trebuie să aibă cel puțin 3 caractere', 'woocommerce');
+        }
+
+        if (mb_strlen($phone) < 6) {
+            $errors['billing_address.phone'] = __('Introduceți un număr de telefon valid', 'woocommerce');
+        }
+
+        if (!empty($errors)) {
+            $fieldList = '<ul>';
+            $fieldList .= implode('', array_map(function ($msg) {
+                return '<li>' . esc_html($msg) . '</li>';
+            }, $errors));
+            $fieldList .= '</ul>';
+
+            $generalMessage = __('Vă rugăm să corectați următoarele erori:', 'woocommerce') . $fieldList;
+
+            return new WP_Error(
+                'woocommerce_rest_checkout_error',
+                $generalMessage, // This shows up as the general error alert at the top
+                [
+                    'status' => 400,
+                    'additional_data' => [
+                        'field_errors' => $errors, // These appear under each field
+                    ],
+                ]
+            );
+        }
+    }
+
+    return $result;
+}, 10, 3);
 
