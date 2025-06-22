@@ -82,7 +82,7 @@
                             <div class="rm-subsidiary-block-logo-text">Nr.5</div>
                         </div>
                         <div class="rm-subsidiary-block-button">
-                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#subsidiaryFive" disabled>Coming soon</button>
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#subsidiaryFive">Deschide</button>
                         </div>
                     </div>
                 </div>
@@ -94,6 +94,7 @@
             <?php get_template_part('landing-page/section/subsidiaries/subsidiary-two'); ?>
             <?php get_template_part('landing-page/section/subsidiaries/subsidiary-three'); ?>
             <?php get_template_part('landing-page/section/subsidiaries/subsidiary-four'); ?>
+            <?php get_template_part('landing-page/section/subsidiaries/subsidiary-five'); ?>
         </div>
     </div>
 </section>
