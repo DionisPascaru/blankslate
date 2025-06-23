@@ -516,8 +516,11 @@ input[type=radio]:hover {
     --shop-title-font-size: 40px ;
   }
 }
-.rm-banner img {
-  width: 100%;
+.rm-banner {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .rm-banner-mobile {

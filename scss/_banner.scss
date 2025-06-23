@@ -1,9 +1,13 @@
 @use 'variables' as *;
 
 .rm-banner {
-  img {
-    width: 100%;
-  }
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //img {
+  //  width: 100%;
+  //}
 }
 
 .rm-banner-mobile {
