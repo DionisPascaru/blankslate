@@ -49,16 +49,6 @@ $serviceBasicData = [
         'title' => "Frizură copii 7+",
         'content' => "Frizură stilată pentru fiul dvs include: nemijlocit tunsoarea propriu–zisă, spălarea capului și styling.",
         'price' => "400-450 MDL"
-    ],
-    [
-        'title' => "Tată + fiul",
-        'content' => "Serviciul dat include o frezură stilată pentru tine si fiul dumnevoastră.\n\n",
-        'price' => "<span>-10% (Frizură + Frizură)</span>"
-    ],
-    [
-        'title' => "Tată + fiul",
-        'content' => "Serviciul dat include un complex pentru tine si o frezură stilată fiului dumnevoastră.\n\n",
-        'price' => "<span>-10% (Complex + Frizură)</span>"
     ]
 ];
 ?>
