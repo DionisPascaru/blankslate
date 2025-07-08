@@ -128,7 +128,7 @@
                         </div>
                         <div class="rm-contact-item-icons">
                             <div class="rm-contact-item-icon-phone">
-                                <a>
+                                <a href="tel:+373 68 171 797">
                                     <i class="icon-phone-square"></i>
                                 </a>
                             </div>
