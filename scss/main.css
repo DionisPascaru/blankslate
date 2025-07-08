@@ -1518,6 +1518,7 @@ input[type=radio]:hover {
   gap: 10px;
 }
 .rm-contacts .rm-contact-item .rm-contact-item-icons a {
+  display: flex;
   transition: opacity 0.5s;
   text-decoration: none;
 }
