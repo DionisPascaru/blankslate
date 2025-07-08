@@ -119,7 +119,7 @@
                         <div class="rm-contact-item-hash">#5</div>
                         <div class="rm-contact-item-text">
                             <div class="rm-contact-item-text-phone">
-                                <a>Coming soon</a>
+                                <a href="tel:+373 68 171 797">+373 68 171 797</a>
                             </div>
                             <div class="rm-contact-item-text-address">
                                 <span>Chișinău,</span>
