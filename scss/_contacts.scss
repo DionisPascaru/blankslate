@@ -51,6 +51,8 @@
       gap: 10px;
 
       a {
+        border: 1px solid red;
+        display: flex;
         transition: opacity 0.5s;
         text-decoration: none;
 
