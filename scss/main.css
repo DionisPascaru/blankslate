@@ -201,7 +201,7 @@ a {
 }
 
 .rm-shop-page {
-  padding: 50px 0;
+  padding: 100px 0 50px;
   min-height: 500px;
 }
 @media screen and (min-width: 992px) {
@@ -2125,7 +2125,7 @@ input[type=radio]:hover {
 }
 
 .rm-product-card {
-  width: calc(50% - 10px);
+  width: calc(50% - 5px);
 }
 @media screen and (min-width: 992px) {
   .rm-product-card {
