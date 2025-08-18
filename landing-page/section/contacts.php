@@ -133,7 +133,7 @@
                                 </a>
                             </div>
                             <div class="rm-contact-item-icon-location">
-                                <a target="_blank">
+                                <a href="https://maps.app.goo.gl/EyrSQAXm8WQDmuKYA" target="_blank">
                                     <i class="icon-location-square"></i>
                                 </a>
                             </div>
