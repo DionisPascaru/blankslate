@@ -36,11 +36,6 @@ $serviceBasicData = [
         'price' => "200 MDL"
     ],
     [
-        'title' => "Curățarea urechilor",
-        'content' => "Componentele naturale ale lumânării în timpul procesului de ardere creează efectul încălzirii și masajului, înmoaie dopurile de sulf, ceea ce contribuie la îndepărtarea rapidă și nedureroasă a acestora.",
-        'price' => "200 MDL"
-    ],
-    [
         'title' => "Complex",
         'content' => "Complexul include frizură bărbatească și modelarea bărbii.",
         'price' => "400-450 MDL"

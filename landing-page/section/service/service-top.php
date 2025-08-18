@@ -36,14 +36,14 @@ $serviceBasicData = [
         'price' => "200 MDL"
     ],
     [
-        'title' => "Curățarea urechilor",
-        'content' => "Componentele naturale ale lumânării în timpul procesului de ardere creează efectul încălzirii și masajului, înmoaie dopurile de sulf, ceea ce contribuie la îndepărtarea rapidă și nedureroasă a acestora.",
-        'price' => "200 MDL"
-    ],
-    [
         'title' => "Complex",
         'content' => "Complexul include frizură bărbatească și modelarea bărbii.",
         'price' => "500-550 MDL"
+    ],
+    [
+        'title' => "VIP Complex",
+        'content' => "VIP Complexul include frizura+barbă, mască facială și epilare cu ceară",
+        'price' => "800-950 MDL"
     ],
     [
         'title' => "Frizură copii 7+",
