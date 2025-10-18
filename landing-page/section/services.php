@@ -1,4 +1,10 @@
-<?php ?>
+<?php
+
+if (function_exists('sgi_get_grouped_items')) {
+    $groups = sgi_get_grouped_items();
+} else {
+    $groups = []; // fallback if the plugin is deactivated
+}?>
 <section id="services">
     <div class="container">
         <div class="rm-services">
@@ -11,32 +17,66 @@
                 </div>
             </div>
             <ul class="nav nav-tabs rm-services-tabs" id="myTab" role="tablist">
-                <li class="rm-services-tab-basic" role="presentation">
-                    <div class="rm-services-tab active" id="home-tab" data-bs-toggle="tab" data-bs-target="#serviceBasicTab" type="button" role="tab" aria-controls="serviceBasicTab" aria-selected="true">Basic</div>
-                </li>
-                <li class="rm-services-tab-pro" role="presentation">
-                    <div class="rm-services-tab" id="profile-tab" data-bs-toggle="tab" data-bs-target="#serviceProTab" type="button" role="tab" aria-controls="serviceProTab" aria-selected="false">Pro</div>
-                </li>
-                <li class="rm-services-tab-top" role="presentation">
-                    <div class="rm-services-tab" id="profile-tab" data-bs-toggle="tab" data-bs-target="#serviceTopTab" type="button" role="tab" aria-controls="serviceTopTab" aria-selected="false">Top</div>
-                </li>
-                <li class="rm-services-tab-grand" role="presentation">
-                    <div class="rm-services-tab" id="profile-tab" data-bs-toggle="tab" data-bs-target="#serviceGrandTab" type="button" role="tab" aria-controls="serviceGrandTab" aria-selected="false">Grand</div>
-                </li>
+                <?php foreach ($groups as $index => $group) :
+                    $lowerTabTitle = strtolower( $group['title'] );
+                    $computeTabDataBsTarget = "service${group['title']}Tab";
+                    $computeTabItemClass = "rm-services-tab-$lowerTabTitle";
+                    ?>
+                    <li class="<?php echo esc_attr( $computeTabItemClass ); ?>" role="presentation">
+                        <div class="rm-services-tab <?php echo esc_attr( $index === 0 ? 'active' : '' ); ?>"
+                             id="home-tab"
+                             data-bs-toggle="tab"
+                             data-bs-target="#<?php echo esc_attr( $computeTabDataBsTarget ); ?>"
+                             type="button" role="tab"
+                             aria-controls="<?php echo esc_attr( $computeTabDataBsTarget ); ?>"
+                             aria-selected="true">
+                            <?php echo esc_html( $group['title'] ); ?>
+                        </div>
+                    </li>
+                <?php endforeach; ?>
             </ul>
             <div class="tab-content" id="myTabContent">
-                <div class="rm-services-tab-content-basic tab-pane fade show active" id="serviceBasicTab" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                    <?php get_template_part('landing-page/section/service/service-basic'); ?>
-                </div>
-                <div class="rm-services-tab-content-pro tab-pane fade" id="serviceProTab" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-                    <?php get_template_part('landing-page/section/service/service-pro'); ?>
-                </div>
-                <div class="rm-services-tab-content-top tab-pane fade" id="serviceTopTab" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-                    <?php get_template_part('landing-page/section/service/service-top'); ?>
-                </div>
-                <div class="rm-services-tab-content-grand tab-pane fade" id="serviceGrandTab" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-                    <?php get_template_part('landing-page/section/service/service-grand'); ?>
-                </div>
+                <?php foreach ($groups as $groupIndex => $group) :
+                    $lowerGroupTitle = strtolower( $group['title'] );
+                    $computeTabDataBsTarget = "service${group['title']}Tab";
+                    $computeAccordionDataBsTarget = "service${group['title']}Accordion"; #serviceGrandAccordion
+                    $computeTabClass = "rm-services-tab-content-${lowerGroupTitle}";
+                    $items = $group['items'];
+                ?>
+                    <div class="<?php echo esc_attr($computeTabClass); ?> tab-pane fade <?php echo esc_attr($groupIndex === 0 ? 'active show' : ''); ?>"
+                         id="<?php echo esc_attr($computeTabDataBsTarget); ?>"
+                         role="tabpanel"
+                         aria-labelledby="home-tab"
+                         tabindex="0">
+                        <div class="accordion" id="<?php echo esc_attr($computeAccordionDataBsTarget); ?>">
+                            <?php foreach ($items as $itemIndex => $item) :
+                                $collapseId = "collapse{$groupIndex}_{$itemIndex}";
+                                $headingId = "heading{$groupIndex}_{$itemIndex}";
+                                $isFirst = $itemIndex === 0 ? 'show' : '';
+                                ?>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="<?= $headingId ?>">
+                                        <div class="rm-accordion-heading <?= $isFirst ? '' : 'collapsed' ?>"
+                                             type="button"
+                                             data-bs-toggle="collapse"
+                                             data-bs-target="#<?= $collapseId ?>"
+                                             aria-expanded="<?= $isFirst ? 'true' : 'false' ?>"
+                                             aria-controls="<?= $collapseId ?>">
+                                            <div class="rm-accordion-heading-title"><?= $item['title'] ?></div>
+                                            <div class="rm-accordion-heading-price"><?= $item['price'] ?></div>
+                                        </div>
+                                    </h2>
+                                    <div id="<?= $collapseId ?>" class="accordion-collapse collapse <?= $isFirst ?>"
+                                         data-bs-parent="#<?php echo esc_attr($computeAccordionDataBsTarget); ?>">
+                                        <div class="accordion-body">
+                                            <?= $item['description'] ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>

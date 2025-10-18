@@ -315,6 +315,29 @@ get_template_part('woocommerce/header');
                 });
             });
 
+            (function autoSelectFirstVariation() {
+                const firstVariation = variations.find(v => v.is_in_stock); // choose first in-stock
+                if (!firstVariation) return;
+
+                for (const [attrName, attrValue] of Object.entries(firstVariation.attributes)) {
+                    if (!attrValue) continue;
+
+                    // Find matching option button
+                    const btn = form.querySelector(
+                        `.rm-variation-option[data-attribute="${attrName.replace('attribute_', '')}"][data-value="${attrValue}"]`
+                    );
+
+                    if (btn) {
+                        btn.classList.add('selected');
+                        const input = form.querySelector(`[name="${attrName}"]`);
+                        if (input) input.value = attrValue;
+                    }
+                }
+
+                // Trigger update once everything is set
+                updateVariation();
+            })();
+
         });
 
     </script>
