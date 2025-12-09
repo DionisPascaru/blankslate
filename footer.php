@@ -8,13 +8,13 @@
             </div>
             <div class="rm-footer-media">
                 <div class="rm-footer-media-item">
-                    <a href="https://www.facebook.com/realmen.md"><i class="icon-facebook"></i></a>
+                    <a href="https://www.facebook.com/share/1BpPWEM58R/?mibextid=wwXIfr"><i class="icon-facebook"></i></a>
                 </div>
                 <div class="rm-footer-media-item">
                     <a href="https://www.instagram.com/realmen.md/"><i class="icon-instagram"></i></a>
                 </div>
                 <div class="rm-footer-media-item">
-                    <a href="https://www.tiktok.com/@realmen.md"><i class="icon-tick-tock"></i></a>
+                    <a href="https://www.tiktok.com/@realmen.chisinau?_r=1&_t=ZM-91rC8K6fT8F"><i class="icon-tick-tock"></i></a>
                 </div>
             </div>
         </div>
