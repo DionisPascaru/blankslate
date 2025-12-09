@@ -74,7 +74,7 @@
                             <div class="rm-subsidiary-modal-contacts-phone">Chișinău, str. Alexei Şciusev, 55</div>
                             <div class="rm-subsidiary-modal-contacts-links">
                                 <div>
-                                    <a href="https://www.facebook.com/realmen.md">
+                                    <a href="https://www.facebook.com/share/1BpPWEM58R/?mibextid=wwXIfr">
                                         <i class="icon-facebook"></i>
                                     </a>
                                 </div>
@@ -84,7 +84,7 @@
                                     </a>
                                 </div>
                                 <div>
-                                    <a href="https://www.tiktok.com/@realmen.md">
+                                    <a href="https://www.tiktok.com/@realmen.chisinau?_r=1&_t=ZM-91rC8K6fT8F">
                                         <i class="icon-tick-tock"></i>
                                     </a>
                                 </div>

@@ -26,7 +26,7 @@
                     <div class="col-1 rm-nav-column">
                         <div class="rm-social-media">
                             <div class="rm-social-media-item">
-                                <a href="https://www.facebook.com/realmen.md"><i class="icon-facebook"></i></a>
+                                <a href="https://www.facebook.com/share/1BpPWEM58R/?mibextid=wwXIfr"><i class="icon-facebook"></i></a>
                             </div>
                             <div class="rm-social-media-item">
                                 <a href="https://www.instagram.com/realmen.md/"><i class="icon-instagram"></i></a>
