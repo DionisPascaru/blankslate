@@ -29,11 +29,11 @@
                 </ul>
                 <div class="tab-content rm-subsidiary-modal-tabs-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="subsidiaryThreeTeamTabPane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                        <?php echo do_shortcode('[simple-staff-list group="bd-mircea-cel-batran-14"]'); ?>
+                        <?php echo do_shortcode('[simple-staff-list group="str-alba-iulia-160"]'); ?>
                     </div>
                     <div class="tab-pane fade" id="subsidiaryThreeAboutTabPane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
                         <div class="rm-subsidiary-tab-content-gallery">
-                            <?php echo do_shortcode('[rl_gallery id="2565"]'); ?>
+                            <?php echo do_shortcode('[rl_gallery id="2564"]'); ?>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="subsidiaryThreeGraphTabPane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
@@ -70,8 +70,8 @@
                     </div>
                     <div class="tab-pane fade" id="subsidiaryThreeContactTabPane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
                         <div class="rm-subsidiary-modal-contacts">
-                            <div class="rm-subsidiary-modal-contacts-address">+373 68 727 772</div>
-                            <div class="rm-subsidiary-modal-contacts-phone">Chișinău, bd. Mircea cel Bătrân, 14</div>
+                            <div class="rm-subsidiary-modal-contacts-address">+373 68 433 444</div>
+                            <div class="rm-subsidiary-modal-contacts-phone">Chișinău, str. Alba-Iulia 160</div>
                             <div class="rm-subsidiary-modal-contacts-links">
                                 <div>
                                     <a href="https://www.facebook.com/share/1BpPWEM58R/?mibextid=wwXIfr">
@@ -79,7 +79,7 @@
                                     </a>
                                 </div>
                                 <div>
-                                    <a href="https://www.instagram.com/realmen_ciocana">
+                                    <a href="https://www.instagram.com/realmen_buiucani">
                                         <i class="icon-instagram"></i>
                                     </a>
                                 </div>
