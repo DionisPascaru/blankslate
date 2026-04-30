@@ -3473,4 +3473,68 @@ input[type=radio]:hover {
   outline: unset;
 }
 
+/** ----- Colors ----- **/
+/** ------ Small screen ------ **/
+/** ------ Medium screen ------ **/
+/** ------ Large screen ------ **/
+/** ------ Extra large screen ------ **/
+/** ------ 2x large screen ------ **/
+/** ----- font sizes ----- **/
+:root {
+  --heading-font-size: 44px;
+  --normal-font-size: 16px;
+  --small-font-size: 14px;
+  --title-font-size: 20px;
+  --modal-title-font-size: 28px;
+  --shop-heading-font-size: 50px;
+  --shop-title-font-size: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --heading-font-size: 70px;
+    --title-font-size: 22px;
+    --modal-title-font-size: 50px;
+    --shop-heading-font-size: 60px;
+    --shop-title-font-size: 30px ;
+  }
+}
+@media screen and (min-width: 992px) {
+  :root {
+    --shop-heading-font-size: 80px;
+    --shop-title-font-size: 40px ;
+  }
+}
+.rm-competition {
+  padding: 50px 0;
+  background-color: #004DFF;
+}
+.rm-competition .rm-competition-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.rm-competition .rm-competition-heading h2 {
+  font-family: normal normal 300 18px/23px Montserrat;
+  font-size: 40px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1;
+}
+@media screen and (min-width: 768px) {
+  .rm-competition .rm-competition-heading h2 {
+    font-size: 74px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .rm-competition .rm-competition-heading h2 {
+    font-size: 96px;
+  }
+}
+.rm-competition .rm-competition-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 /*# sourceMappingURL=main.css.map */
