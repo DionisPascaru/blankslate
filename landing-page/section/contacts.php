@@ -8,7 +8,7 @@
                 </div>
             </div>
             <div class="row rm-contacts-items">
-                <div class="col-sm-12 col-md-6 col-lg-3 mb-5">
+                <div class="col-sm-12 col-lg-4 mb-5">
                     <div class="rm-contact-item rm-contact-item-one">
                         <div class="rm-contact-item-hash">#1</div>
                         <div class="rm-contact-item-text">
@@ -36,7 +36,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-3 mb-5">
+                <div class="col-sm-12 col-lg-4 mb-5">
                     <div class="rm-contact-item rm-contact-item-two">
                         <div class="rm-contact-item-hash">#2</div>
                         <div class="rm-contact-item-text">
@@ -62,7 +62,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-3 mb-5">
+                <div class="col-sm-12 col-lg-4 mb-5">
                     <div class="rm-contact-item rm-contact-item-three">
                         <div class="rm-contact-item-hash">#3</div>
                         <div class="rm-contact-item-text">
@@ -82,32 +82,6 @@
                             </div>
                             <div class="rm-contact-item-icon-location">
                                 <a href="https://maps.app.goo.gl/31dmvuqRjk1WMQmP9" target="_blank">
-                                    <i class="icon-location-square"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-3 mb-5">
-                    <div class="rm-contact-item rm-contact-item-four">
-                        <div class="rm-contact-item-hash">#4</div>
-                        <div class="rm-contact-item-text">
-                            <div class="rm-contact-item-text-phone">
-                                <a href="tel:+373 68 171 797">+373 68 171 797</a>
-                            </div>
-                            <div class="rm-contact-item-text-address">
-                                <span>Chișinău,</span>
-                                <span>str. Alexei Şciusev, 55</span>
-                            </div>
-                        </div>
-                        <div class="rm-contact-item-icons">
-                            <div class="rm-contact-item-icon-phone">
-                                <a href="tel:+373 68 171 797">
-                                    <i class="icon-phone-square"></i>
-                                </a>
-                            </div>
-                            <div class="rm-contact-item-icon-location">
-                                <a href="https://maps.app.goo.gl/EyrSQAXm8WQDmuKYA" target="_blank">
                                     <i class="icon-location-square"></i>
                                 </a>
                             </div>

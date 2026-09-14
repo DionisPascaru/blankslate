@@ -3,18 +3,26 @@
         /**
          * Timeline slider.
          */
-        $('.rm-timeline-for').slick({
+        const timelineSliderFor = $('.rm-timeline-for');
+        const timelineSliderNav = $('.rm-timeline-nav');
+        const totalSlides = timelineSliderFor.children().length;
+        const lastSlide = totalSlides - 1;
+
+        timelineSliderFor.slick({
             slidesToShow: 1,
             slidesToScroll: 1,
+            initialSlide: lastSlide,
             asNavFor: '.rm-timeline-nav',
             arrows: false,
             fade: true,
             infinite: false,
             draggable: false
         });
-        $('.rm-timeline-nav').slick({
+
+        timelineSliderNav.slick({
             slidesToShow: 5,
             slidesToScroll: 1,
+            initialSlide: lastSlide,
             asNavFor: '.rm-timeline-for',
             focusOnSelect: true,
             centerMode: true,
@@ -29,7 +37,7 @@
                         slidesToShow: 3,
                         centerMode: true,
                         centerPadding: '0',
-                        arrows: true,
+                        arrows: true
                     }
                 },
                 {
