@@ -41,12 +41,12 @@
                             <span class="rm-timeline-nav-item-dot"></span>
                         </div>
                     </div>
-                    <div class="rm-timeline-nav-item">
+                    <!-- <div class="rm-timeline-nav-item">
                         <div class="rm-timeline-nav-item-point">
                             <span class="rm-timeline-nav-item-label">2023</span>
                             <span class="rm-timeline-nav-item-dot"></span>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="rm-timeline-nav-item">
                         <div class="rm-timeline-nav-item-point">
                             <span class="rm-timeline-nav-item-label">2024</span>
@@ -114,7 +114,7 @@
                             Bătrân, 14</p>
                     </div>
                 </div>
-                <div class="rm-timeline-for-item">
+                <!-- <div class="rm-timeline-for-item">
                     <div class="rm-timeline-for-heading">Filiala NR.4</div>
                     <div class="rm-timeline-for-body">
                         <p>Am încheiat al doilea contract de franciză situat pe str. V. Alecsandri, însă după o colaborare
@@ -122,7 +122,7 @@
                         <p>Totodata, în anul 2023 ne deschidem și în sectorul Buiucani, pe str. Alba-Iulia 160, o nouă
                             franciză, o nouă colaborare. Misiunea noastră este să fim cât mai aproape de fiecare client.</p>
                     </div>
-                </div>
+                </div> -->
                 <div class="rm-timeline-for-item">
                     <div class="rm-timeline-for-heading">REBRANDING</div>
                     <div class="rm-timeline-for-body">
